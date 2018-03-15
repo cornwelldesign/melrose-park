@@ -12,7 +12,9 @@ import {
 	below
 } from "../style/functions"
 import Bg from "../components/Bg"
-import scrollToElement from 'scroll-to-element'
+if (typeof window !== `undefined`) {
+  const scrollToElement = require('scroll-to-element');
+}
 
 
 
@@ -164,10 +166,15 @@ class TemplateWrapper extends React.Component {
 		}
 
     showRegister() {
+			if (typeof window !== `undefined`) {
+
       scrollToElement('#register', {
         ease:'out-quad',
         duration:1000
-      });
+			});
+		} else {
+			return false;
+		} 
     }
 
   render() {
