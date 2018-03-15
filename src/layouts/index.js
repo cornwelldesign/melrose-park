@@ -14,6 +14,7 @@ import {
 import Bg from "../components/Bg"
 
 
+
 const ToggleWrap = styled.div `
 		transition: filter 2s;
 		transition-timing-function: ease;
