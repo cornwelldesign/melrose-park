@@ -57,7 +57,7 @@ handleSubmit(e) {
 	})
 
 	fetch(
-		"https://vds9c5imf1.execute-api.ap-southeast-2.amazonaws.com/prod/flinders",
+		"",
 		{
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
