@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: 'Archer';
+    src: url('Archer-Medium.woff2') format('woff2'),
+        url('Archer-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plantin';
+    src: url('PlantinStd-BoldCondensed.woff2') format('woff2'),
+        url('PlantinStd-BoldCondensed.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

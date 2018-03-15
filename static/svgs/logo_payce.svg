@@ -1,0 +1,48 @@
+<svg id="logo" width="70" height="20" viewBox="0 0 70 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>payce_block_pms_Landscape</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-516 -1943)">
+<g id="payce_block_pms_Landscape">
+<g id="payce_block_pms_Landscape">
+<g id="Fill 1">
+<use xlink:href="#path0_fill" transform="translate(516 1943.06)" fill="#D0232B"/>
+</g>
+<g id="Fill 3">
+<use xlink:href="#path1_fill" transform="translate(520.991 1948)" fill="#FFFFFE"/>
+</g>
+<g id="Fill 4">
+<use xlink:href="#path2_fill" transform="translate(532.638 1948)" fill="#FFFFFE"/>
+</g>
+<g id="Fill 5">
+<use xlink:href="#path3_fill" transform="translate(545.645 1947.98)" fill="#FFFFFE"/>
+</g>
+<g id="Fill 6">
+<use xlink:href="#path4_fill" transform="translate(557.695 1947.76)" fill="#FFFFFE"/>
+</g>
+<g id="Fill 7">
+<use xlink:href="#path5_fill" transform="translate(571.773 1947.97)" fill="#FFFFFE"/>
+</g>
+<g id="Fill 8">
+<use xlink:href="#path6_fill" transform="translate(576.004 1951.91)" fill="#FFFFFE"/>
+</g>
+<g id="Fill 9">
+<use xlink:href="#path7_fill" transform="translate(582.454 1947.77)" fill="#FFFFFE"/>
+</g>
+<g id="Fill 10">
+<use xlink:href="#path8_fill" transform="translate(583.293 1948.5)" fill="#FFFFFE"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 19.5074L 69.8187 19.5074L 69.8187 0L 0 0L 0 19.5074Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 5.48782 0L 0 0L 0 9.64826L 2.11783 9.64826L 2.11783 5.9113L 5.74478 5.9113C 8.04652 5.9113 9.6113 4.67652 9.6113 2.9C 9.6113 1.19739 8.08261 0 5.48782 0ZM 5.92829 4.1635L 2.11786 4.1635L 2.11786 1.73132L 5.92829 1.73132C 7.05351 1.73132 7.54916 2.26219 7.54916 2.93741C 7.54916 3.6135 7.05351 4.1635 5.92829 4.1635Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 4.71217 0L 0 9.64826L 2.31826 9.63087L 3.46087 7.16348L 7.80522 7.16348L 8.9487 9.63087L 11.2683 9.64826L 6.55391 0L 4.71217 0ZM 4.1778 5.45091L 5.65084 2.45874L 7.03127 5.45091L 4.1778 5.45091Z"/>
+<path id="path3_fill" fill-rule="evenodd" d="M 4.91609 3.16826C 4.93435 3.16826 2.46609 0 2.46609 0L 0 0L 3.84739 4.95348L 3.84739 9.66696L 6.0013 9.66696L 6.0013 4.95348L 9.85044 0L 7.38348 0L 4.91609 3.16826Z"/>
+<path id="path4_fill" fill-rule="evenodd" d="M 5.83652 8.28699C 3.59043 8.28699 2.08043 6.92047 2.08043 4.92656C 2.08043 3.08004 3.59043 1.80613 5.78043 1.78743C 7.66 1.7696 9.44652 2.91352 9.44652 2.91352L 10.3843 1.49308C 10.3843 1.49308 8.36043 0.0556905 5.83652 0.00177748C 2.24522 -0.0725703 0 2.19482 0 5.03699C 0 7.86134 2.31913 10.0726 5.59695 10.0726C 8.76478 10.0726 10.7726 8.28699 10.7726 8.28699L 9.85086 6.90047C 9.85086 6.90047 7.89826 8.28699 5.83652 8.28699Z"/>
+<path id="path5_fill" fill-rule="evenodd" d="M 2.11783 3.94783L 2.11783 1.71261L 9.09652 1.71261L 9.09652 0L 0 0L 0 9.63087C 0 9.63087 9.09652 9.66609 9.09652 9.64826L 9.09652 7.90435L 2.11783 7.90435L 2.11783 5.66043L 2.11609 5.66043L 2.11609 3.94783L 2.11783 3.94783Z"/>
+<path id="path6_fill" fill-rule="evenodd" d="M 3.42565 1.73565L 0 1.73565L 0 0L 3.42565 0L 4.66304 0.867826L 3.42565 1.73565Z"/>
+<path id="path7_fill" fill-rule="evenodd" d="M 1.05347 0.109619C 0.533038 0.109619 0.109558 0.532663 0.109558 1.05353C 0.109558 1.57397 0.533038 1.99788 1.05347 1.99788C 1.57478 1.99788 1.99826 1.57397 1.99826 1.05353C 1.99826 0.532663 1.57478 0.109619 1.05347 0.109619ZM 1.05347 2.10739C 0.473042 2.10739 0 1.63435 0 1.05348C 0 0.472609 0.473042 0 1.05347 0C 1.63521 0 2.10782 0.472609 2.10782 1.05348C 2.10782 1.63435 1.63521 2.10739 1.05347 2.10739Z"/>
+<path id="path8_fill" fill-rule="evenodd" d="M 0.101318 0.365204L 0.300015 0.365204C 0.414363 0.366074 0.466972 0.316074 0.466972 0.225205C 0.466972 0.13477 0.414363 0.0852051 0.300015 0.0852051L 0.101318 0.0852051L 0.101318 0.365204ZM 0 0L 0.334343 0C 0.485645 0 0.568253 0.083913 0.568253 0.225217C 0.568253 0.366087 0.485645 0.451739 0.334343 0.450869L 0.101303 0.450869L 0.101303 0.762609L 0 0.762609L 0 0Z"/>
+</defs>
+</svg>
