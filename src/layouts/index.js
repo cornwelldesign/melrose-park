@@ -12,6 +12,7 @@ import {
 	below
 } from "../style/functions"
 import Bg from "../components/Bg"
+import scrollToElement from 'scroll-to-element'
 
 
 
@@ -27,7 +28,7 @@ const ToggleWrap = styled.div `
 
 const Header = styled.header `
   width:100%;
-  height:500px;
+  height:50vh;
   position:fixed;
   top:0;
   left:0;
@@ -82,6 +83,10 @@ const RegisterButton = styled.a `
 
     }
   }
+
+  @media screen and (max-width:768px) {
+    display:none;
+  }
 `
 
 
@@ -100,6 +105,11 @@ const Logo01 = styled.div `
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+
+  @media screen and (max-height:768px) {
+    width:190px;
+    height:126px;
+  }
 `
 
 
@@ -154,7 +164,10 @@ class TemplateWrapper extends React.Component {
 		}
 
     showRegister() {
-      location.hash = "#register";
+      scrollToElement('#register', {
+        ease:'out-quad',
+        duration:1000
+      });
     }
 
   render() {
@@ -306,7 +319,7 @@ class TemplateWrapper extends React.Component {
             </svg>
           </Logo01>
 
-          <RegisterButton href="#"onClick={this.showRegister}>
+          <RegisterButton href="#register" onClick={this.showRegister}>
           Register now
           </RegisterButton>
 
@@ -323,6 +336,7 @@ class TemplateWrapper extends React.Component {
 
 				<RegisterForm
           shown={this.state.registerOpen}
+          className="active"
           toggleForm={this
           .toggleForm
           .bind(this)}/>

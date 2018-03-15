@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Flinders Bank | Naturally Melbourne`,
-    siteUrl: `https://flindersbank.com.au`
+    title: `Melrose Park | The new heart of Sydney`,
+    siteUrl: `http://melrosepark.com.au`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

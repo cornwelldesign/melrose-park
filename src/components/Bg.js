@@ -101,15 +101,17 @@ const Title = styled.h2 `
   transform: translateY(-50%);
   font-size:13rem;
   text-transform:uppercase;
+  line-height:0.85;
 
   @media screen and (max-width:768px) {
   	padding:22%;
   	font-size:10rem;
+    color:rgba(255,255,255,0.96);
+    text-shadow: 0 1px 32px rgba(0,0,0,0.1);
   }
   @media screen and (max-width:480px) {
   	padding:12%;
   	font-size:8rem;
-  	line-height:1.2;
   }
 `
 

@@ -24,6 +24,7 @@ class RegisterForm extends React.Component {
     }
     this.state = {
       formStatus: "incomplete",
+      className : "",
       values: {},
       url: url
     }
@@ -35,9 +36,17 @@ class RegisterForm extends React.Component {
     this.setState({ values })
   }
   componentDidMount() {
-    this.updateForm = this.updateForm.bind(this)
+    this.updateForm   = this.updateForm.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.showThankYou = this.showThankYou.bind(this)
+    this.hideThankYou = this.hideThankYou.bind(this)
   }
+	showThankYou() {
+		this.state.className = "active";
+	}
+	hideThankYou() {
+		this.state.className = "";
+	}
 
 handleSubmit(e) {
 	e.preventDefault()
@@ -112,7 +121,7 @@ if (typeof window !== `undefined`) {
 		}
 */
     return (
-      <Container popup={this.props.popup} shown={this.props.shown}>
+      <Container popup={this.props.popup} shown={this.props.shown} id="register">
 
       	<Logo02>
           <svg>
@@ -123,24 +132,22 @@ if (typeof window !== `undefined`) {
         <Title>
         Register now
         </Title>
-        {this.props.popup && <div><Close onClick={this.props.toggleForm}/>
+        <ThankYou className={this.state.className}>
+        	<Close onClick={this.hideThankYou}>
+
+        	</Close>
+          <Heading>Thank you<br/> for registering</Heading>
+        </ThankYou>
+        {this.props.popup && <div><Close onClick={this.hideThankYou}/>
 					<Logo>
 						<svg>
 						<use xlinkHref='/svgs/melrose_logo_inverted.svg#logo' />
-
 						</svg>
 					</Logo>
 					</div>
 				}
         {this.state.formStatus === "complete"
-          ? (
-            <ThankYou>
-            	<Close onClick={this.props.toggleForm}>
-
-            	</Close>
-              <Heading>Thank you<br/> for registering</Heading>
-            </ThankYou>
-          )
+          ? this.showThankYou()
           : (
             <ThemeProvider theme={theme}>
               <Form action="" onSubmit={this.handleSubmit}>
@@ -149,7 +156,7 @@ if (typeof window !== `undefined`) {
 										name="first_name"
 										label="First Name*"
 										required
-										onChange={this.updateForm}
+										onChange={this.updateForm.bind(this)} // Bit of a hack
 									/>
 								</Field>
 								<Field>
@@ -233,17 +240,17 @@ if (typeof window !== `undefined`) {
             </ThemeProvider>
           )}
           <LogoWrapper>
-            <Logo03 href="/">
+            <Logo03 href="http://payce.com.au/" target="_blank">
               <svg>
                 <use xlinkHref='/svgs/logo_payce.svg#logo' />
               </svg>
             </Logo03>
-            <Logo04 href="/">
+            <Logo04 href="https://www.sekisuihouse.com.au/" target="_blank">
               <svg>
                 <use xlinkHref='/svgs/logo_sekisui.svg#logo' />
               </svg>
             </Logo04>
-            <Logo05 href="/">
+            <Logo05 href="http://www.bostonmarketing.com.au/" target="_blank">
               <svg>
                 <use xlinkHref='/svgs/logo_boston.svg#logo' />
               </svg>
@@ -264,16 +271,25 @@ const Logo02 = styled.div `
 `
 
 const Title = styled.h3 `
-	margin-top:30px;
-	margin-bottom:90px;
+	margin-top:80px;
+	margin-bottom:80px;
 	display:inline-block;
 	font-family:${vars.fonts.headings};
 	font-size:4rem;
 	color:#000;
 	text-transform:uppercase;
+
+	@media screen and (max-width:768px) {
+		margin-top:50px;
+		margin-bottom:40px;
+	}
+	@media screen and (max-width:480px) {
+		margin-top:40px;
+		margin-bottom:20px;
+	}
 `
 
-const Logo03 = styled.div `
+const Logo03 = styled.a `
   display: inline-block;
   position: relative;
   width:70px;
@@ -281,7 +297,7 @@ const Logo03 = styled.div `
   margin:0 24px;
 `
 
-const Logo04 = styled.div `
+const Logo04 = styled.a `
   display: inline-block;
   position: relative;
   width:59px;
@@ -289,7 +305,7 @@ const Logo04 = styled.div `
   margin:0 24px;
 `
 
-const Logo05 = styled.div `
+const Logo05 = styled.a `
   display: inline-block;
   position: relative;
   width:83px;
@@ -304,12 +320,18 @@ const LogoWrapper = styled.div `
   align-self:flex-end;
   align-items:center;
   justify-content:center;
+
+  @media screen and (max-width:768px) {
+  	margin-top:80px;
+  }
 `
 
 const Container = styled.div `
   background-color: ${vars.colors.blank};
 	position: relative;
-	height:100vh;
+	padding-top:60px;
+	padding-bottom:10px;
+	min-height:100vh;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -334,14 +356,13 @@ const Container = styled.div `
 		visibility: visible;
 		opacity: 1;
     `};
-		${below.mobile`
-			margin-top:0;
-			left:0.5rem;
-			right:0.5rem;
-			top:0.5rem;
-			bottom:0.5rem;
-		`}
-	`
+  @media screen and (max-width:768px) {
+  	padding:20px 0;
+  	padding-top:50px;
+  	min-height:100vh;
+  	height:auto;
+  }
+`
 
 const Close = styled.div `
   height: 4rem;
@@ -434,6 +455,12 @@ const Heading = styled.h3 `
   transform: translateY(-50%);
   font-size:10rem;
   text-transform:uppercase;
+  padding-top:20px;
+
+  @media screen and (max-width:768px) {
+  	font-size:8rem;
+  	padding:0 15px;
+  }
 `
 
 const Submit = styled.button `
@@ -487,13 +514,22 @@ const Submit = styled.button `
 `
 
 const ThankYou = styled.div `
+	display:none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #333;
-  z-index: 1;
+  background-image:url('/images/thank_you.jpg');
+  background-size:cover;
+  background-position:center center;
+  z-index: 2;
+
+
+  &.active {
+  	display:block;
+  }
 `
 
 
