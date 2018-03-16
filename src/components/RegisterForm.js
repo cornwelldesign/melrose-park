@@ -49,6 +49,10 @@ class RegisterForm extends React.Component {
 	}
 
 handleSubmit(e) {
+	let formStatus = "complete"
+
+	this.setState({ formStatus })
+
 	e.preventDefault()
 	const fields = [].slice.call(e.target.querySelectorAll("[name]"))
 	fields.map(f => {
@@ -68,8 +72,7 @@ handleSubmit(e) {
 		.then(json => {
 			console.log(json)
 			console.log("Tag manager push here")
-			let formStatus = "complete"
-			this.setState({ formStatus })
+
 		})
 		.catch(err => console.log(err))
   }
