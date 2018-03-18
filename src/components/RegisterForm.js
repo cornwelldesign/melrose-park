@@ -30,7 +30,6 @@ class RegisterForm extends React.Component {
     }
   }
   updateForm(e) {
-  	console.log(this);
     let values = this.state.values
     values[e.target.getAttribute("name")] = e.target.value || '';
     this.setState({ values })
@@ -42,13 +41,18 @@ class RegisterForm extends React.Component {
     this.hideThankYou = this.hideThankYou.bind(this)
   }
 	showThankYou() {
-		this.state.className = "active";
+		this.setState({
+			className : "active"
+		});
 	}
 	hideThankYou() {
-		this.state.className = "";
+		this.setState({
+			formStatus : "incomplete"
+		})
 	}
 
 handleSubmit(e) {
+	console.log(this);
 	e.preventDefault()
 	const fields = [].slice.call(e.target.querySelectorAll("[name]"))
 	fields.map(f => {
@@ -64,9 +68,11 @@ handleSubmit(e) {
 			body: JSON.stringify(this.state.values)
 		}
 	)
-		.then(res => res.json())
+		.then(function(res) {
+			return {};
+		})
 		.then(json => {
-			console.log(json)
+			//console.log(json)
 			console.log("Tag manager push here")
 			let formStatus = "complete"
 			this.setState({ formStatus })
@@ -74,52 +80,6 @@ handleSubmit(e) {
 		.catch(err => console.log(err))
   }
 	render() {
-
-/*
-if (typeof window !== `undefined`) {
-			var apartment_type = document.querySelector('select[name="apartment_type"]')
-			if (apartment_type) {
-				apartment_type.addEventListener("change", function (e) {
-					addOptions(this.value)
-				})
-
-				const price_range_select = document.querySelector('select[name="price_range"]')
-				const len = price_range_select.options.length
-				const options = []
-
-				// store options
-				for (let i = len - 1; i >= 1; i--) {
-					options.push({
-						group: price_range_select.options[i].getAttribute("data-group"),
-						key: price_range_select.options[i].getAttribute("value"),
-						val: price_range_select.options[i].innerHTML
-					})
-				}
-
-				var addOptions = function (group) {
-					clearOptions(price_range_select)
-
-					for (let i = options.length - 1; i >= 0; i--) {
-						if (parseInt(group) === parseInt(options[i].group)) {
-							let temp_option = document.createElement("option")
-							temp_option.value = options[i].key
-							temp_option.innerHTML = options[i].val
-							temp_option.hidden = false
-							price_range_select.appendChild(temp_option)
-						}
-					}
-				}
-
-				function clearOptions(select) {
-					const opt_len = select.options.length
-					for (let i = opt_len - 1; i >= 1; i--) {
-						select.options[i].setAttribute('selected', 'false');
-						select.options[i].setAttribute('hidden', 'true');
-					}
-				}
-			}
-		}
-*/
     return (
       <Container popup={this.props.popup} shown={this.props.shown} id="register">
 
@@ -132,12 +92,7 @@ if (typeof window !== `undefined`) {
         <Title>
         Register now
         </Title>
-        <ThankYou className={this.state.className}>
-        	<Close onClick={this.hideThankYou}>
-
-        	</Close>
-          <Heading>Thank you<br/> for registering</Heading>
-        </ThankYou>
+        
         {this.props.popup && <div><Close onClick={this.hideThankYou}/>
 					<Logo>
 						<svg>
@@ -147,10 +102,16 @@ if (typeof window !== `undefined`) {
 					</div>
 				}
         {this.state.formStatus === "complete"
-          ? this.showThankYou()
+          ? 
+          <ThankYou className={this.state.className}>
+	        	<Close onClick={this.hideThankYou}>
+
+	        	</Close>
+	          <Heading>Thank you<br/> for registering</Heading>
+        	</ThankYou>
           : (
             <ThemeProvider theme={theme}>
-              <Form action="" onSubmit={this.handleSubmit}>
+              <Form action="" onSubmit={this.handleSubmit.bind(this)}>
 								<Field>
 									<Input
 										name="first_name"
@@ -164,7 +125,7 @@ if (typeof window !== `undefined`) {
 										name="last_name"
 										label="Last Name*"
 										required
-										onChange={this.updateForm}
+										onChange={this.updateForm.bind(this)}
 									/>
 								</Field>
 								<Field>
@@ -172,7 +133,7 @@ if (typeof window !== `undefined`) {
 										name="email"
 										label="Email*"
 										required
-										onChange={this.updateForm}
+										onChange={this.updateForm.bind(this)}
 									/>
 								</Field>
 								<Field>
@@ -180,7 +141,8 @@ if (typeof window !== `undefined`) {
 										name="phone_number"
 										value=""
 										label="Phone"
-										onChange={this.updateForm}
+										required="false"
+										onChange={this.updateForm.bind(this)}
 									/>
 								</Field>
 								<Field>
@@ -188,7 +150,7 @@ if (typeof window !== `undefined`) {
 										name="postcode"
 										value=""
 										label="Postcode"
-										onChange={this.updateForm}
+										onChange={this.updateForm.bind(this)}
 									/>
 								</Field>
 								<Field>
@@ -196,7 +158,7 @@ if (typeof window !== `undefined`) {
 										name="interested_in"
 										type="select"
 										label="interested in"
-										onChange={this.updateForm}
+										onChange={this.updateForm.bind(this)}
 										options={[
 											{ value: "1",  label: "1 Bedroom - $542k-$575k" },
 											{ value: "2", label: "2 Bedroom - $845k-$1.3m" },
@@ -211,7 +173,7 @@ if (typeof window !== `undefined`) {
 										name="price_range"
 										type="select"
 										label="Price range"
-										onChange={this.updateForm}
+										onChange={this.updateForm.bind(this)}
 										options={[
 											{ value: "1",  label: "1 Bedroom - $542k-$575k" },
 											{ value: "2", label: "2 Bedroom - $845k-$1.3m" },
@@ -226,7 +188,7 @@ if (typeof window !== `undefined`) {
 										name="i_am_a"
 										type="select"
 										label="I am a"
-										onChange={this.updateForm}
+										onChange={this.updateForm.bind(this)}
 										options={[
 											{ value: "lover..",  label: "lover.." },
 											{ value: "but not a fighter", label: "but not a fighter" }
@@ -455,7 +417,7 @@ const Heading = styled.h3 `
   transform: translateY(-50%);
   font-size:10rem;
   text-transform:uppercase;
-  padding-top:20px;
+  padding-top:25px;
 
   @media screen and (max-width:768px) {
   	font-size:8rem;
@@ -514,7 +476,6 @@ const Submit = styled.button `
 `
 
 const ThankYou = styled.div `
-	display:none;
   position: fixed;
   top: 0;
   left: 0;
