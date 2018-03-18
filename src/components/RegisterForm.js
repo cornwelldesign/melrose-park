@@ -49,6 +49,7 @@ class RegisterForm extends React.Component {
 	}
 
 handleSubmit(e) {
+	console.log('gg');
 	let formStatus = "complete"
 
 	this.setState({ formStatus })
