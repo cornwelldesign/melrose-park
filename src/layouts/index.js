@@ -30,8 +30,8 @@ const ToggleWrap = styled.div `
 
 const Header = styled.header `
   width:100%;
-  height:50vh;
-  position:fixed;
+  height:100vh;
+  position:relative;
   top:0;
   left:0;
   z-index:0;
@@ -108,10 +108,7 @@ const Logo01 = styled.div `
   top: 50%;
   transform: translateY(-50%);
 
-  @media screen and (max-height:768px) {
-    width:190px;
-    height:126px;
-  }
+
 `
 
 

@@ -58,7 +58,6 @@ export default Bg
 
 const Container = styled.section `
   width: 100%;
-  margin-top:50vh;
   position: relative;
 	overflow: hidden;
 	background: ${vars.colors.blank};
