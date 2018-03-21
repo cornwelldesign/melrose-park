@@ -102,12 +102,12 @@ const Footer = styled.footer `
 
 const Logo01 = styled.div `
   display: inline-block;
-  width:381px;
-  height:253px;
+  width:495px;
+  height:328px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-
+	max-width: 90%;
 
 `
 

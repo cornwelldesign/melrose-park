@@ -112,113 +112,42 @@ handleSubmit(e) {
         	</ThankYou>
           : (
             <ThemeProvider theme={theme}>
-              <Form action="" onSubmit={this.handleSubmit.bind(this)}>
-								<Field>
-									<Input
-										name="first_name"
-										label="First Name*"
-										required
-										onChange={this.updateForm.bind(this)} // Bit of a hack
-									/>
-								</Field>
-								<Field>
-									<Input
-										name="last_name"
-										label="Last Name*"
-										required
-										onChange={this.updateForm.bind(this)}
-									/>
-								</Field>
-								<Field>
-									<Input
-										name="email"
-										label="Email*"
-										required
-										onChange={this.updateForm.bind(this)}
-									/>
-								</Field>
-								<Field>
-									<Input
-										name="phone_number"
-										value=""
-										label="Phone"
-										required="false"
-										onChange={this.updateForm.bind(this)}
-									/>
-								</Field>
-								<Field>
-									<Input
-										name="postcode"
-										value=""
-										label="Postcode"
-										onChange={this.updateForm.bind(this)}
-									/>
-								</Field>
-								<Field>
-								<Input
-										name="interested_in"
-										type="select"
-										label="interested in"
-										onChange={this.updateForm.bind(this)}
-										options={[
-											{ value: "1",  label: "1 Bedroom - $542k-$575k" },
-											{ value: "2", label: "2 Bedroom - $845k-$1.3m" },
-											{ value: "3", label: "3 Bedroom - $ 1.4m-$3.05m" },
-											{ value: "4", label: "Penthouse - Price upon request" }
-										]}
-									/>
-								</Field>
+						<Iframe src="http://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="350" type="text/html" frameborder="0" allowTransparency="true" ></Iframe>
 
-								<Field>
-								<Input
-										name="price_range"
-										type="select"
-										label="Price range"
-										onChange={this.updateForm.bind(this)}
-										options={[
-											{ value: "1",  label: "1 Bedroom - $542k-$575k" },
-											{ value: "2", label: "2 Bedroom - $845k-$1.3m" },
-											{ value: "3", label: "3 Bedroom - $ 1.4m-$3.05m" },
-											{ value: "4", label: "Penthouse - Price upon request" }
-										]}
-									/>
-								</Field>
-
-								<Field>
-								<Input
-										name="i_am_a"
-										type="select"
-										label="I am a"
-										onChange={this.updateForm.bind(this)}
-										options={[
-											{ value: "lover..",  label: "lover.." },
-											{ value: "but not a fighter", label: "but not a fighter" }
-										]}
-									/>
-								</Field>
-
-								
-                <Submit>Register Now</Submit>
-              </Form>
             </ThemeProvider>
           )}
           <LogoWrapper>
             <Logo03 href="http://payce.com.au/" target="_blank">
+						Proudly Developed by
+						<div className="icon" >
               <svg>
                 <use xlinkHref='/svgs/logo_payce.svg#logo' />
               </svg>
+							</div>
             </Logo03>
             <Logo04 href="https://www.sekisuihouse.com.au/" target="_blank">
+						Proudly Developed by
+						<div className="icon" >
+
               <svg>
                 <use xlinkHref='/svgs/logo_sekisui.svg#logo' />
               </svg>
+							</div>
             </Logo04>
+						</LogoWrapper>
+						<LogoWrapper>
+
             <Logo05 href="http://www.bostonmarketing.com.au/" target="_blank">
+						Marketed by
+						<div className="icon" >
+
               <svg>
                 <use xlinkHref='/svgs/logo_boston.svg#logo' />
               </svg>
+							</div>
             </Logo05>
-          </LogoWrapper>
+						</LogoWrapper>
+
       </Container>
     )
   }
@@ -226,8 +155,13 @@ handleSubmit(e) {
 
 export default RegisterForm
 
+const Iframe = styled.iframe `
+  display: block;
+
+`
 const Logo02 = styled.div `
   display: inline-block;
+
   position:relative;
   width:111px;
   height:74px;
@@ -254,39 +188,56 @@ const Title = styled.h3 `
 
 const Logo03 = styled.a `
   display: inline-block;
+
+.icon{
+
   position: relative;
-  width:70px;
-  height:20px;
+  width:105px;
+  height:30px;
   margin:0 24px;
+}
 `
 
 const Logo04 = styled.a `
   display: inline-block;
+
+.icon{
+
   position: relative;
-  width:59px;
-  height:27px;
+  width:88px;
+  height:40px;
   margin:0 24px;
+}
 `
 
 const Logo05 = styled.a `
   display: inline-block;
+
+.icon{
+
   position: relative;
-  width:83px;
-  height:19px;
+  width:124px;
+  height:28px;
   margin:0 24px;
+}
 `
 
 const LogoWrapper = styled.div `
 	width:100%;
-	margin-top:150px;
+	margin-top:20px;
 	display:flex;
   align-self:flex-end;
   align-items:center;
   justify-content:center;
+	a{
+text-decoration:none;
+color: #000;
 
-  @media screen and (max-width:768px) {
-  	margin-top:80px;
-  }
+	}
+	.icon{
+		margin-top:5px;
+	}
+ 
 `
 
 const Container = styled.div `
