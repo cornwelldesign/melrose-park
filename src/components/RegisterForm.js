@@ -361,6 +361,8 @@ const Logo = styled.div `
 	right: 0;
 	margin:auto;
 
+
+
 `
 
 const Heading = styled.h3 `
