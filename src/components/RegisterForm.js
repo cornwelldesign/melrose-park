@@ -91,6 +91,10 @@ handleSubmit(e) {
 		.catch(err => console.log(err))
   }
 	render() {
+		const border = {
+			border: none
+		};
+		
     return (
       <Container popup={this.props.popup} shown={this.props.shown} id="register">
 
@@ -120,8 +124,7 @@ handleSubmit(e) {
 <span></span>
           : (
             <ThemeProvider theme={theme}>
-						<Iframe src="https://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="350" type="text/html" frameborder="0" allowTransparency="true" ></Iframe>
-
+						<Iframe src="https://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style={style}></Iframe>
             </ThemeProvider>
           )}
           <LogoWrapper>
