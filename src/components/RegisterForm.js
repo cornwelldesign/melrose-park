@@ -125,8 +125,9 @@ handleSubmit(e) {
             </ThemeProvider>
           )}
           <LogoWrapper>
+					<Sub>Proudly Developed by</Sub>
+
             <Logo03 href="http://payce.com.au/" target="_blank">
-						Proudly Developed by
 						<div className="icon" >
               <svg>
                 <use xlinkHref='/svgs/logo_payce.svg#logo' />
@@ -134,7 +135,6 @@ handleSubmit(e) {
 							</div>
             </Logo03>
             <Logo04 href="https://www.sekisuihouse.com.au/" target="_blank">
-						Proudly Developed by
 						<div className="icon" >
 
               <svg>
@@ -206,6 +206,11 @@ const Logo03 = styled.a `
 }
 `
 
+const Sub = styled.span `
+display:block;
+clear:both;
+`
+
 const Logo04 = styled.a `
   display: inline-block;
 
@@ -233,10 +238,7 @@ const Logo05 = styled.a `
 const LogoWrapper = styled.div `
 	width:100%;
 	margin-top:20px;
-	display:flex;
-  align-self:flex-end;
-  align-items:center;
-  justify-content:center;
+
 	a{
 text-decoration:none;
 color: #000;
