@@ -124,7 +124,7 @@ handleSubmit(e) {
 <span></span>
           : (
             <ThemeProvider theme={theme}>
-						<Iframe src="https://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style={style}></Iframe>
+						<Iframe src="https://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style={border}></Iframe>
             </ThemeProvider>
           )}
           <LogoWrapper>
