@@ -49,16 +49,7 @@ hideThankYou() {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.showThankYou = this.showThankYou.bind(this)
 		this.hideThankYou = this.hideThankYou.bind(this)
-		let page = window.location.pathname;
-		page = page.replace('/','');
-		page = page.replace('/','');
-		if(page == 'thank-you') {
-			let formStatus01 = "complete"
-
-			this.setState({ formStatus01 })
-			this.showThankYou();
-		}
-	  }
+  }
 
 
 handleSubmit(e) {

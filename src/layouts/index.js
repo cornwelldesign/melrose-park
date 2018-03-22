@@ -335,7 +335,9 @@ class TemplateWrapper extends React.Component {
 				
 				</ToggleWrap>
 
-        
+                    {this
+              .props
+              .children()}
 
 				<RegisterForm
           shown={this.state.registerOpen}

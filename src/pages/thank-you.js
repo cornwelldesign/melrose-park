@@ -4,14 +4,17 @@ import Link from "gatsby-link"
 import styled, { injectGlobal } from "styled-components"
 import * as vars from "../style/vars"
 import {maxHeight, below} from "../style/functions"
+import {colors} from "../style/vars"
 
 class homePage extends React.Component {
   componentDidMount() {
 	}
 	render() {
 		return(
-<div></div>
-    )
+			<ThankYou  id="thanks">
+
+			<Heading>Thank you<br/> for registering</Heading>
+		</ThankYou>    )
   }
 }
 
@@ -33,6 +36,45 @@ const P = styled.p`
 
 	`};
 `
+const ThankYou = styled.div `
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  background-image:url('/images/thank_you.jpg');
+  background-size:cover;
+  background-position:center center;
+  z-index: 10000;
+	display:block;
+`
+
+
+const ThankYouText = styled.h2 `
+  font-size: 1.5rem;
+  color: ${colors.white};
+  text-align: center;
+`
+const Heading = styled.h3 `
+	display:inline-block;
+	color:rgba(255,255,255,0.9);
+	text-shadow: 0 2px 32px rgba(0,0,0,0.3);
+	position: relative;
+	z-index:2;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size:10rem;
+  text-transform:uppercase;
+  padding-top:25px;
+
+  @media screen and (max-width:768px) {
+  	font-size:8rem;
+  	padding:0 15px;
+  }
+`
+
+
 
 const RegisterButton = styled.div `
   width: 100%;
