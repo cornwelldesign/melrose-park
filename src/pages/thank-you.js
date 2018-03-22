@@ -8,6 +8,7 @@ import {colors} from "../style/vars"
 
 class homePage extends React.Component {
   componentDidMount() {
+		this.props.updateMeta('Thank you', '');
 	}
 	render() {
 		return(
