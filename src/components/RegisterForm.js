@@ -92,7 +92,7 @@ handleSubmit(e) {
   }
 	render() {
 		const border = {
-			border: none
+			border: 'none'
 		};
 		
     return (
