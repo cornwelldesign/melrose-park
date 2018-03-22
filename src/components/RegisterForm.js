@@ -34,22 +34,32 @@ class RegisterForm extends React.Component {
     values[e.target.getAttribute("name")] = e.target.value || '';
     this.setState({ values })
   }
+showThankYou() {
+	this.setState({
+		className : "active"
+	});
+}
+hideThankYou() {
+	this.setState({
+		formStatus : "incomplete"
+	})
+}
   componentDidMount() {
     this.updateForm   = this.updateForm.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.showThankYou = this.showThankYou.bind(this)
-    this.hideThankYou = this.hideThankYou.bind(this)
-  }
-	showThankYou() {
-		this.setState({
-			className : "active"
-		});
-	}
-	hideThankYou() {
-		this.setState({
-			formStatus : "incomplete"
-		})
-	}
+		this.hideThankYou = this.hideThankYou.bind(this)
+		let page = window.location.pathname;
+		page = page.replace('/','');
+		page = page.replace('/','');
+		if(page == 'thank-you') {
+			let formStatus01 = "complete"
+
+			this.setState({ formStatus01 })
+			this.showThankYou();
+		}
+	  }
+
 
 handleSubmit(e) {
 	let formStatus = "complete"
@@ -93,7 +103,10 @@ handleSubmit(e) {
         <Title>
         Register now
         </Title>
-        
+				<ThankYou className={this.state.className}>
+
+	          <Heading>Thank you<br/> for registering</Heading>
+        	</ThankYou>
         {this.props.popup && <div><Close onClick={this.hideThankYou}/>
 					<Logo>
 						<svg>
@@ -104,12 +117,7 @@ handleSubmit(e) {
 				}
         {this.state.formStatus === "complete"
           ? 
-          <ThankYou className={this.state.className}>
-	        	<Close onClick={this.hideThankYou}>
-
-	        	</Close>
-	          <Heading>Thank you<br/> for registering</Heading>
-        	</ThankYou>
+<span></span>
           : (
             <ThemeProvider theme={theme}>
 						<Iframe src="https://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="350" type="text/html" frameborder="0" allowTransparency="true" ></Iframe>
@@ -438,7 +446,7 @@ const ThankYou = styled.div `
   background-size:cover;
   background-position:center center;
   z-index: 2;
-
+	display:none;
 
   &.active {
   	display:block;
