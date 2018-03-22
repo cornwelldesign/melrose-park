@@ -98,7 +98,7 @@ handleSubmit(e) {
         <Title>
         Register now
         </Title>
-				<ThankYou className={this.state.className}>
+				<ThankYou className={this.state.className} id="thankYou">
 
 	          <Heading>Thank you<br/> for registering</Heading>
         	</ThankYou>
@@ -444,7 +444,7 @@ const ThankYou = styled.div `
   z-index: 2;
 	display:none;
 
-  &.active {
+  &:target {
   	display:block;
   }
 `
