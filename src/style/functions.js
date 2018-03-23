@@ -4,7 +4,7 @@ export const sizes = {
   xl: 2300,
 	giant: 1440,
 	mid: 1240,
-  desktop: 950,
+  desktop: 990,
   tablet: 760,
 	mobile: 600,
 	xs: 360,

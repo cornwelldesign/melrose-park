@@ -118,7 +118,7 @@ handleSubmit(e) {
 						<Iframe src="https://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style={border}></Iframe>
             </ThemeProvider>
           )}
-          <LogoWrapper>
+          <LogoWrapper01>
 					<Sub>Proudly Developed by</Sub>
 
             <Logo03 href="http://payce.com.au/" target="_blank">
@@ -136,8 +136,8 @@ handleSubmit(e) {
               </svg>
 							</div>
             </Logo04>
-						</LogoWrapper>
-						<LogoWrapper>
+						</LogoWrapper01>
+						<LogoWrapper02>
 
             <Logo05 href="http://www.bostonmarketing.com.au/" target="_blank">
 						Marketed by
@@ -148,7 +148,7 @@ handleSubmit(e) {
               </svg>
 							</div>
             </Logo05>
-						</LogoWrapper>
+						</LogoWrapper02>
 
       </Container>
     )
@@ -229,7 +229,24 @@ const Logo05 = styled.a `
 }
 `
 
-const LogoWrapper = styled.div `
+const LogoWrapper01 = styled.div `
+	width:100%;
+	margin-top:-165px;
+
+	a{
+text-decoration:none;
+color: #000;
+
+	}
+	.icon{
+		margin-top:5px;
+	}
+	${below.desktop`
+		margin-top:0;
+	`}
+ 
+`
+const LogoWrapper02 = styled.div `
 	width:100%;
 	margin-top:20px;
 
