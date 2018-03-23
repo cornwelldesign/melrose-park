@@ -6,10 +6,8 @@ import * as vars from "../style/vars"
 import {maxHeight, below} from "../style/functions"
 import {colors} from "../style/vars"
 
-class homePage extends React.Component {
-  componentDidMount() {
-		this.props.updateMeta('Thank you', '');
-	}
+class thanksPage extends React.Component {
+
 	render() {
 		return(
 			<ThankYou  id="thanks">
@@ -19,7 +17,7 @@ class homePage extends React.Component {
   }
 }
 
-export default homePage
+export default thanksPage
 
 
 const P = styled.p`
