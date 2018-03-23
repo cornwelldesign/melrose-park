@@ -39,7 +39,7 @@ class Bg extends React.Component {
     return (
       <Container>
 
-				<Poster src="/images/melrose_background-v2.jpg"
+				<Poster src="/images/melrose_background-v3.jpg"
 					 onClick={this
 	          .play
 	          .bind(this)}
