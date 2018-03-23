@@ -11,7 +11,6 @@ class thanksPage extends React.Component {
 	render() {
 		return(
 			<ThankYou  id="thanks">
-
 			<Heading>Thank you<br/> for registering</Heading>
 		</ThankYou>    )
   }
