@@ -10,7 +10,13 @@ class Input extends React.Component {
       fieldStatus: "empty",
       value: ""
     }
-  }
+	}
+	
+
+
+
+
+	
   setFocused() {
     this.setState({ fieldStatus: "focused" })
   }
