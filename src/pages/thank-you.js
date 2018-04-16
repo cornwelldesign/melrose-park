@@ -43,7 +43,7 @@ const ThankYou = styled.div `
   background-color: #333;
   background-image:url('/images/thank_you.jpg');
   background-size:cover;
-  background-position:center center;
+  background-position:0 center;
   z-index: 10000;
 	display:block;
 `
