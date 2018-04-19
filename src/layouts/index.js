@@ -119,8 +119,11 @@ class TemplateWrapper extends React.Component {
   }
   toggleForm() {
     const registerOpen = !this.state.registerOpen
-    this.setState({registerOpen})
-    window.scrollTo(0, 0);
+		this.setState({registerOpen})
+		if (typeof window !== `undefined`) {
+
+		window.scrollTo(0, 0);
+		}
 
   }
   toggleNav() {

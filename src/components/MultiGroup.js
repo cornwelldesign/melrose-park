@@ -4,8 +4,13 @@ import Footer from "../components/Footer"
 export default class MultiGroup extends React.Component {
   // Default options
   constructor(props){
+		var height;
+		if (typeof window !== `undefined`) {
+
+		height = document.documentElement.clientHeight;
+		}
     super(props);
-    this.state={scroller: "scroller", reached: false, nPage: 1, count: React.Children.count(this.props.children), height: document.documentElement.clientHeight };
+    this.state={scroller: "scroller", reached: false, nPage: 1, count: React.Children.count(this.props.children), height: height };
     this.onWheel= this.onWheel.bind(this);
     this.selectPage=this.selectPage.bind(this);
     this._handleResize = this._handleResize.bind(this);
