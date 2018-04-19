@@ -17,6 +17,7 @@ class LocationPage extends React.Component {
   render() {
     return (
       <section>
+			
         <div className="row">
           <div className="col padd col-02 static">
             <Image
@@ -32,6 +33,7 @@ class LocationPage extends React.Component {
             />
           </div>
         </div>
+
         <div className="row">
           <div className="col col-02" ></div>
           <div className="col col-04 ">
@@ -75,6 +77,7 @@ class LocationPage extends React.Component {
             />
           </div>
         </div>
+
         <div className="row">
           <div className="col col-02" />
           <div className="col col-03">
@@ -95,23 +98,25 @@ class LocationPage extends React.Component {
         </div>
         <div className="row">
           <div className="col col-02" />
-          <div className="col col-05">
+          <div className="col col-06">
             <Image
               src="/images/melrose-park-sydney-property-015-BUS.jpg"
               alt="Melrose Park Property, Sydney - Bus Service"
             />
           </div>
-          <div className="col col-02 top padd">
-            <H4 icon={true}>
+          <div className="col col-03 top padd">
+            <H3 icon={true}>
               Easy Connections To The Highway And Rapid Bus Services To Sydney &
               Parramatta.
-            </H4>
+            </H3>
             <P>
               More than 2,000 express busses service Melrose Park Residences.
               Buses departing every 5 minutes.
             </P>
           </div>
         </div>
+				<ParaTitle title="Every Journey Made Easy." />
+
         <div className="row">
 				<div className="col col-02" ></div>
           <div className="col col-03">
@@ -128,10 +133,10 @@ class LocationPage extends React.Component {
             />
           </div>
         </div>
-        <ParaTitle title="Every Journey Made Easy." />
+
         <div className="row">
           <div className="col padd col-02" />
-          <div className="col padd col-10">
+          <div className="col col-10">
             <Transport />
           </div>
         </div>

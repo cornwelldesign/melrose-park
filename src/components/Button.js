@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import * as vars from "../style/vars"
+import { below } from "../style/functions"
 import Link from "gatsby-link"
 
 class Button extends React.Component {
@@ -32,6 +33,7 @@ const Wrap = styled.div`
 
 `
 const ButtonContainer = styled(Link)`
+
 	text-align:center;
 	text-transform: uppercase;
 	font-family: ${vars.fonts.titleAlt};
@@ -49,6 +51,11 @@ const ButtonContainer = styled(Link)`
 	position: relative;
 	min-width: 10rem;
 	z-index:0;
+	${below.desktop`
+	font-size:1.2rem;
+	padding: 0.9rem 1rem;
+
+	`}
 	${props => props.type == 'border-white' && `
 		border: 1px solid ${vars.colors.blank};
 		background: transparent;
@@ -60,6 +67,7 @@ const ButtonContainer = styled(Link)`
 		color: ${vars.colors.brandPrimary};
 
 	`}
+
 	}
 `
 
@@ -83,4 +91,7 @@ const AContainer = styled.a `
 	&:hover{
 		background: ${vars.colors.brandPrimary};
 	}
+	${below.desktop`
+display:none;
+	`}
 `

@@ -37,6 +37,10 @@ const Logo = styled(Link)`
 	position: relative;
 	display: block;
 	float:left;
+	${below.desktop`
+	width: 16rem;
+
+	`}
 `
 
 
@@ -94,7 +98,6 @@ class TemplateWrapper extends React.Component {
     }
   }
   componentDidMount() {
-		console.log(window.location)
     if (typeof window !== `undefined`) {
 
       setTimeout(function () {
@@ -110,7 +113,7 @@ class TemplateWrapper extends React.Component {
 						*/			setTimeout(function () {
 
 							this.setState({loadingOver: true});
-						}.bind(this), 0)
+						}.bind(this), 4600)
 
 		}
   }
@@ -128,13 +131,7 @@ class TemplateWrapper extends React.Component {
     this.setState({page_title: title, page_description: desc})
   }
   render() {
-    if (typeof window !== `undefined`) {
-      const tagManagerArgs = {
-        gtmId: 'GTM-TXDTTRJ'
-      }
-      TagManager.initialize(tagManagerArgs)
 
-    }
     const updateMeta = this
       .updateMeta
       .bind(this);
@@ -297,7 +294,7 @@ class TemplateWrapper extends React.Component {
               .toggleNav
               .bind(this)}
               isOpened={this.state.nav_open}/>
-							<Button button="Register" float={true} />
+							<Button button="Register" href="/register" float={true} />
 
             <Nav
               toggleNav={this

@@ -32,6 +32,7 @@ class LifestylePage extends React.Component {
             />
           </div>
         </div>
+				
         <div className="row">
 				<div className="col col-02" ></div>
 				<div className="col col-05 ">
@@ -40,6 +41,7 @@ class LifestylePage extends React.Component {
             </LargeP>
           </div>
         </div>
+				
         <div className="row">
 				<div className="col col-03" ></div>
           <div className="col col-03 padd">

@@ -10,7 +10,7 @@ class Nav extends React.Component {
 			<Container nav_open={this.props.nav_open} className={this.props.links_hide} >
 				<Inner>
 				<Item>
-						<A to="/vision/" onClick={this.props.onClick} activeClassName="selected" Vision="Vision" >Vision</A>
+						<A to="/vision/" onClick={this.props.onClick} activeClassName="selected" title="Vision" >Vision</A>
 					</Item>
 					<Item>
 						<A to="/location/" onClick={this.props.onClick}  activeClassName="selected" title="Location" >Location</A>
@@ -90,10 +90,11 @@ const A = styled(Link)`
 */
 }
 ${below.mid`
-padding: 1.8rem 3rem;
+padding: ${vars.genPadd / 2}rem 1rem;
+font-size:1.2rem;
 	`}
 	${below.desktop`
-	padding: 1.8rem 1vh;
+	padding: 0.9rem 1rem;
 
 	`}
 	${below.mobile `

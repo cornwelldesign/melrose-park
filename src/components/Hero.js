@@ -3,14 +3,28 @@ import styled, { keyframes } from "styled-components";
 import * as vars from "../style/vars";
 import { below } from "../style/functions";
 import { H1 } from "./Text";
-var scrollToElement = require('scroll-to-element');
 
 class Hero extends React.Component {
-	down() {
-		scrollToElement('.main', {
-			offset: -45,
-			duration: 1500
-	});	}
+  constructor(props) {
+    super(props)
+    this.state = {
+			playing: false
+
+		
+		}
+	}
+	play(){
+		this.setState({playing: true});
+		var vid = document.querySelector("video"); 
+
+    vid.play(); 
+	}
+	pause(){
+		this.setState({playing: false});
+		var vid = document.querySelector("video"); 
+
+    vid.pause(); 
+	}
   render() {
     return (
       <Container half={this.props.half}>
@@ -18,7 +32,7 @@ class Hero extends React.Component {
 
         <Img src={this.props.image} alt={this.props.alt} draggable={false} />
         {this.props.vidButton && (
-          <Toggle title="Play Video">
+          <Toggle title="Play Video" onClick={() => { this.play() }}>
             <img
               src="/svg/melrose-park-sydney-property-010-PLAY.svg"
               alt="Play Button"
@@ -28,6 +42,13 @@ class Hero extends React.Component {
         )}
         {this.props.title && <H1>{this.props.title}</H1>}
 				</Inner>
+				<Video show={this.state.playing} onClick={() => { this.pause() }} >
+				<Play controls >
+				
+					<source src='https://s3-ap-southeast-2.amazonaws.com/cornwell-misc/melrose-park/melrose-park-sydney-property-.mp4' type="video/mp4"  />
+				</Play>
+				</Video>
+
       </Container>
     );
   }
@@ -48,7 +69,7 @@ const Container = styled.div`
     z-index: 2;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 72%;
+    max-width: 86%;
     margin: auto;
 		padding-bottom:0;
 		white-space: pre-line;
@@ -122,3 +143,34 @@ const Toggle = styled.a`
     display: block;
   }
 `;
+
+
+const Video = styled.div`
+  display: block;
+  position: fixed;
+	z-index: 20;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.7);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1.5s, visibility 1.5s;
+	${props => props.show == true && `
+	opacity: 1;
+	visibility: visible;
+	`}
+`;
+
+const Play = styled.video`
+		max-width: 120rem;
+		width: 60vw;
+		height:40vw;
+		margin: auto;
+		position: absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+`

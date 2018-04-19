@@ -55,10 +55,6 @@ class ReasonsToBuy extends React.Component {
             .map((slide, index) => (
               <Slide key={index}>
                 <img src={slide.img} alt={slide.alt} draggable={false}/>
-                <Text >
-                  <H5>{slide.title}</H5>
-                  <P>{slide.text}</P>
-                </Text>
               </Slide>
             ))}
         </Slider>

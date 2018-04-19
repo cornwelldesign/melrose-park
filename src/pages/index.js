@@ -17,12 +17,12 @@ class HomePage extends React.Component {
       <MultiGroup animTime={1.5} paddingTop="4rem">
 			        <multiScroll>
 							<leftSide>
-							        <Hero image="/images/melrose-park-sydney-property-001-GARDENS.jpg" alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)" title={`The New Heart 
-        of Sydney`} half="left"/>
+							        <Hero image="/images/melrose-park-sydney-property-001-GARDENS.jpg" alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)"  title={`The New Heart
+					of Sydney`}  half="left"/>
 							</leftSide>
           <rightSide>
-					        <Hero image="/images/melrose-park-sydney-property-001-GARDENS.jpg" alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)" title={`The New Heart 
-        of Sydney`} half="right"/>
+					        <Hero image="/images/melrose-park-sydney-property-001-GARDENS.jpg" alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)" title={`The New Heart
+					of Sydney`} half="right"/>
 					</rightSide>
 
 </multiScroll>

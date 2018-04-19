@@ -11,9 +11,8 @@ class contactPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <ContactDetails />
-				<Register />
+      <div style>
+       Coming soon
       </div>
     );
   }

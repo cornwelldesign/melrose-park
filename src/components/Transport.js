@@ -8,11 +8,17 @@ import { H1, H4, P } from "./Text"
 class Transport extends React.Component {
   render() {
     return (
-		<img src="/images/melrose-park-sydney-property-017-MAP.jpg" />
+			<Container>
+		<img src="/svg/melrose-park-sydney-property-009-MAP.svg" />
+		</Container>
+
     )
   }
 
 }
 
+const Container = styled.div`
+	padding-top: 4rem;
+`;
 export default Transport;
 

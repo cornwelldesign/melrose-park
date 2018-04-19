@@ -23,7 +23,7 @@ export default class MultiGroup extends React.Component {
 
   // A Listener to check if the window has changed its height
   componentDidMount() {
-       window.addEventListener("resize", this._handleResize);
+		window.addEventListener("resize", this._handleResize);
   }
   // Internal function to change the size of the height on the screen dinamically
   _handleResize(){

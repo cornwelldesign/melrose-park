@@ -54,7 +54,10 @@ const H1container = styled.h1`
 	line-height: 0.8;
 	color: ${props => (props.type ? `${vars.colors.brandPrimary}` : `auto`)};
 		padding-bottom: ${vars.genPadd}rem;
+	${below.mid`
+	font-size: 10rem;
 
+	`}
 `
 
 const H2container = styled.h2`
@@ -63,6 +66,10 @@ const H2container = styled.h2`
   text-transform: uppercase;
 	font-weight: normal;
 	line-height: 0.85;
+	${below.mid`
+	font-size: 6rem;
+
+	`}
 `
 
 const H3container = styled.h3`
@@ -105,7 +112,10 @@ const LargePcontainer = styled.p`
 		}
 
 	`)}
-`
+	${below.mid`
+	font-size: 3rem;
+
+	`}`
 const H4container = styled.h4`
 	font-family: ${vars.fonts.title};
   font-size: 2.5rem;

@@ -5,7 +5,6 @@ import fonts from "../../static/fonts/fonts.css"
 
 injectGlobal`
 ${fonts}
-${videoStyle}
 *, *::before, *::after {
   margin: 0;
   padding: 0;

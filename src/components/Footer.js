@@ -14,10 +14,10 @@ class Footer extends React.Component {
 				<Logo href="https://www.sekisuihouse.com.au/" title="Sekisui House" target="_blank" >
 					<Icon src="/svg/melrose-park-sydney-property-003-SEKISUI.svg" alt="Sekisui House Logo" />
 				</Logo>
-				<Etc href="/privacy" title="Privacy Policy" >
+				<Etc to="/privacy" title="Privacy Policy" >
 					Privacy Policy
 				</Etc> 
-				<Etc href="/privacy" title="Privacy Policy" >
+				<Etc to="/privacy" title="Privacy Policy" >
 				Due Diligence
 				</Etc> 
 				<Social href="https://www.facebook.com/MelroseParkLife/" title="Facebook">
