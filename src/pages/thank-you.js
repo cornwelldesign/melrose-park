@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 
 import styled, { injectGlobal } from "styled-components"
 import * as vars from "../style/vars"
-import {maxHeight, below} from "../style/functions"
+import {maxHeight, below, above } from "../style/functions"
 import {colors} from "../style/vars"
 
 class thanksPage extends React.Component {
@@ -46,6 +46,10 @@ const ThankYou = styled.div `
   background-position:0 center;
   z-index: 10000;
 	display:block;
+	${above.desktop`
+	background-position:center;
+	background-size: cover;
+	`};
 `
 
 

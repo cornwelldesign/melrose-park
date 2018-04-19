@@ -23,7 +23,8 @@ class TemplateWrapper extends React.Component {
 				country_name: "Australia",
 				phone_number: "",
 				latitude: "-33.814225",
-				longitude: "151.070157"
+				longitude: "151.070157",
+				theme: "#00B398"
 			}
 		}
 
@@ -135,7 +136,7 @@ class TemplateWrapper extends React.Component {
             content: this.state.page_company
           }, {
             name: "theme-color",
-            content: "#0392D4"
+            content: this.state.theme
           }, {
             property: "business:contact_data:street_address",
             content: this.state.street_address
