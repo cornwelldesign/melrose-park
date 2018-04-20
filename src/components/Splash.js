@@ -63,7 +63,7 @@ export default Spash;
 
 const Round01Animate = keyframes`
   0% {
-  	stroke-dashoffset: 1332;
+  	stroke-dashoffset: 1328.2906494140625;
 
   }
 
@@ -146,8 +146,8 @@ const Container = styled.section`
     top: 50%;
     transform: translateY(-50%);
     #round-01 {
-      stroke-dasharray: 1332;
-      stroke-dashoffset: 1332;
+      stroke-dasharray: 1328.2906494140625;
+      stroke-dashoffset: 1328.2906494140625;
 			animation: ${Round01Animate} 2s normal forwards ease-out; 
     }
 		#round-02 {

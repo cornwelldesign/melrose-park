@@ -13,27 +13,7 @@ class ReasonsToBuy extends React.Component {
   constructor() {
     super();
   }
-  componentDidMount() {
-    if (typeof window !== `undefined`) {
-      var target = document.getElementById(`sec-${this._reactInternalInstance._mountOrder}`)
-      document.addEventListener('scroll', () => {
-        var distance = offset(target);
-        var scroll = window.scrollY + (window.innerHeight / 2) + 150;
-        if (distance && scroll) {
-          if (distance.top < scroll) {
-            target
-              .classList
-              .add('shown');
-          } else {
-            target
-              .classList
-              .remove('shown');
-          }
-        }
-      });
 
-    }
-  }
   render() {
     var settings = {
       dots: true,
@@ -76,14 +56,9 @@ const Container = styled.div `
 		max-width: 80rem;
 		margin:auto;
 	}
-	&.shown{
-		img{
-			opacity: 1;
-			transform: translate3d(0, 0, 0) !important;
-		}
-	}
+
 	.slick-dots { 
-		bottom:15.9rem;
+		bottom:2rem;
 		${below.desktop `
 			display: none !important;
 		`}
@@ -91,20 +66,19 @@ const Container = styled.div `
 		margin-left:0;
 		margin-right:0;
 		 button {
-			background-color: #fff;
 			margin: 0 0.5rem;
 			width: 1rem;
 			font-size:0;
 			opacity: 1;
 			height: 1rem;
-			border: 0.1rem solid ${vars.colors.brandHighlight};
+			border: 0.1rem solid #fff;
 			border-radius: 100%;
 			&:before{
 				display:none;
 			}
 		}
 		&.slick-active button {
-				background-color: ${vars.colors.brandHighlight};
+				background-color: #fff;
 			}
 		}
 	}
@@ -121,11 +95,6 @@ const Text = styled.div `
 const Slide = styled.div `
 	width:100%;
 	overflow:hidden;
-	img {
-		width:100%;
-		transform: translate3d(0, -5%, 0);
-    opacity: 0;
-		transition: transform 1s, opacity 2s;
-	}
+
 
 `

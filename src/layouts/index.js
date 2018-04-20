@@ -113,7 +113,7 @@ class TemplateWrapper extends React.Component {
 						*/			setTimeout(function () {
 
 							this.setState({loadingOver: true});
-						}.bind(this), 4600)
+						}.bind(this), 0)
 
 		}
   }
