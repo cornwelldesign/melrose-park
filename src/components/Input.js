@@ -45,7 +45,7 @@ class Input extends React.Component {
       })
     }
     return (
-      <Wrapper type={this.props.type} >
+      <Wrapper type={this.props.type} white={this.props.white} >
 			{type != "checkbox"  && (        <Label
           htmlFor={this.props.name}
           populated={this.state.fieldStatus}
@@ -128,10 +128,11 @@ const Wrapper = styled.div`
   height: 2.5em;
   display: block;
   position: relative;
+	font-family: 'Archer';
   color: inherit;
   background-color: transparent;
-  color: ${vars.colors.body};
-  border-bottom:#000 solid 2px;
+  color: ${props => (props.white ? `#fff` : `#000`)} ;
+  border-bottom:${props => (props.white ? `#fff` : `#000`)} solid 2px;
 `
 
 Wrapper.defaultProps = {

@@ -5,6 +5,7 @@ import * as vars from "../style/vars"
 import {maxHeight, below} from "../style/functions"
 import Input from "../components/Input"
 import {colors} from "../style/vars"
+import { navigateTo } from "gatsby-link"
 
 const theme = {
   color: colors.body,
@@ -34,28 +35,25 @@ class RegisterForm extends React.Component {
     values[e.target.getAttribute("name")] = e.target.value || '';
     this.setState({ values })
   }
-showThankYou() {
-	this.setState({
-		className : "active"
-	});
-}
-hideThankYou() {
-	this.setState({
-		formStatus : "incomplete"
-	})
-}
   componentDidMount() {
     this.updateForm   = this.updateForm.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.showThankYou = this.showThankYou.bind(this)
-		this.hideThankYou = this.hideThankYou.bind(this)
+    this.hideThankYou = this.hideThankYou.bind(this)
   }
-
+	showThankYou() {
+		this.setState({
+			className : "active"
+		});
+	}
+	hideThankYou() {
+		this.setState({
+			formStatus : "incomplete"
+		})
+	}
 
 handleSubmit(e) {
-	let formStatus = "complete"
 
-	this.setState({ formStatus })
 	e.preventDefault()
 	const fields = [].slice.call(e.target.querySelectorAll("[name]"))
 	fields.map(f => {
@@ -82,73 +80,121 @@ handleSubmit(e) {
 		.catch(err => console.log(err))
   }
 	render() {
-		const border = {
-			border: 'none'
-		};
-		
     return (
       <Container popup={this.props.popup} shown={this.props.shown} id="register">
 
-      	<Logo02>
-          <svg>
-          <use xlinkHref='/svgs/melrose_logo_inverted.svg#logo' />
 
-          </svg>
-        </Logo02>
-        <Title>
-        Register now
-        </Title>
-				<ThankYou className={this.state.className} id="thankYou">
-
-	          <Heading>Thank you<br/> for registering</Heading>
-        	</ThankYou>
+        
         {this.props.popup && <div><Close onClick={this.hideThankYou}/>
-					<Logo>
-						<svg>
-						<use xlinkHref='/svgs/melrose_logo_inverted.svg#logo' />
-						</svg>
-					</Logo>
+
 					</div>
 				}
-        {this.state.formStatus === "complete"
-          ? 
-<span></span>
-          : (
+
             <ThemeProvider theme={theme}>
-						<Iframe src="https://go.pardot.com/l/472112/2018-03-18/4rvrt" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style={border}></Iframe>
+              <Form action="" onSubmit={this.handleSubmit.bind(this)}>
+								<Field>
+									<Input
+										name="first_name"
+										label="First Name*"
+										required
+										white={this.props.white}
+										onChange={this.updateForm.bind(this)} // Bit of a hack
+									/>
+								</Field>
+								<Field>
+									<Input
+										name="last_name"
+										label="Last Name*"
+										required
+										white={this.props.white}
+
+										onChange={this.updateForm.bind(this)}
+									/>
+								</Field>
+								<Field>
+									<Input
+										name="email"
+										label="Email*"
+										required
+										white={this.props.white}
+
+										onChange={this.updateForm.bind(this)}
+									/>
+								</Field>
+								<Field>
+									<Input
+										name="phone_number"
+										value=""
+										label="Phone"
+										required="false"
+										white={this.props.white}
+
+										onChange={this.updateForm.bind(this)}
+									/>
+								</Field>
+								<Field>
+									<Input
+										name="postcode"
+										value=""
+										label="Postcode"
+										white={this.props.white}
+
+										onChange={this.updateForm.bind(this)}
+									/>
+								</Field>
+								<Field>
+								<Input
+										name="interested_in"
+										type="select"
+										white={this.props.white}
+
+										label="interested in"
+										onChange={this.updateForm.bind(this)}
+										options={[
+											{ value: "1",  label: "1 Bedroom - $542k-$575k" },
+											{ value: "2", label: "2 Bedroom - $845k-$1.3m" },
+											{ value: "3", label: "3 Bedroom - $ 1.4m-$3.05m" },
+											{ value: "4", label: "Penthouse - Price upon request" }
+										]}
+									/>
+								</Field>
+
+								<Field>
+								<Input
+										name="price_range"
+										type="select"
+										label="Price range"
+										white={this.props.white}
+
+										onChange={this.updateForm.bind(this)}
+										options={[
+											{ value: "1",  label: "1 Bedroom - $542k-$575k" },
+											{ value: "2", label: "2 Bedroom - $845k-$1.3m" },
+											{ value: "3", label: "3 Bedroom - $ 1.4m-$3.05m" },
+											{ value: "4", label: "Penthouse - Price upon request" }
+										]}
+									/>
+								</Field>
+
+								<Field>
+								<Input
+										name="i_am_a"
+										type="select"
+										label="I am a"
+										white={this.props.white}
+
+										onChange={this.updateForm.bind(this)}
+										options={[
+											{ value: "lover..",  label: "lover.." },
+											{ value: "but not a fighter", label: "but not a fighter" }
+										]}
+									/>
+								</Field>
+
+								
+                <Submit 	white={this.props.white} >Register Now</Submit>
+              </Form>
             </ThemeProvider>
-          )}
-          <LogoWrapper01>
-					<Sub>Proudly Developed by</Sub>
-
-            <Logo03 href="http://payce.com.au/" target="_blank">
-						<div className="icon" >
-              <svg>
-                <use xlinkHref='/svgs/logo_payce.svg#logo' />
-              </svg>
-							</div>
-            </Logo03>
-            <Logo04 href="https://www.sekisuihouse.com.au/" target="_blank">
-						<div className="icon" >
-
-              <svg>
-                <use xlinkHref='/svgs/logo_sekisui.svg#logo' />
-              </svg>
-							</div>
-            </Logo04>
-						</LogoWrapper01>
-						<LogoWrapper02>
-
-            <Logo05 href="http://www.bostonmarketing.com.au/" target="_blank">
-						Marketed by
-						<div className="icon" >
-
-              <svg>
-                <use xlinkHref='/svgs/logo_boston.svg#logo' />
-              </svg>
-							</div>
-            </Logo05>
-						</LogoWrapper02>
 
       </Container>
     )
@@ -157,140 +203,19 @@ handleSubmit(e) {
 
 export default RegisterForm
 
-const Iframe = styled.iframe `
-  display: block;
 
-`
-const Logo02 = styled.div `
-  display: inline-block;
-
-  position:relative;
-  width:111px;
-  height:74px;
-`
-
-const Title = styled.h3 `
-	margin-top:80px;
-	margin-bottom:80px;
-	display:inline-block;
-	font-family:${vars.fonts.headings};
-	font-size:4rem;
-	color:#000;
-	text-transform:uppercase;
-
-	@media screen and (max-width:768px) {
-		margin-top:50px;
-		margin-bottom:40px;
-	}
-	@media screen and (max-width:480px) {
-		margin-top:40px;
-		margin-bottom:20px;
-	}
-`
-
-const Logo03 = styled.a `
-  display: inline-block;
-
-.icon{
-
-  position: relative;
-  width:105px;
-  height:30px;
-  margin:0 24px;
-}
-`
-
-const Sub = styled.span `
-display:block;
-clear:both;
-`
-
-const Logo04 = styled.a `
-  display: inline-block;
-
-.icon{
-
-  position: relative;
-  width:88px;
-  height:40px;
-  margin:0 24px;
-}
-`
-
-const Logo05 = styled.a `
-  display: inline-block;
-
-.icon{
-
-  position: relative;
-  width:124px;
-  height:28px;
-  margin:0 24px;
-}
-`
-
-const LogoWrapper01 = styled.div `
-	width:100%;
-	margin-top:-165px;
-
-	a{
-text-decoration:none;
-color: #000;
-
-	}
-	.icon{
-		margin-top:5px;
-	}
-	${below.desktop`
-		margin-top:0;
-	`}
- 
-`
-const LogoWrapper02 = styled.div `
-	width:100%;
-	margin-top:20px;
-
-	a{
-text-decoration:none;
-color: #000;
-
-	}
-	.icon{
-		margin-top:5px;
-	}
- 
-`
 
 const Container = styled.div `
-  background-color: ${vars.colors.blank};
 	position: relative;
-	padding-top:60px;
+	padding-top:0;
 	padding-bottom:10px;
-	min-height:100vh;
+
   z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
-  ${props => props.popup && `
-    position: fixed;
-    top: 2rem;
-		bottom: 2rem;
-		left: 2rem;
-		right: 2rem;
-    z-index: 2001;
-		visibility: hidden;
-		opacity: 0;
-		transition: visibility 2s, opacity 0.3s linear;
-		margin-top: 0;
-		background-color: rgba(0,0,0, 0.6);
 
-    `};
-		${props => props.shown && `
-		visibility: visible;
-		opacity: 1;
-    `};
   @media screen and (max-width:768px) {
   	padding:20px 0;
   	padding-top:50px;
@@ -367,118 +292,34 @@ const Field = styled.div `
 `
 
 
-const Logo = styled.div `
-  position: relative;
-	width: 24.2rem;
-	height: 8.9rem;
-	position: absolute;
-  top: 4rem;
-	color: #fff;
-	left: 0;
-	right: 0;
-	margin:auto;
-
-`
-
-const Heading = styled.h3 `
-	display:inline-block;
-	color:rgba(255,255,255,0.9);
-	text-shadow: 0 2px 32px rgba(0,0,0,0.3);
-	position: relative;
-	z-index:2;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size:10rem;
-  text-transform:uppercase;
-  padding-top:25px;
-
-  @media screen and (max-width:768px) {
-  	font-size:8rem;
-  	padding:0 15px;
-  }
-`
 
 const Submit = styled.button `
-  width: 100%;
-  text-align: center;
-	color: ${vars.colors.blank};
-	font-size: 1.75rem;
-  padding: 1rem 2.5rem 1rem 2.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-	transition: color ${vars.time}, background ${vars.time};
-	position: relative;
-	z-index: 7;
-	display: inline;
-	margin: auto;
-	margin-top:2rem;
-	color: ${vars.colors.brandPrimary};
-	border: 2px solid ${vars.colors.brandPrimary};
-	font-weight: normal;
-	background: transparent;
-	max-width: 250px;
 
-	transition: border-color 1.5s, color 1.5s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
- &:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 101%;
-	height: 100%;
-	background: ${vars.colors.brandPrimary};
-	z-index: -1;
-	opacity: 0;
-	-webkit-transform: scale3d(0.7, 1, 1);
-	transform: scale3d(0.7, 1, 1);
-	transition: transform 1s, opacity 1s, border-color 1s;
- }
-&:hover {
-	color: #fff;
-	border-color: ${vars.colors.brandPrimary};
-&:before{
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-
-}
-}
-`
-
-const ThankYou = styled.div `
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  background-image:url('/images/thank_you.jpg');
-  background-size:cover;
-  background-position:center center;
-  z-index: 2;
-	display:none;
-
-  &:target {
-  	display:block;
-  }
-`
-
-
-const ThankYouText = styled.h2 `
-  font-size: 1.5rem;
-  color: ${colors.white};
-  text-align: center;
-`
-
-const FormNote = styled.p `
-  text-transform: uppercase;
-  color: ${colors.brandHighlight};
-  text-align: center;
-  width: 100%;
-  margin-top: 2rem;
+	text-align:center;
+	text-transform: uppercase;
+	font-family: ${vars.fonts.titleAlt};
 	font-size: 1.4rem;
+	line-heights: 1;
+	letter-spacing:1px;
+	text-decoration: none;
+	background: ${vars.colors.blank};
+	border: none;
+	color: ${props => (props.white ? `#fff` : `#000`)} ;
+	padding: ${vars.genPadd / 2}rem  ${vars.genPadd}rem;
+	transition: background 1s;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	min-width: 10rem;
+	z-index:0;
+	border: 1px solid ${props => (props.white ? `#fff` : `#000`)} ;
+	margin: 2rem auto auto auto;
+		background: transparent;
+		color: ${props => (props.white ? `#fff` : `#000`)} ;
+		&:hover{
+		background: ${props => (props.white ? `#fff` : `#000`)} ;
+		color: ${props => (props.white ? `#000` : `#fff`)} ;
+		}
 `
+
 

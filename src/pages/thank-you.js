@@ -1,127 +1,72 @@
-import React from "react"
-import Link from "gatsby-link"
-
-import styled, { injectGlobal } from "styled-components"
-import * as vars from "../style/vars"
-import {maxHeight, below, above } from "../style/functions"
-import {colors} from "../style/vars"
+import React from "react";
+import GoogleMap from "../components/Map"
+import styled, { keyframes } from "styled-components";
+import * as vars from "../style/vars";
+import Image from "../components/Image.js";
+import Register from "../components/RegisterForm.js";
+import { H1 } from "../components/Text"
 
 class thanksPage extends React.Component {
+  componentDidMount() {
+    this.props.updateMeta(
+      "Thank You | Melrose Park ",
+      "Registration made."
+    );
+  }
+  render() {
+		
+		
+		return (
+			<ThanksSec>
 
-	render() {
-		return(
-			<ThankYou  id="thanks">
-			<Heading>Thank you<br/> for registering</Heading>
-		</ThankYou>    )
+            <Image
+              src="/images/melrose-park-sydney-property-040-RESIDENTS.jpg"
+              alt="Melrose Park Property, Sydney - Group of residents"
+            />
+							<H1>THANK YOU<br/>FOR REGISTERING</H1>
+
+
+						</ThanksSec>
+
+
+    );
   }
 }
 
-export default thanksPage
-
-
-const P = styled.p`
-	display:block;
-	font-size: 1.75rem;
-	line-height: 1.4;
-	letter-spacing: 0.15rem;
-	color: #fff;
-	margin-bottom: 4rem;
-	padding-top:50vh;
-	position: relative;
-	z-index: 3;
-	${maxHeight.height`
-	padding-top:34vh;
-
-	`};
-`
-const ThankYou = styled.div `
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  background-image:url('/images/thank_you.jpg');
-  background-size:cover;
-  background-position:0 center;
-  z-index: 10000;
-	display:block;
-	${above.desktop`
-	background-position:center;
-	background-size: cover;
-	`};
-`
-
-
-const ThankYouText = styled.h2 `
-  font-size: 1.5rem;
-  color: ${colors.white};
-  text-align: center;
-`
-const Heading = styled.h3 `
-	display:inline-block;
-	color:rgba(255,255,255,0.9);
-	text-shadow: 0 2px 32px rgba(0,0,0,0.3);
-	position: relative;
-	z-index:2;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size:10rem;
-  text-transform:uppercase;
-  padding-top:25px;
-
-  @media screen and (max-width:768px) {
-  	font-size:8rem;
-  	padding:0 15px;
-  }
-`
-
-
-
-const RegisterButton = styled.div `
-  width: 100%;
-  text-align: center;
-	color: ${vars.colors.blank};
-	font-size: 1.75rem;
-  padding: 1rem 2.5rem 1rem 2.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-	transition: color ${vars.time}, background ${vars.time};
-	position: relative;
-	z-index: 7;
-	display: inline;
-	margin: auto;
-	color: #C8AE88;
-	border: 2px solid #C8AE88;
-	font-weight: normal;
-
-
-	transition: border-color 1.5s, color 1.5s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
- &:before {
-	content: '';
+const ThanksSec = styled.div`
+height: 100vh;
+width: 100%;
+min-height: 60rem;
+position: relative;
+img{
 	position: absolute;
 	top: 0;
 	left: 0;
-	right: 0;
-	width: 101%;
+	right:0;
+	bottom: 0;
+	z-index: 1;
+	margin: 0;
+	width: 100%;
 	height: 100%;
-	background: #C8AE88;
-	z-index: -1;
-	opacity: 0;
-	-webkit-transform: scale3d(0.7, 1, 1);
-	transform: scale3d(0.7, 1, 1);
-	transition: transform 1.5s, opacity 1.5s, border-color 1.5s;
- }
-&:hover {
-	color: #fff;
-	border-color: #C8AE88;
-&:before{
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-
+	object-position: center;
+	object-fit: cover;
 }
+h1{
+	position: absolute;
+	left: 0;
+	right:0;
+  top: 50%;
+  transform: translateY(-50%);	margin: auto;
+	z-index: 2;
+	margin: auto;
+	color: ${vars.colors.blank};
+	text-shadow:rgba(0, 0, 0, 0.3) 0px 2px 32px;
+	text-align: center;
 }
 `
+
+
+
+
+
+export default thanksPage;

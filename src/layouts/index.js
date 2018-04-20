@@ -2,67 +2,157 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
-import styled, {
-	injectGlobal
-} from "styled-components"
+import styled, {injectGlobal} from "styled-components"
+
+import Footer from "../components/Footer"
+import RegisterForm from "../components/RegisterForm.js"
+import Nav from "../components/Nav.js"
+import Hamburger from "../components/Hamburger.js"
+import Splash from "../components/Splash"
+import Button from "../components/Button"
+
+import * as vars from "../style/vars"
+import "../style/main.js"
+import {below} from "../style/functions"
+import TagManager from 'react-gtm-module'
+
+const Main = styled.main `
+	padding-top: 4.5rem;
+	position: relative;
+
+
+`
+const ToggleWrap = styled.div `
+		transition: filter 2s;
+		transition-timing-function: ease;
+
+		filter: blur(0);
+	${props => props.blur == true && `
+        filter: blur(5px);
+	`}
+`
+
+const Logo = styled(Link)`
+	width: 23rem;
+	position: relative;
+	display: block;
+	float:left;
+	${below.mid`
+	width: 20rem;
+
+	`}
+	${below.desktop`
+display: none;
+	`}	${below.tablet`
+display: block;
+width: 15rem;
+	`}
+	${below.mobile`
+margin: 1rem 0 0 1rem;
+	`}
+`
+
+
+const Header = styled.header `
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	transform: translate3d(0, 0, 0);
+	background: ${vars.colors.brandPrimary};
+	padding: ${vars.genPadd / 2}rem ${vars.genPadd}rem;
+	${below.mobile`
+	padding:0;
+
+	`}
+&:before,
+&:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+&:after {
+    clear: both;
+}
+
+
+`
 
 class TemplateWrapper extends React.Component {
-		constructor(props) {
-			super(props)
-			this.state = {
-				registerOpen: false,
-				company: "Melrose Park",
-				page_title: "Melrose Park | Register now",
-				page_description: "Melrose Park - The new heart of Sydney",
-				company: "Melrose Park",
-				domain: 'http:/melrosepark.com.au',
-				street_address: "Hope St, Melrose Park",
-				locality: "en_AU",
-				region: "NSW",
-				postal_code: "2144",
-				country_name: "Australia",
-				phone_number: "",
-				latitude: "-33.814225",
-				longitude: "151.070157",
-				theme: "#00B398"
-			}
-		}
-
-		toggleForm() {
-			const registerOpen = !this.state.registerOpen
-			this.setState({
-				registerOpen
-			})
-      this.setState({
-        formStatus:'inComplete'
-      })
-		}
-		updateMeta(title, desc) {
-			this.setState({
-				page_title: title,
-				page_description: desc
-			})
-		}
-
-    showRegister() {
-			if (typeof window !== `undefined`) {
-        scrollToElement('#register', {
-          ease:'out-quad',
-          duration:1000
-  			});
-  		} else {
-  			return false;
-  		}
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true,
+      loadingOver: true,
+      registerOpen: false,
+      nav_open: false,
+      nav_fixed: false,
+      nav_hidden: false,
+      links_hide: false,
+      domain: "https://melrosepark.com.au/",
+      company: "Melrose Park",
+      page_title: "Melrose Park | The New Heart of Sydney",
+      page_description: "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
+          "g you could need for the life you want to live. Located only 8km from Parramatta" +
+          " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
+      company: "Melrose Park",
+      street_address: "661 Victoria Road ",
+      addressLocality: "Melrose Park",
+      locality: "en_AU",
+      region: "NSW",
+      postal_code: "2114",
+      country_name: "Australia",
+      country_short: "AU",
+      phone_number: "1300 267 866",
+      latitude: "-27.997379",
+      longitude: "153.419856",
+      amenityFeature: "Building Development in Melrose Park, Sydney",
+      map: "https://melrosepark.com.au/contact/"
     }
+  }
+  componentDidMount() {
+    if (typeof window !== `undefined`) {
 
+      setTimeout(function () {
+        window.scrollTo(0, 0);
+
+      }, 1)
+/*
+			setTimeout(function () {
+
+          this.setState({loadingOver: true});
+				}.bind(this), 4600)
+
+						*/			setTimeout(function () {
+
+							this.setState({loadingOver: true});
+						}.bind(this), 0)
+
+		}
+  }
+  toggleForm() {
+    const registerOpen = !this.state.registerOpen
+		this.setState({registerOpen})
+		if (typeof window !== `undefined`) {
+
+		window.scrollTo(0, 0);
+		}
+
+  }
+  toggleNav() {
+    let nav_open = !this.state.nav_open
+    this.setState({nav_open})
+  }
+  updateMeta(title, desc) {
+    this.setState({page_title: title, page_description: desc})
+  }
   render() {
 
-			const updateMeta = this
+    const updateMeta = this
       .updateMeta
-			.bind(this);
-			const toggleForm = this.toggleForm.bind(this);
+      .bind(this);
     return (
-      <div id="top">
+      <div id="top" >
         <Helmet
           title={this.state.page_title}
           meta={[
@@ -85,7 +175,7 @@ class TemplateWrapper extends React.Component {
             content: this.state.page_description
           }, {
             itemprop: "image",
-            content: `${this.state.domain}/images/social.jpg`
+            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
           }, {
             name: "twitter:card",
             content: "summary_large_image"
@@ -97,7 +187,13 @@ class TemplateWrapper extends React.Component {
             content: this.state.page_description
           }, {
             name: "twitter:image:src",
-            content: `${this.state.domain}/images/social.jpg`
+            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
+          }, {
+            property: "og:video",
+            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.mp4`
+          }, {
+            property: "og:video:secure_url",
+            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.mp4`
           }, {
             property: "og:title",
             content: this.state.page_title
@@ -109,16 +205,10 @@ class TemplateWrapper extends React.Component {
             content: `${this.state.domain}${this.props.location_pathname}`
           }, {
             property: "og:image",
-            content: `${this.state.domain}/images/social.jpg`
+            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
           }, {
             property: "og:image:secure_url",
-            content: `${this.state.domain}/images/social.jpg`
-          }, {
-            property: "og:video",
-            content: `${this.state.domain}/images/flinders-bank.mp4`
-          }, {
-            property: "og:video:secure_url",
-            content: `${this.state.domain}/images/flinders-bank.mp4`
+            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
           }, {
             property: "og:image:type",
             content: "image/jpeg"
@@ -136,7 +226,7 @@ class TemplateWrapper extends React.Component {
             content: this.state.page_company
           }, {
             name: "theme-color",
-            content: this.state.theme
+            content: "#00B398"
           }, {
             property: "business:contact_data:street_address",
             content: this.state.street_address
@@ -166,44 +256,86 @@ class TemplateWrapper extends React.Component {
             content: this.state.longitude
           }
         ]}
+          script={[{
+            "@context": "http://schema.org",
+            "@type": "Place",
+            "url": this.state.domain,
+            "logo": `${this.state.domain}/images/melrose-park-sydney-property-000-LOGO.png`,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": this.state.street_address,
+              "addressLocality": this.state.addressLocality,
+              "addressRegion": this.state.region,
+              "addressCountry": this.state.country_short,
+              "postalCode": this.state.postal_code
+            },
+            "amenityFeature": this.state.amenityFeature,
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": this.state.latitude,
+              "longitude": this.state.longitude
+            },
+            "hasMap": this.state.map,
+            "telephone": this.state.telephone,
+            "description": this.state.amenityFeature
+          }
+        ]}
           link={[
           {
             rel: "apple-touch-icon",
             sizes: "180x180",
-            href: "/images/apple-touch-icon.png"
+            href: "/images/melrose-park-sydney-property-000-FAVICON-180.png"
           }, {
             rel: "icon",
             sizes: "32x32",
             type: "image/png",
-            href: "/images/favicon-32x32.png"
+            href: "/images/melrose-park-sydney-property-000-FAVICON-32.png"
           }, {
             rel: "icon",
             sizes: "16x16",
             type: "image/png",
-            href: "/images/favicon-16x16.png"
-          }, {
-            rel: "manifest",
-            href: "/images/site.webmanifest"
-          }, {
-            rel: "mask-icon",
-            href: "/images/safari-pinned-tab.svg",
-            color: "#00b398"
-          }, {
-            rel:"shortcut icon",
-            href: "/images/favicon.ico"
+            href: "/images/melrose-park-sydney-property-000-FAVICON-16.png"
           }, {
             rel: "canonical",
             href: this.state.domain
           }
         ]}/>
 
-     
+          <Header className={this.state.nav_fixed + ' ' + this.state.nav_hidden}>
+            <Logo to="/">
+              <img src="/svg/melrose-park-sydney-property-001-LOGO.svg"/>
+            </Logo>
+            <Hamburger
+              onClick={this
+              .toggleNav
+              .bind(this)}
+              isOpened={this.state.nav_open}/>
+							<Button button="Register Now" href="/register" float={true} />
 
-                    {this
+            <Nav
+              toggleNav={this
+              .toggleNav
+              .bind(this)}
+              nav_open={this.state.nav_open}
+              links_hide={this.state.links_hide}
+              onClick={this
+              .toggleNav
+              .bind(this)}/>
+          </Header>
+          <Main>
+            {this
               .props
-              .children()}
+              .children({
+                ...this.props,
+                ...this.state,
+                updateMeta
+              })}
+          </Main>
 
-	</div>
+          <Footer/>
+
+{this.state.loading == true && (<Splash shown={this.state.loadingOver}/>)}
+      </div>
     )
   }
 }

@@ -3,12 +3,12 @@ import { css, injectGlobal } from 'styled-components'
 export const sizes = {
   xl: 2300,
 	giant: 1440,
-	mid: 1240,
-  desktop: 990,
-  tablet: 760,
+	mid: 1325,
+  desktop: 1080,
+  tablet: 770,
 	mobile: 600,
 	xs: 360,
-	height: 850
+	height: 1980
 }
 
 export const minHeight = Object.keys(sizes).reduce((accumulator, label) => {

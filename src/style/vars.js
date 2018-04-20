@@ -1,19 +1,19 @@
 import { css } from "styled-components"
 
 export const colors = {
-	blank          : "#ffffff",
-	body           : "#585857",
-	brandPrimary   : "#00B398",
-	brandHighlight : "#977b60",
-	offColor       : "#ececec"
+	blank: "#FFFFFF",
+	offBlank: "#F5F5F5",
+	body: "#000000",
+	offBody: "#9B9B9B",
+	brandPrimary: "#00B398"
 }
 
 export const fonts = {
-	headings : "Plantin",
-	body     : "Archer"
+	title: '"Plantin", serif',
+	titleAlt: "'Archer', san-serif",
+	body: "'Founders Grotesk', sans-serif"
 }
 
-export const genPadd = "3rem";
-export const tabPadd = "1.5rem";
-export const mobPadd = "1rem";
-export const time    = ".7s";
+
+export const genPadd = 2;
+export const time = 0.7;

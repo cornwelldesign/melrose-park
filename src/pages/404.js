@@ -7,7 +7,7 @@ class errorPage extends React.Component {
   render() {
     return (
       <div>
-       
+ff
        
       </div>
     )
