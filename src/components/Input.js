@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import { below } from "../style/functions"
+import {colors} from "../style/vars"
+import * as vars from "../style/vars"
 
 class Input extends React.Component {
   constructor() {
@@ -9,7 +10,13 @@ class Input extends React.Component {
       fieldStatus: "empty",
       value: ""
     }
-  }
+	}
+	
+
+
+
+
+	
   setFocused() {
     this.setState({ fieldStatus: "focused" })
   }
@@ -31,35 +38,28 @@ class Input extends React.Component {
     if (this.props.options) {
       options1 = this.props.options.map(function(opt, i) {
         return (
-          <option key={i} value={opt.value}>
+          <option key={i} value={opt.value}  data-group={opt.data_group}>
             {opt.label}
           </option>
         )
       })
     }
     return (
-      <Wrapper>
-        <Label
+      <Wrapper type={this.props.type} white={this.props.white} >
+			{type != "checkbox"  && (        <Label
           htmlFor={this.props.name}
           populated={this.state.fieldStatus}
           ref="label"
         >
           {this.props.label}
         </Label>
-        {type != "select" ? (
-          <Field
-            type={type}
-            name={this.props.name}
-            innerRef={comp => {
-              this.input = comp
-            }}
-            required
-            onFocus={this.setFocused.bind(this)}
-            onBlur={this.setBlured.bind(this)}
-            onChange={this.updateValue.bind(this)}
-          />
-        ) : (
-          <div>
+			) }
+
+
+        {type == "select" && (
+
+
+					 <div>
             <Select
               name={this.props.name}
               innerRef={comp => {
@@ -75,14 +75,48 @@ class Input extends React.Component {
             </Select>
             <Arrow />
           </div>
+       
         )}
+				{type == "checkbox" && (
+					<Checkbox >
+					<Tick
+            type={type}
+            name={this.props.name}
+            innerRef={comp => {
+              this.input = comp
+            }}
+            required
+            onFocus={this.setFocused.bind(this)}
+            onBlur={this.setBlured.bind(this)}
+            onChange={this.updateValue.bind(this)}
+          />
+						<span>
+						{this.props.label}
+
+						</span>
+					</Checkbox>
+				)} 
+				{type != "checkbox" && type !="select" && (
+
+						<Field
+            type={type}
+            name={this.props.name}
+            innerRef={comp => {
+              this.input = comp
+            }}
+            required
+            onFocus={this.setFocused.bind(this)}
+            onBlur={this.setBlured.bind(this)}
+            onChange={this.updateValue.bind(this)}
+          />
+				)}
       </Wrapper>
     )
   }
 }
 
 const themeDefaults = {
-  color: "#000",
+  color: colors.body,
   backgroundColor: "#f1f1f1",
   paddingLeft: "1em",
   fontSize: "1rem"
@@ -94,12 +128,11 @@ const Wrapper = styled.div`
   height: 2.5em;
   display: block;
   position: relative;
+	font-family: 'Archer';
   color: inherit;
-  background-color: ${props => props.theme.backgroundColor};
-  color: ${props => props.theme.color};
-	${below.mobile`
-		height: 3.5em;
-	`}
+  background-color: transparent;
+  color: ${props => (props.white ? `#fff` : `#000`)} ;
+  border-bottom:${props => (props.white ? `#fff` : `#000`)} solid 2px;
 `
 
 Wrapper.defaultProps = {
@@ -107,17 +140,19 @@ Wrapper.defaultProps = {
 }
 
 const Label = styled.label`
-  padding-left: ${props => props.theme.paddingLeft};
+  padding-left: 0;
   position: absolute;
   height: 1em;
   line-height: 1em;
+	letter-spacing: 0.1rem;
   display: block;
   top: 0.9em;
   left: 0;
   z-index: 1;
-  transition: all 0.05s;
+  transition: all 0.15s;
   color: inherit;
   box-sizing: content-box;
+	text-transform: uppercase;
   ${props =>
     props.populated == "focused"
       ? `
@@ -146,9 +181,9 @@ const Field = styled.input`
   border-radius: 0;
   appearance: none;
   outline: none;
-  padding: 1.2em 0 0.25em;
-  padding-left: ${props => props.theme.paddingLeft};
+  padding: 1.2em 0 0 0;;
   color: inherit;
+  cursor:pointer;
 
   > option {
     color: #000;
@@ -171,6 +206,48 @@ const Arrow = styled.div`
   border-style: solid;
   border-width: 0.375em 0.375em 0 0.375em;
   border-color: currentColor transparent transparent transparent;
+`
+const Checkbox = styled.label`
+text-align:left;
+display:block;
+margin-top: 2rem;
+text-transform: uppercase;
+
+`
+const Tick = styled.input`
+	display:inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: none;
+border: 1px solid #fff;
+
+  border-radius: 0;
+  margin-right: 1.8rem;
+  -webkit-appearance: none;
+  margin-top: 0.2rem;
+  position: relative;
+  top: 0.1rem;
+  outline: 0;
+	&:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("/images/tick.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: none;
+}
+&:checked {
+  background: rgba(255,255,255,1);
+	&:after {
+  display: block;
+}
+}
+}
 `
 
 export default Input

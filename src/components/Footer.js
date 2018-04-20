@@ -3,6 +3,7 @@ import styled from "styled-components"
 import * as vars from "../style/vars"
 import {below, clearFix} from "../style/functions"
 import Link from "gatsby-link"
+import Button from "../components/Button"
 
 class Footer extends React.Component {
   render() {
@@ -14,18 +15,23 @@ class Footer extends React.Component {
 				<Logo href="https://www.sekisuihouse.com.au/" title="Sekisui House" target="_blank" >
 					<Icon src="/svg/melrose-park-sydney-property-003-SEKISUI.svg" alt="Sekisui House Logo" />
 				</Logo>
+				<Logo href="http://www.bostonmarketing.com.au/" title="Boston" target="_blank" >
+					<Icon src="/svg/melrose-park-sydney-property-002-BOSTON.svg" alt="Boston Marketing" />
+				</Logo>
 				<Etc to="/privacy" title="Privacy Policy" >
 					Privacy Policy
 				</Etc> 
 				<Etc to="/privacy" title="Privacy Policy" >
 				Due Diligence
 				</Etc> 
+				<Button button="Register Now" href="/register" float={true} />
 				<Social href="https://www.facebook.com/MelroseParkLife/" title="Facebook">
 					<Round src="/svg/melrose-park-sydney-property-005-FACEBOOK.svg" alt="Facebook Logo" />
 				</Social>
 				<Social href="//" title="Instagram">
 					<Round src="/svg/melrose-park-sydney-property-006-INSTAGRAM.svg" alt="Instagram Logo" />
 				</Social>
+
 			</Container>
 		)
   }
@@ -73,5 +79,5 @@ const Social = styled.a`
 
 const Round = styled.img`
 	width:3rem;
-	margin-left: ${vars.genPadd}rem;
+	margin-right: ${vars.genPadd}rem;
 `

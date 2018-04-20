@@ -65,20 +65,24 @@ class ResidencesPage extends React.Component {
 				<Carousel
           slides={[
           {
-            img: "/images/melrose-park-sydney-property-038-KITCHEN.jpg",
+            img: "/images/melrose-park-sydney-property-042-SOFA.jpg",
+            alt: "Melrose Park Property, Sydney - Sofa (Artists Impression)"
+          },
+					{
+            img: "/images/melrose-park-sydney-property-044-LOOKINGIN.jpg",
+            alt: "Melrose Park Property, Sydney - Sofa (Artists Impression)"
+          },
+					{
+            img: "/images/melrose-park-sydney-property-046-LOOKINGIN.jpg",
             alt: "Melrose Park Property, Sydney - kitchen Area (Artists Impression)"
           },
 					{
-            img: "/images/melrose-park-sydney-property-038-KITCHEN.jpg",
+            img: "/images/melrose-park-sydney-property-045-Kitchen.jpg",
             alt: "Melrose Park Property, Sydney - kitchen Area (Artists Impression)"
           },
 					{
-            img: "/images/melrose-park-sydney-property-038-KITCHEN.jpg",
-            alt: "Melrose Park Property, Sydney - kitchen Area (Artists Impression)"
-          },
-					{
-            img: "/images/melrose-park-sydney-property-038-KITCHEN.jpg",
-            alt: "Melrose Park Property, Sydney - kitchen Area (Artists Impression)"
+            img: "/images/melrose-park-sydney-property-045-BATH.jpg",
+            alt: "Melrose Park Property, Sydney - Bath (Artists Impression)"
           }
         ]}/>
 				      </div>

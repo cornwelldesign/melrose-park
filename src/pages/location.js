@@ -115,6 +115,22 @@ class LocationPage extends React.Component {
             </P>
           </div>
         </div>
+
+				        <div className="row">
+          <div className="col col-02" />
+          <div className="col col-03 padd">
+            <H3 icon={true}>Future Sydney Metro West</H3>
+            <P>
+              23 mins to Sydney CBD.
+            </P>
+          </div>
+					<div className="col col-05 padd">
+            <Image
+              src="/images/melrose-park-sydney-property-041-TRAIN.jpg"
+              alt="Melrose Park Property, Sydney - Sydney Metro West"
+            />
+          </div>
+        </div>
 				<ParaTitle title="Every Journey Made Easy." />
 
         <div className="row">

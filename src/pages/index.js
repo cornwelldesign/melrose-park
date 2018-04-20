@@ -39,11 +39,11 @@ class HomePage extends React.Component {
           <rightSide>
              <FocusTxt
               link="/lifestyle/"
-              text={`The pulse of your new 
-							neighbourhood, Melrose Park 
-							Residences will have everything 
-							you could need for the life you 
-							want to live.`}
+              text={`The pulse of your new neighbourhood, 
+							Melrose Park Residences 
+							will have everything you 
+							could need for the 
+							life you want to live.`}
               button="Explore the Lifestyle"
             />
           </rightSide>
@@ -52,8 +52,8 @@ class HomePage extends React.Component {
           <leftSide>
             <FocusTxt
               link="/location/"
-              text={`Located only 8km from 
-							Parramatta and 17km from 
+              text={`Located only 7km from 
+							Parramatta CBD and 17km from 
 							Sydney CBD, Melrose Park 
 							one of Sydney’s most 
 							connected places. `}
@@ -99,9 +99,9 @@ class HomePage extends React.Component {
           <leftSide>
              <FocusTxt
               link="/lifestyle/"
-              text={`With the future in mind, Smart 
-							City technology is designed to 
-							enrich your lifestyle.`}
+              text={`With the future in mind, 
+							Smart City technology is designed
+							to enrich your lifestyle.`}
               button="Explore the Lifestyle"
             />
           </leftSide>

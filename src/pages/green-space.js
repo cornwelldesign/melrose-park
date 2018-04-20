@@ -105,16 +105,15 @@ class LifestylePage extends React.Component {
 
           <div className="col col-04">
             <LargeP type="green">
-              A versatile neighbourhood park, The Common is a generous everyday
+              A versatile neighbourhood 
+							park, The Common is a 
+							generous everyday
               retreat of over 5,000m2.
             </LargeP>
 
             <P>
-              A lush respite from the hustle and bustle of everyday life, The
-              Common offers a range of spaces including a tranquil bosque, a
-              vantage plaza and an open lawn. Deciduous trees creates bursts of
-              colour in spring and autumn, while offering summer shade and
-              dramatic winter silhouettes.
+						Enjoy lush landscapes along Boulevard Park, with planted edges and avenues of trees, play a round of golf in the leading Ryde-Parramatta Golf Club or discover floral and pocket gardens throughout Melrose Park. 
+
             </P>
           </div>
         </div>

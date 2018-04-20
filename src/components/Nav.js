@@ -78,7 +78,7 @@ const A = styled(Link)`
 	font-family: ${vars.fonts.titleAlt};
 	padding: ${vars.genPadd / 2}rem ${vars.genPadd}rem;
 	display:block;
-	font-weight: 300;
+	font-weight: 500;
 	&:hover{
 		font-weight: 500;
 	}

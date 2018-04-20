@@ -10,23 +10,36 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 
 class ParaTitle extends React.Component {
 
+
+	scroll() {
+		if (typeof window !== `undefined`) {	
+			let div = document.querySelector('.para');
+		let scroll = window.scrollY;
+		if(div) {
+
+		let top = div.offsetTop; 
+		let height = window.innerHeight;
+		let btm = top + height;
+
+		let track = scroll - top;
+		let goal = btm - top;
+		let style = (track / goal) * 100;
+		div.style.transform = `translateX(${style}%)`;
+	}
+		} else {
+			return false;
+		}
+	}
+	componentDidMount() {
+		window.addEventListener("scroll", this.scroll);
+	}
   render() {
     return (
 			<Container>
-			<ParallaxProvider >
-			    <Parallax
-        className="custom-class"
-				offsetYMax={0}
-        offsetYMin={0}
-				offsetXMin={30}
-				offsetXMax={-30}
-				      tag="div"
-    >
-				<H1 >{this.props.title}</H1>
-    </Parallax>
-			</ParallaxProvider>
-			</Container>
-
+			<Inner>
+				<H1 className="para" >{this.props.title}</H1>
+				</Inner>
+</Container>
     )
   }
 
@@ -38,8 +51,20 @@ const Container = styled.div`
 	padding: ${vars.genPadd}rem 0 0 0;
 	white-space: pre;
 	width:100%;
+	height: 12.5rem;
 	overflow:hidden;
 `;
+
+
+const Inner = styled.div`
+width: 70vw;
+height: 12.5rem;
+padding-left: 30vw;
+h1{
+
+}
+`;
+
 
 export default ParaTitle
 

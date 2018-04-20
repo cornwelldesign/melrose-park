@@ -144,4 +144,11 @@ const Pcontainer = styled.p`
 	font-weight: normal;
 	line-height: 1;
 	padding-bottom: ${vars.genPadd}rem;
+	a{
+		text-decoration: none;
+		color: ${vars.colors.body};
+	}
+	.green{
+		color: ${vars.colors.brandPrimary};
+	}
 `

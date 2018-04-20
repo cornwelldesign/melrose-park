@@ -113,7 +113,7 @@ class TemplateWrapper extends React.Component {
 						*/			setTimeout(function () {
 
 							this.setState({loadingOver: true});
-						}.bind(this), 0)
+						}.bind(this), 4600)
 
 		}
   }
@@ -297,7 +297,7 @@ class TemplateWrapper extends React.Component {
               .toggleNav
               .bind(this)}
               isOpened={this.state.nav_open}/>
-							<Button button="Register" href="/register" float={true} />
+							<Button button="Register Now" href="/register" float={true} />
 
             <Nav
               toggleNav={this

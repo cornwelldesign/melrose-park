@@ -51,6 +51,8 @@ const ButtonContainer = styled(Link)`
 	position: relative;
 	min-width: 10rem;
 	z-index:0;
+	font-weight: 500;
+
 	${below.desktop`
 	font-size:1.2rem;
 	padding: 0.9rem 1rem;
