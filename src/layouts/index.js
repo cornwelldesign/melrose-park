@@ -147,7 +147,13 @@ class TemplateWrapper extends React.Component {
     this.setState({page_title: title, page_description: desc})
   }
   render() {
+		if (typeof window !== `undefined`) {
+			const tagManagerArgs = {
+			gtmId: 'GTM-58Z33ZW'
+	}
+	TagManager.initialize(tagManagerArgs)
 
+}
     const updateMeta = this
       .updateMeta
       .bind(this);
