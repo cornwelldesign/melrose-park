@@ -27,7 +27,7 @@ class LifestylePage extends React.Component {
           </div>
           <div className="col  col-10">
             <Image
-              src="/images/melrose-park-sydney-property-028-PARK-v2.jpg"
+              src="/images/melrose-park-sydney-property-028-PARK-v3.jpg"
               alt="Melrose Park Property, Sydney - Gardens (Artists Impression)"
             />
           </div>
@@ -67,8 +67,8 @@ class LifestylePage extends React.Component {
           </div>
           <div className="col col-06 padd">
             <img
-              src="/images/melrose-park-sydney-property-030-PLAYPARK.jpg"
-              alt="Melrose Park Property, Sydney - Play Park (Artists Impression)"
+              src="/images/melrose-park-sydney-property-032-KIDS-v2.jpg"
+              alt="Melrose Park Property, Sydney - Play Park "
             />
           </div>
         </div>
@@ -76,16 +76,16 @@ class LifestylePage extends React.Component {
           <div className="col col-02" ></div>
           <div className="col col-03 padd">
             <Image
-              src="/images/melrose-park-sydney-property-031-GOLF.jpg"
-              alt="Melrose Park Property, Sydney - Golf Park"
+              src="/images/melrose-park-sydney-property-048-LAKE.jpg"
+              alt="Melrose Park Property, Sydney - Lake"
             />
           </div>
 					<div className="col col-02" ></div>
 
           <div className="col col-04 padd">
             <Image
-              src="/images/melrose-park-sydney-property-032-KIDS.jpg"
-              alt="Melrose Park Property, Sydney - Play Park"
+              src="/images/melrose-park-sydney-property-047-GOLF.jpg"
+              alt="Melrose Park Property, Sydney - Golf Course"
             />
           </div>
         </div>
