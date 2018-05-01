@@ -29,8 +29,8 @@
         "scroll-entrance": "^1.0.0",
         "scroll-to-element": "2.0.0",
         "slick-carousel": "^1.8.1",
-        "styled-components": "2.2.3",
-        "styled-normalize": "2.2.1",
+        "styled-components": "3.2.6",
+        "styled-normalize": "4.0.0",
         "whatwg-fetch": "2.0.3"
     },
     "keywords": [
