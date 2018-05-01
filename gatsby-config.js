@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Chevron One | Gold Coast`,
-    siteUrl: `https://chevronone.com.au`
+    title: `Melrose Park | The New Heart of Sydney`,
+    siteUrl: `https://melrosepark.com.au`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
