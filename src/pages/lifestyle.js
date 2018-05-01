@@ -27,7 +27,7 @@ class LifestylePage extends React.Component {
           </div>
           <div className="col  col-10">
             <Image
-              src="/images/melrose-park-sydney-property-019-TOWN.jpg"
+              src="/images/melrose-park-sydney-property-019-TOWN-v2.jpg"
               alt="Melrose Park Property, Sydney - Town Center (Artists Impression)"
             />
           </div>
@@ -101,7 +101,7 @@ class LifestylePage extends React.Component {
           <div className="col col-02" />
           <div className="col col-10">
             <Image
-              src="/images/melrose-park-sydney-property-023-RETAIL.jpg"
+              src="/images/melrose-park-sydney-property-023-RETAIL-v2.jpg"
               alt="Melrose Park Property, Sydney - Retail (Artists Impression)"
             />
           </div>

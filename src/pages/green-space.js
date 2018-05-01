@@ -27,7 +27,7 @@ class LifestylePage extends React.Component {
           </div>
           <div className="col  col-10">
             <Image
-              src="/images/melrose-park-sydney-property-028-PARK.jpg"
+              src="/images/melrose-park-sydney-property-028-PARK-v2.jpg"
               alt="Melrose Park Property, Sydney - Gardens (Artists Impression)"
             />
           </div>

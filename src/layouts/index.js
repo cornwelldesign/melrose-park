@@ -198,10 +198,10 @@ class TemplateWrapper extends React.Component {
             content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
           }, {
             property: "og:video",
-            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.mp4`
+            content: `https://s3-ap-southeast-2.amazonaws.com/cornwell-misc/melrose-park/melrose-park-sydney-property-teaser.mp4`
           }, {
             property: "og:video:secure_url",
-            content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.mp4`
+            content: `https://s3-ap-southeast-2.amazonaws.com/cornwell-misc/melrose-park/melrose-park-sydney-property-teaser.mp4`
           }, {
             property: "og:title",
             content: this.state.page_title

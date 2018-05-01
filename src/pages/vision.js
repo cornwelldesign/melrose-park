@@ -22,8 +22,8 @@ class VisionPage extends React.Component {
         <Hero
           image="/images/melrose-park-sydney-property-007-PARK.jpg"
           alt="Melrose Park Property, Sydney - Play Park (Artists Impression)"
-          vidButton="Teaser Video"
-          video="https://s3-ap-southeast-2.amazonaws.com/cornwell-misc/melrose-park/melrose-park-sydney-property.mp4"
+          vidButton=" "
+          video="https://s3-ap-southeast-2.amazonaws.com/cornwell-misc/melrose-park/melrose-park-sydney-property-teaser.mp4"
         />
 								<section>
 
