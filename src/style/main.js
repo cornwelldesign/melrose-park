@@ -216,6 +216,14 @@ width: auto;
 		}
 	
 	`}
+	&.static {
+		background: #fff;
+		position: fixed;
+		z-index: 3;
+		${below.desktop`
+		position:relative;
+		`}
+	}
 }
 
 .scroller {
