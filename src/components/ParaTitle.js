@@ -22,6 +22,7 @@ class ParaTitle extends React.Component {
 		let btm = top + height;
 
 		let track = scroll - top;
+		track = track * 0.4;
 		let goal = btm - top;
 		let style = (track / goal) * 100;
 		div.style.transform = `translateX(${style}%)`;
