@@ -18,12 +18,10 @@ class Footer extends React.Component {
 				<Logo href="http://www.bostonmarketing.com.au/" title="Boston" target="_blank" >
 					<Icon src="/svg/melrose-park-sydney-property-002-BOSTON-v3.svg" alt="Boston Marketing" />
 				</Logo>
-				<Etc to="/privacy" title="Privacy Policy" >
+				<Etc to="https://www.bostonmarketing.com.au/privacy-policy/" title="Privacy Policy" >
 					Privacy Policy
 				</Etc> 
-				<Etc to="/privacy" title="Privacy Policy" >
-				Due Diligence
-				</Etc> 
+
 				<Button button="Register Now" href="/register" float={true} />
 				<Social href="https://www.facebook.com/MelroseParkLife/" title="Facebook">
 					<Round src="/svg/melrose-park-sydney-property-005-FACEBOOK.svg" alt="Facebook Logo" />
@@ -75,7 +73,7 @@ const Icon = styled.img`
 	`}
 `
 
-const Etc = styled(Link)`
+const Etc = styled.a`
 	text-transform: uppercase;
 	font-family: ${vars.fonts.titleAlt};
 	color: ${vars.colors.blank};
