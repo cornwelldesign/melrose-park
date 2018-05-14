@@ -15,7 +15,7 @@ class SmartCity extends React.Component {
   render() {
     return (
       <section>
-        <div className="row">
+        <div className="row tab-hide">
           <div className="col padd col-02 static">
             <Image
               src="/images/melrose-park-sydney-property-024-RESIDENCE.jpg"
@@ -29,6 +29,14 @@ class SmartCity extends React.Component {
             <Image
               src="/images/melrose-park-sydney-property-025-GARDENS.jpg"
               alt="Melrose Park Property, Sydney - Gardens (Artists Impression)"/>
+          </div>
+        </div>
+				<div className="row tab-show">
+          <div className="col padd col-02 static">
+            <Image
+              src="/images/melrose-park-sydney-property-024-RESIDENCE.jpg"
+              alt="Melrose Park Property, Sydney - Resident (Downsizer)"/>
+            <H4 icon={true}>My Life Made Simply Wonderful.</H4>
           </div>
         </div>
         <ParaTitle title="A Smarter Tomorrow."/>

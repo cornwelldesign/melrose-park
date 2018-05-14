@@ -70,6 +70,11 @@ blockquote:before, blockquote:after, q:before, q:after {
 		font-weight: bold;
 	}
 
+	sup{
+		font-size: 0.4em;
+		vertical-align: 0.9em;
+	}
+
 .focus-box:nth-of-type(even){
 	.txt{
 		left: 0;
@@ -226,6 +231,17 @@ width: auto;
 	}
 }
 
+.tab-hide{
+	${below.desktop`
+		display:none;
+		`}	
+}
+.tab-show{
+	display: none;
+	${below.desktop`
+		display:block;
+		`}	
+}
 .scroller {
 	
   height: 100%;

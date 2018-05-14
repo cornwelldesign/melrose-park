@@ -18,7 +18,7 @@ class LocationPage extends React.Component {
     return (
       <section>
 
-        <div className="row">
+        <div className="row tab-hide">
           <div className="col padd col-02 static">
             <Image
               src="/images/melrose-park-sydney-property-010-RESIDENTS.jpg"
@@ -35,6 +35,14 @@ class LocationPage extends React.Component {
           </div>
         </div>
 
+        <div className="row tab-show">
+          <div className="col padd col-02 static">
+            <Image
+              src="/images/melrose-park-sydney-property-010-RESIDENTS.jpg"
+              alt="Melrose Park Property, Sydney - Residents (Young Couple)"/>
+            <H4 icon={true}>My World Connected Like Never Before</H4>
+          </div>
+        </div>
         <div className="row">
           <div className="col col-02"></div>
           <div className="col col-04 ">

@@ -17,7 +17,7 @@ class LifestylePage extends React.Component {
   render() {
     return (
       <section>
-        <div className="row">
+        <div className="row tab-hide">
           <div className="col padd col-02 static">
             <Image
               src="/images/melrose-park-sydney-property-027-RESIDENTS.jpg"
@@ -33,6 +33,14 @@ class LifestylePage extends React.Component {
               alt="Melrose Park Property, Sydney - Gardens (Artists Impression)"/>
           </div>
         </div>
+				<div className="row tab-show">
+          <div className="col padd col-02 static">
+            <Image
+              src="/images/melrose-park-sydney-property-027-RESIDENTS.jpg"
+              alt="Melrose Park Property, Sydney - Residents (Young Family)"/>
+            <H4 icon={true}>People I Love, In A Place We Love.</H4>
+          </div>
+        </div>
         <div className="row">
           <div className="col padd col-02"/>
           <div className="col  col-03">
@@ -42,8 +50,7 @@ class LifestylePage extends React.Component {
           </div>
           <div className="col padd col-06">
             <LargeP type="green">
-              The sprawling 13,000m<sup>2</sup>
-              Central Park will be the heart of the new Melrose Park community.
+              The sprawling 13,000m<sup>2</sup>  Central Park will be the heart of the new Melrose Park community.
             </LargeP>
             <P>
               Inspired by the best parks around the world, abundant open spaces combine
@@ -101,7 +108,7 @@ class LifestylePage extends React.Component {
           <div className="col col-04">
             <LargeP type="green">
               A versatile neighbourhood park, The Common is a generous everyday retreat of
-              over 5,000m2.
+              over 5,000m<sup>2</sup> .
             </LargeP>
 
             <P>

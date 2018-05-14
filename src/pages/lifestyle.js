@@ -17,7 +17,7 @@ class LifestylePage extends React.Component {
   render() {
     return (
       <section>
-        <div className="row">
+        <div className="row tab-hide">
           <div className="col padd col-02 static">
             <Image
               src="/images/melrose-park-sydney-property-018-RESIDENT.jpg"
@@ -33,7 +33,14 @@ class LifestylePage extends React.Component {
               alt="Melrose Park Property, Sydney - Town Center (Artists Impression)"/>
           </div>
         </div>
-
+        <div className="row tab-show">
+          <div className="col padd col-02 static">
+            <Image
+              src="/images/melrose-park-sydney-property-018-RESIDENT.jpg"
+              alt="Melrose Park Property, Sydney - Resident (First Time Buy)"/>
+            <H4 icon={true}>Somewhere To Call My Own</H4>
+          </div>
+        </div>
         <div className="row">
           <div className="col col-02"></div>
           <div className="col col-05 ">

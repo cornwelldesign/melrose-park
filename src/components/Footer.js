@@ -28,7 +28,7 @@ class Footer extends React.Component {
 				<Social href="https://www.facebook.com/MelroseParkLife/" title="Facebook">
 					<Round src="/svg/melrose-park-sydney-property-005-FACEBOOK.svg" alt="Facebook Logo" />
 				</Social>
-				<Social href="//" title="Instagram">
+				<Social href="https://www.instagram.com/melroseparklife/" title="Instagram">
 					<Round src="/svg/melrose-park-sydney-property-006-INSTAGRAM.svg" alt="Instagram Logo" />
 				</Social>
 
@@ -69,6 +69,7 @@ display:inline-block;
 
 const Icon = styled.img`
 	width: 6rem;
+	max-height: 2rem;
 	${below.mobile`
 		width:100%;
 	`}
