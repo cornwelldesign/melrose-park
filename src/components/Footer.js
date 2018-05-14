@@ -18,7 +18,7 @@ class Footer extends React.Component {
 				<Logo href="http://www.bostonmarketing.com.au/" title="Boston" target="_blank" >
 					<Icon src="/svg/melrose-park-sydney-property-002-BOSTON-v3.svg" alt="Boston Marketing" />
 				</Logo>
-				<Etc to="https://www.bostonmarketing.com.au/privacy-policy/" title="Privacy Policy" >
+				<Etc href="https://www.bostonmarketing.com.au/privacy-policy/" target="_blank" title="Privacy Policy" >
 					Privacy Policy
 				</Etc> 
 
