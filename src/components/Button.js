@@ -83,7 +83,9 @@ const ButtonContainer = styled(Link)`
 		background: ${vars.colors.offBody};
 		color: ${vars.colors.blank};
 		${props => props.type == 'border-white' && `
-		color: ${vars.colors.white};
+		color: ${vars.colors.brandPrimary};
+		background: ${vars.colors.blank};
+
 
 	`}
 

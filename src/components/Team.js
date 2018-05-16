@@ -55,6 +55,14 @@ const Container = styled.div`
 	.col{
 		vertical-align: top;
 	}
+	h1{
+		font-size: 9rem;
+		padding: 2rem 0;
+		${below.mid`
+	font-size: 8rem;
+
+	`}
+	}
 	p{
 		font-size: 1.4rem;
 	}

@@ -2,7 +2,7 @@ import { css, injectGlobal } from 'styled-components'
 
 export const sizes = {
   xl: 2300,
-	giant: 1440,
+	giant: 1480,
 	mid: 1325,
   desktop: 1080,
   tablet: 770,
