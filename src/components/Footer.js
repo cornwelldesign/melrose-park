@@ -45,12 +45,10 @@ const Container = styled.footer `
 	padding: ${vars.genPadd / 2}rem ${vars.genPadd}rem;
 	vertical-align: middle;
 	${below.mobile`
-	a{
-	float:none;
-	}
-	.btn{
-		display:none;
-	}
+		display: flex;
+		.btn {
+			display:none;
+		}
 	`}
 `
 
@@ -60,17 +58,16 @@ display:inline-block;
 	margin-right: ${vars.genPadd}rem;
 	vertical-align: middle;
 	${below.mobile`
-		width:22%;
-		margin: 0 3%;
+		width: 13rem;
+		position: relative;
+		margin: 0;
+		vertical-align: text-bottom;
 	`}
 `
 
 const Icon = styled.img`
 	width: 6rem;
 	max-height: 2rem;
-	${below.mobile`
-		width:100%;
-	`}
 `
 
 const Etc = styled.a`
@@ -83,15 +80,13 @@ const Etc = styled.a`
 	display:inline-block;
 	vertical-align: middle;
 	${below.mobile`
-	display:block;
 	`}
-
 `
 
 const Social = styled.a`
 	float:right;
 	${below.mobile`
-	float:none;
+		margin: 0 .5rem;
 	`}
 `
 
