@@ -46,28 +46,37 @@ const Container = styled.footer `
 	vertical-align: middle;
 	${below.mobile`
 		display: flex;
+		/* border: 1px solid red; */
 		.btn {
 			display:none;
 		}
 	`}
 `
 
-
 const Logo = styled.a `
 display:inline-block;
 	margin-right: ${vars.genPadd}rem;
 	vertical-align: middle;
 	${below.mobile`
+		/* border: 1px solid red; */
 		width: 13rem;
 		position: relative;
 		margin: 0;
-		vertical-align: text-bottom;
+		/* text-align: center; */
+		line-height: 0;
 	`}
 `
 
 const Icon = styled.img`
 	width: 6rem;
 	max-height: 2rem;
+	${below.mobile`
+		/* border: 1px solid white; */
+		position: absolute;
+		top: 50%;
+		/* bottom: 0; */
+		transform: translateY(-50%);
+	`}
 `
 
 const Etc = styled.a`
@@ -80,6 +89,10 @@ const Etc = styled.a`
 	display:inline-block;
 	vertical-align: middle;
 	${below.mobile`
+		width: 19rem;
+		/* border: 1px solid red; */
+		text-align: center;
+		line-height: 2.6;
 	`}
 `
 
@@ -87,6 +100,7 @@ const Social = styled.a`
 	float:right;
 	${below.mobile`
 		margin: 0 .5rem;
+		/* border: 1px solid red; */
 	`}
 `
 
