@@ -73,6 +73,11 @@ const Container = styled.div`
     margin: auto;
 		padding-bottom:0;
 		white-space: pre-line;
+		${below.mobile`
+			font-size: 8rem;
+			max-width: 97%;
+			}
+		`}
   }
 	${props => props.half && `
 	width:100%;

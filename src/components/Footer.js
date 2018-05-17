@@ -46,7 +46,6 @@ const Container = styled.footer `
 	vertical-align: middle;
 	${below.mobile`
 		display: flex;
-		/* border: 1px solid red; */
 		.btn {
 			display:none;
 		}
@@ -58,11 +57,9 @@ display:inline-block;
 	margin-right: ${vars.genPadd}rem;
 	vertical-align: middle;
 	${below.mobile`
-		/* border: 1px solid red; */
 		width: 13rem;
 		position: relative;
 		margin: 0;
-		/* text-align: center; */
 		line-height: 0;
 	`}
 `
@@ -90,7 +87,6 @@ const Etc = styled.a`
 	vertical-align: middle;
 	${below.mobile`
 		width: 19rem;
-		/* border: 1px solid red; */
 		text-align: center;
 		line-height: 2.6;
 	`}
@@ -100,7 +96,6 @@ const Social = styled.a`
 	float:right;
 	${below.mobile`
 		margin: 0 .5rem;
-		/* border: 1px solid red; */
 	`}
 `
 

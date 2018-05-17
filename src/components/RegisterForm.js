@@ -235,7 +235,7 @@ const Close = styled.div `
 	transition: color ${vars.time};
 
   &:after {
-    content '';
+    content: '';
     display: block;
     width: 100%;
     height: 1px;
