@@ -34,11 +34,11 @@ const Wrap = styled.div`
 `
 const ButtonContainer = styled(Link)`
 
-	text-align:center;
+	text-align: center;
 	text-transform: uppercase;
 	font-family: ${vars.fonts.titleAlt};
 	font-size: 1.4rem;
-	line-heights: 1;
+	line-height: 1;
 	letter-spacing:1px;
 	text-decoration: none;
 	background: ${vars.colors.blank};
@@ -73,6 +73,9 @@ const ButtonContainer = styled(Link)`
 	display:block;
 	font-size: 2.2rem;
 	padding: 0 1.5rem;
+	`}
+	${below.xs`
+		font-size: 4vw;
 	`}
 	${props => props.type == 'border-white' && `
 		border: 1px solid ${vars.colors.blank};

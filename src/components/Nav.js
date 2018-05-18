@@ -36,11 +36,11 @@ class Nav extends React.Component {
 }
 
 const Container = styled.nav`
-	float:right;
-	overflow:hidden;
+	float: right;
+	overflow: hidden;
 	padding: 0 ${vars.genPadd}rem;
-	&.links-hide{
-		display:none;
+	&.links-hide {
+		display: none;
 	}
 
 		${below.desktop`
@@ -58,7 +58,7 @@ const Container = styled.nav`
 		width:100%;
 		height:auto;
 		transition: top ${vars.time};
-		top: ${props => (props.nav_open ? `4.5rem` : `-60vh`)};
+		top: ${props => (props.nav_open ? `4.5rem` : `-45rem`)};
 		background: ${vars.colors.offBlank};
 	`}
 `
