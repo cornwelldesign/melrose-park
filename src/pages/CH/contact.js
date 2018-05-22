@@ -33,17 +33,17 @@ class contactPage extends React.Component {
 <div>
 <div className="col  col-04 padd ">
 	<H3>请联系我们</H3>
-	<P><span className="green">Visit our display suite at </span><br/>
+	<P><span className="green">欢迎参观我们的样板房 </span><br/>
 <a href="" target="_blank" title="Map" >661 Victoria Road <br/>
 Melrose Park NSW 2114</a><br/><br/>
 
-<span className="green" >Sales Enquiries</span> <br/>
+<span className="green" >销售查询</span> <br/>
 <a href="tel:1300 267 866"   title="tel" >1300 267 866</a><br/>
 <a href="mailto:hello@melrosepark.com.au" title="Email" >hello@melrosepark.com.au</a><br/><br/>
 
-<span className="green" >Follow us</span>  <br/>
+<span className="green" >关注我们</span>  <br/>
 <a href="https://www.facebook.com/MelroseParkLife/" title="Facebook" target="_blank" >Facebook</a><br/>
-<a href="https://www.facebook.com/MelroseParkLife/" title="Instagram" target="_blank" >Instagram</a></P>
+<a href="https://www.facebook.com/MelroseParkLife/" title="微信公众号" target="_blank" >微信公众号</a></P>
 </div>
 
 <div className="col  col-08 ">
@@ -53,9 +53,9 @@ Melrose Park NSW 2114</a><br/><br/>
       </ContactTop>
 			<ContactBtm>
 			<div className="col  col-04 padd ">
-	<H3>REGISTER NOW</H3>
+	<H3>立刻登记</H3>
 	</div>
-	<div className="col  col-08 padd "> <P>Stay in touch with all the latest news from Melrose Park</P>							<Iframe src="https://go.pardot.com/l/472112/2018-04-19/61bsk" width="100%" height="500" type="text/html"  allowTransparency="true" ></Iframe>
+	<div className="col  col-08 padd "> <P>得到更多最新 的Melrose Park信息</P>							<Iframe src="https://go.pardot.com/l/472112/2018-04-19/61bsk" width="100%" height="500" type="text/html"  allowTransparency="true" ></Iframe>
 
 </div>
 						</ContactBtm>
