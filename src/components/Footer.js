@@ -12,9 +12,6 @@ class Footer extends React.Component {
 				<Logo href="http://payce.com.au/" title="Payce" target="_blank" >
 					<Icon src="/svg/melrose-park-sydney-property-002-PAYCE.svg" alt="Payce Logo" />
 				</Logo>
-				<Logo href="https://www.sekisuihouse.com.au/" title="Sekisui House" target="_blank" >
-					<Icon src="/svg/melrose-park-sydney-property-003-SEKISUI.svg" alt="Sekisui House Logo" />
-				</Logo>
 				<Logo href="http://www.bostonmarketing.com.au/" title="Boston" target="_blank" >
 					<Icon src="/svg/melrose-park-sydney-property-002-BOSTON-v3.svg" alt="Boston Marketing" />
 				</Logo>
@@ -56,7 +53,7 @@ const Container = styled.footer `
 
 
 const Logo = styled.a `
-display:inline-block;
+	display:inline-block;
 	margin-right: ${vars.genPadd}rem;
 	vertical-align: middle;
 	${below.mobile`
@@ -66,8 +63,8 @@ display:inline-block;
 `
 
 const Icon = styled.img`
-	width: 6rem;
-	max-height: 2rem;
+	width: 8rem;
+	max-height: 2.5rem;
 	${below.mobile`
 		width:100%;
 	`}
