@@ -60,8 +60,7 @@ class LocationPage extends React.Component {
           <div className="col col-02 top padd">
             <H3 icon={true}>数分钟即达Meadowbank火车站</H3>
             <P>
-              Melrose Park residents have access to the Melrose Park Rider, a free shuttle
-              service to the nearby Meadowbank train station.
+            Melrose Park居民可以使用免费班车Melrose Park Rider，前往附近的Meadowbank 火车站。
             </P>
           </div>
         </div>
@@ -146,7 +145,7 @@ class LocationPage extends React.Component {
         <div className="row">
           <div className="col padd col-02"/>
           <div className="col col-10">
-            <Transport/>
+            <Transport lang="ch" />
           </div>
         </div>
       </section>

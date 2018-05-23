@@ -1,142 +1,156 @@
-import React from "react";
-import styled, {keyframes} from "styled-components"
-import * as vars from "../../style/vars";
-import {above, below} from "../../style/functions"
+import React from "react"
+import styled, { keyframes } from "styled-components"
+import * as vars from "../../style/vars"
+import { above, below } from "../../style/functions"
 
-import Image from "../../components/Image.js";
-import ParaTitle from "../../components/ParaTitle.js";
-import Team from "../../components/Team.js";
-import Hero from "../../components/Hero.js";
-import { LargeP, P, H1, H4 } from "../../components/Text.js";
+import Image from "../../components/Image.js"
+import ParaTitle from "../../components/ParaTitle.js"
+import Team from "../../components/Team.js"
+import Hero from "../../components/Hero.js"
+import { LargeP, P, H1, H4 } from "../../components/Text.js"
 
 class VisionPage extends React.Component {
-  componentDidMount() {
-    this.props.updateMeta(
-      "Vision | Melrose Park ",
-      "Melrose Park is the new Australian dream, a welcoming neighbourhood with a sense of place. Beautiful residences, public spaces, vibrant shopping and dining"
-    );
-  }
+   componentDidMount() {
+      this.props.updateMeta(
+         "Vision | Melrose Park ",
+         "Melrose Park is the new Australian dream, a welcoming neighbourhood with a sense of place. Beautiful residences, public spaces, vibrant shopping and dining"
+      )
+   }
 
-  render() {
-    return (
-      <div>
-
-			
-
-        <Hero
-          image="/images/melrose-park-sydney-property-007-PARK.jpg"
-          alt="Melrose Park Property, Sydney - Play Park (Artists Impression)"
-          vidButton=" "
-          video="https://s3-ap-southeast-2.amazonaws.com/cornwell-misc/melrose-park/melrose-park-sydney-property-teaser.mp4"
-        />
-								<section>
-
-        <ParaTitle title="一次伟大的转型" />
-
-        <div className="row">
-          <div className="col padd col-03">
-            <LargeP type="green" icon={true}>
-            拥抱多方位，多元化的生活方式，Melrose Park Residences让您尽情享受，尽情欢舞，尽情连接。
-            </LargeP>
-          </div>
-          <div className="col padd col-09">
-            <Image
-              src="/images/melrose-park-sydney-property-008-SUBURB.jpg"
-              alt="Melrose Park Property, Sydney - View of Suburb (Artists Impression)"
+   render() {
+      return (
+         <div>
+            <Hero
+               image="/images/melrose-park-sydney-property-007-PARK.jpg"
+               alt="Melrose Park Property, Sydney - Play Park (Artists Impression)"
+               vidButton=" "
+               video="https://s3-ap-southeast-2.amazonaws.com/cornwell-misc/melrose-park/melrose-park-sydney-property-teaser.mp4"
             />
-          </div>
-        </div>
-        <div className="row padd">
-          <div className="col padd col-03" />
-          <div className="col padd col-05">
-            <P>
-            Melrose Park，一个新澳洲梦开启的地方，一个遍布美丽住宅，宽广绿地，商场美食的大型社区，这里充满了友好的氛围和无数的可能性，充分诠释了新悉尼大都会的城市精神。
-            </P>
-          </div>
-        </div>
+            <section>
+               <ParaTitle title="一次伟大的转型" />
 
-        <div className="row ">
-          <div className="col padd col-09">
-            <Image
-              src="/images/melrose-park-sydney-property-009-RETAIL.jpg"
-              alt="Melrose Park Property, Sydney - Retail Section (Artists Impression)"
-            />
-          </div>
-        </div>
-        <div className="row padd">
-          <div className="col col-06 " ></div>
-          <div className="col padd col-05">
-            <P>
-            无论您来自于世界上哪一个角落，来到澳洲，您就是新澳洲人。Melrose Park就是为这些新澳洲人所建，它很好的诠释了新澳洲人的那种不畏改变，热衷探险，每天追求新体验的精神。Melrose Park的精心整体规划和开发将为您建造一个充满活力和多元化的永久和谐温馨家园。
-            </P>
-          </div>
-        </div>
-				</section>
+               <div className="row">
+                  <div className="col padd col-03">
+                     <LargeP type="green" icon={true}>
+                        拥抱多方位，多元化的生活方式，Melrose Park
+                        Residences让您尽情享受，尽情欢舞，尽情连接。
+                     </LargeP>
+                  </div>
+                  <div className="col padd col-09">
+                     <Image
+                        src="/images/melrose-park-sydney-property-008-SUBURB.jpg"
+                        alt="Melrose Park Property, Sydney - View of Suburb (Artists Impression)"
+                     />
+                  </div>
+               </div>
+               <div className="row padd">
+                  <div className="col padd col-03" />
+                  <div className="col padd col-05">
+                     <P>
+                        Melrose Park，一个新澳洲梦开启的地方，一个遍布美丽住宅，宽广绿地，商场美食的大型社区，这里充满了友好的氛围和无数的可能性，充分诠释了新悉尼大都会的城市精神。
+                     </P>
+                  </div>
+               </div>
 
-        	<Container >
-				<div className="row " >
-				<div className="padd col" >
-				<H1 type="green" >Project Team</H1>
-				</div>
-				</div>
-				<div className="row" >
-					<div className="col padd col-03" >
-						<a href="http://payce.com.au/" target="_blank" title="Payce Website" ><H4>PAYCE</H4></a>
-						<P>Founded in 1978, PAYCE is a leading property development and investment company with a proven track record for setting new international benchmarks with their landmark integrated lifestyle developments.</P>
-						<P>PAYCE has a reputation for not just delivering exceptional, intelligently designed contemporary homes, but also creating dynamic, cohesive communities. At the heart of PAYCE masterplanned designs are community spaces that celebrate the best of local-village living. PAYCE has earned a reputation for creating vibrant, inclusive communities by recognising that everyone needs to be connected and integrated.</P>
-						<P>This success is built upon the commitment to empower and lead communities to realise their own potential, and it’s why innovative urban design is a central feature in every project. As specialists in urban renewal, the PAYCE team draws on best-practice design principles, critical thinking, and true innovation to create quality, inspirational and one-of-a-kind residential, commercial and retail precincts.</P>
-					</div>
-					<div className="col padd col-03" >
-						<a href="https://www.sekisuihouse.com.au/" target="_blank" title="SEKISUI Website" ><H4>SEKISUI HOUSE</H4></a>
+               <div className="row ">
+                  <div className="col padd col-09">
+                     <Image
+                        src="/images/melrose-park-sydney-property-009-RETAIL.jpg"
+                        alt="Melrose Park Property, Sydney - Retail Section (Artists Impression)"
+                     />
+                  </div>
+               </div>
+               <div className="row padd">
+                  <div className="col col-06 " />
+                  <div className="col padd col-05">
+                     <P>
+                        无论您来自于世界上哪一个角落，来到澳洲，您就是新澳洲人。Melrose
+                        Park就是为这些新澳洲人所建，它很好的诠释了新澳洲人的那种不畏改变，热衷探险，每天追求新体验的精神。Melrose Park的精心整体规划和开发将为您建造一个充满活力和多元化的永久和谐温馨家园。
+                     </P>
+                  </div>
+               </div>
+            </section>
 
-						<P>Sekisui House believes in creating homes and communities that improve with time, and last for generations. They do this by providing better design and quality, offering better and more dependable customer service, and establishing better, stronger urban communities.</P>
-						<P>They believe in Smart Universal Design: sustainable, environmentally-focused design that’s applicable to everyone – regardless of age, ability, or stage in life. With every project, they consider the ongoing impact on the surrounding community, and pay meticulous attention to existing ecosystems and community infrastructure.</P>
-						<P>From the quality of their building materials to the rigorous construction processes, Sekisui House is known for their attention to detail and the high quality of their homes and residential developments. You can be sure that everything is considered, and nothing left to chance.</P>
-					</div>
-					<div className="col padd col-03" >
-						<a href="http://architectsajc.com/" target="_blank" title="AJC Website" ><H4>AJ+C</H4></a>
+            <Container>
+               <div className="row ">
+                  <div className="padd col">
+                     <H1 type="green">项目团队</H1>
+                  </div>
+               </div>
+               <div className="row">
+                  <div className="col padd col-04">
+                     <a href="http://payce.com.au/" target="_blank" title="Payce Website">
+                        <H4>PAYCE</H4>
+                     </a>
+                     <P>
+                      PAYCE成立于1978年，是一家领先的房地产开发和投资公司。其地标式的综合性开发项目在刷新国际标准方面成绩卓著。
+                     </P>
+                     <P>
+                     PAYCE不仅能够建造出卓越和智能化设计的现代住宅，而且还能同时创造出具有活力和凝聚力的社区环境。 PAYCE总体规划设计的核心是社区环境，以反映当地社区的最佳生活状态。 PAYCE因为意识到每个人都需要连接和融入，所以特别擅长创建充满活力和凝聚力的社区环境。
+                     </P>
+                     <P>
+                      PAYCE的成功建立于一个庄严承诺：致力引导社区实现其自身潜力，这就是为什么创新型城市设计是其每个项目的核心特征。作为城市改造专家，PAYCE团队利用最佳实践设计原则，批判性思维和实质创新，打造出一批优质，富有灵感的住宅、商业和零售综合社区。
+                     </P>
+                  </div>
+                  <div className="col padd col-04">
+                     <a href="http://architectsajc.com/" target="_blank" title="AJC Website">
+                        <H4>AJ+C</H4>
+                     </a>
 
-						<P>Allen Jack+Cottier (AJ+C) believes that successful residential developments should enrich people’s lives, adding quality and facility to the communities they serve, and in turn providing a framework on which new communities develop.</P>
-						<P>AJ+C are internationally-recognised architects who consistently lead the residential market in Sydney and Australia, demonstrating commitment to a high standard of service, to excellence in design and to environmental sustainability.</P>
-						<P>Driven by the search for elegant solutions to the complex problems that arise from particular needs and particular locations, our designers are not encumbered by an unyielding ‘house style’; nevertheless our buildings carry with them a consistent and recognisable quality that is more than skin deep.</P>
-						<P>Our landmark projects have changed the way people live and work and have influenced how they, and the profession, think about architectural design.</P>
-					</div>
-					<div className="col padd col-03" >
-					<a href="http://turfdesign.com/" target="_blank" title="TURF Website" ><H4>TURF</H4></a>
-						<P>Turf understands the nature of major urban projects and what it takes to deliver them. Their blended knowledge of urban design, landscape architecture, environment, community and infrastructure makes their profession unique in connecting people and place.</P>
-						<P>They create places that are meaningful and beautiful as both a creative challenge and project responsibility. What makes a place feel right? How can it surprise, excite or soothe the senses? What purpose must it serve and what stories can it tell?</P>
-						<P>Turf encourages a process of critical thinking to generate sound principles and exciting ideas. Their collaboration is worldwide, drawing inspiration and ideas from professional experts, communities and stakeholders to generate the best design solutions.</P>
-					</div>
-				</div>
-			</Container>
-      </div>
-    );
-  }
+                     <P>
+                     Allen Jack+Cottier (AJ+C)认为成功的住宅开发项目应该能够做到丰富居民生活，增加社区基础设施，并且为新社区的发展提供整体框架。
+                     </P>
+                     <P>
+                     AJ + C是国际知名的建筑事务所，悉尼和澳大利亚住宅市场的领军人物，他们承诺高标准服务，卓越设计和环境的可持续性。
+                     </P>
+                     <P>
+                     我们的设计师不会拘泥于教科书上“家居风格”的条条框框，他们总是在不断寻求完美解决方案，以解决在实际情况中因出现特殊需求和特定位置而产生的复杂问题。尽管如此，我们建造的建筑物依然质量上乘并且为普通大众所接受。
+                     </P>
+                     <P>
+                     我们建造的地标项目已经改变了人们日常生活和工作方式，并且已经影响到人们，包括业界对建筑设计的看法。
+                     </P>
+                  </div>
+                  <div className="col padd col-04">
+                     <a href="http://turfdesign.com/" target="_blank" title="TURF Website">
+                        <H4>TURF</H4>
+                     </a>
+                     <P>
+                     Turf了解主要城市项目的本质并且知道如何来付诸实践。他们在城市设计，景观建筑，环境，社区和基础设施方面的综合知识使得他们在融合人类与周边环境方面上做到独树一帜。
+                     </P>
+                     <P>
+                     他们建造出既美观又富内涵的社区，这既是一项具有创造性的挑战，也是他们做项目的责任。是什么让一个社区感觉正确？它是如何制造惊喜，激发和舒缓感官的？它要达到什么目的？它告诉我们背后有什么故事？
+                     </P>
+                     <P>
+                     Turf鼓励批判性思维，从而产生完整的理念和令人兴奋的创意。他们的合作遍及全球，他们从专业人士，社区和利益相关者那里汲取灵感和想法，进而形成最佳设计解决方案。 
+                     </P>
+                  </div>
+               </div>
+            </Container>
+         </div>
+      )
+   }
 }
 
-export default VisionPage;
-
-
+export default VisionPage
 
 const Container = styled.div`
-	background: ${vars.colors.offBlank};
-	padding: ${vars.genPadd * 2}rem 0;
-	.col{
-		vertical-align: top;
-	}
-	h1{
-		font-size: 9rem;
-		padding: 2rem 0;
-		${below.mid`
-	font-size: 8rem;
-
-	`}
-	}
-	p{
-		font-size: 1.4rem;
-	}
-	a{
-		color: ${vars.colors.body};
-		text-decoration: none;
-	}
-`;
+   background: ${vars.colors.offBlank};
+   padding: ${vars.genPadd * 2}rem 0;
+   .col {
+      vertical-align: top;
+   }
+   h1 {
+      font-size: 9rem;
+      padding: 2rem 0;
+      ${below.mid`
+        font-size: 8rem;
+      `};
+   }
+   p {
+      font-size: 1.4rem;
+   }
+   a {
+      color: ${vars.colors.body};
+      text-decoration: none;
+   }
+`
