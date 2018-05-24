@@ -113,14 +113,7 @@ class TemplateWrapper extends React.Component {
          setTimeout(function() {
             window.scrollTo(0, 0)
          }, 100)
-         /*
-			setTimeout(function () {
-
-          this.setState({loadingOver: true});
-				}.bind(this), 4600)
-
-                        */
-
+        
          setTimeout(
             function() {
                this.setState({ loadingOver: true })
@@ -128,7 +121,15 @@ class TemplateWrapper extends React.Component {
             100
          )
       }
-   }
+
+      // if path includes "/ch", set to Chinese
+      if (window.location.href.search(/ch\b/) !== -1) {
+        this.setState({ lang: 'ch' })
+        
+      } 
+    }
+      
+      
    toggleForm() {
       const registerOpen = !this.state.registerOpen
       this.setState({ registerOpen })
