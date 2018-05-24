@@ -202,24 +202,17 @@ const A = styled(Link)`
 
 	&.national-flag {
 		height: 100%;
-		width: 3vw;
-		/* width: 55px; */
-		margin: 0px;
+		width: 35px;
+		margin: 0;
 		padding: 0px;
-		/* margin: .5rem; */
-		/* position: relative; */
-		/* vertical-align: baseline; */
-		/* border: 1px solid red; */
-
-		img {
-			/* position: absolute; */
-			/* top: -5px; */
-		}
 	}
 
 	${below.mid`
 		/* padding: ${vars.genPadd / 2}rem .5rem; */
 		font-size:1.2rem;
+		&.national-flag {
+			width: 25px;
+		}
 	`}
 	${below.desktop`
 		padding: 0.9rem .6rem;
@@ -237,12 +230,12 @@ const A = styled(Link)`
 		}
 
 		&.national-flag {
-			display: none;
+			width: 100%;
 
 			img {
 				width: 40px;
-				position: absolute;
-				top: -5px;
+				margin: 1rem 2rem;
+				
 			}
 		}
 	`}
