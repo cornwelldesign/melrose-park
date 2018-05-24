@@ -205,12 +205,14 @@ const A = styled(Link)`
 		width: 35px;
 		margin: 0;
 		padding: 0px;
+		padding-top: 6px;
 	}
 
 	${below.mid`
 		/* padding: ${vars.genPadd / 2}rem .5rem; */
 		font-size:1.2rem;
 		&.national-flag {
+			padding-top: 4px;
 			width: 25px;
 		}
 	`}
@@ -233,7 +235,7 @@ const A = styled(Link)`
 			top: 1rem;
 			border: 0px;
 			left: 17rem;
-
+			padding-top: 0;
 			/* width: 100%; */
 
 			img {
