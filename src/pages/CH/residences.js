@@ -21,7 +21,7 @@ class ResidencesPage extends React.Component {
         <Hero
           image="/images/melrose-park-sydney-property-036-BUILDING.jpg"
           alt="Melrose Park Property, Sydney - Residences Building (Artists Impression)"
-          title="MELROSE PARK精品住宅"
+          title="MELROSE PARK&#10;精品住宅"
         />
 				<section>
         <div className="row">
