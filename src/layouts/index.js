@@ -354,7 +354,7 @@ class TemplateWrapper extends React.Component {
             />
 
             <Header className={this.state.nav_fixed + " " + this.state.nav_hidden}>
-               <Logo to="/" >
+               <Logo to={this.state.lang === 'en' ? "/" : "/ch"}   >
                   <img src="/svg/melrose-park-sydney-property-001-LOGO.svg" />
                </Logo>
                <Hamburger onClick={this.toggleNav.bind(this)} isOpened={this.state.nav_open} />
