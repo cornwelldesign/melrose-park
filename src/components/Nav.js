@@ -5,100 +5,136 @@ import { below } from "../style/functions"
 import Link from "gatsby-link"
 
 class Nav extends React.Component {
-	render() {
-		return(
-			<Container nav_open={this.props.nav_open} className={this.props.links_hide} >
-				<Inner>
-				<Item>
-						{this.props.lang === 'en' ? 
-						<A to="/vision/" onClick={this.props.onClick} activeClassName="selected" title="Vision" >Vision</A>
-						:	
-						<A to="/ch/vision/" onClick={this.props.onClick} activeClassName="selected" title="理念" >理念</A>
-					}
-				
-					</Item>
-					
-					<Item>
-					{this.props.lang === 'en' ? 
-						<A to="/location/" onClick={this.props.onClick}  activeClassName="selected" title="Location" >Location</A>
-						:
-						<A to="/ch/location/" onClick={this.props.onClick}  activeClassName="selected" title="地点" >地点</A>
-					}
-					</Item>
-					
-					<Item>
-					{this.props.lang === 'en' ? 
-						<A to="/lifestyle/" onClick={this.props.onClick}  activeClassName="selected" title="Lifestyle" >Lifestyle</A>
-						:
-						<A to="/ch/lifestyle/" onClick={this.props.onClick}  activeClassName="selected" title="生活方式" >生活方式</A>
-					}
-					</Item>
+   render() {
+      return (
+         <Container nav_open={this.props.nav_open} className={this.props.links_hide}>
+            <Inner>
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/vision/" onClick={this.props.onClick} activeClassName="selected" title="Vision">
+                        Vision
+                     </A>
+                  ) : (
+                     <A to="/ch/vision/" onClick={this.props.onClick} activeClassName="selected" title="理念">
+                        理念
+                     </A>
+                  )}
+               </Item>
 
-					<Item>
-					{this.props.lang === 'en' ? 
-						<A to="/smart-city/" onClick={this.props.onClick}  activeClassName="selected" title="Smart City" >Smart City</A>
-						:
-						<A to="/ch/smart-city/" onClick={this.props.onClick}  activeClassName="selected" title="智慧城市" >智慧城市</A>
-					}
-					</Item>
-					
-					<Item>
-					{this.props.lang === 'en' ? 
-						<A to="/green-space/" onClick={this.props.onClick}  activeClassName="selected" title="Green Space" >Green Space</A>
-						:
-						<A to="/ch/green-space/" onClick={this.props.onClick}  activeClassName="selected" title="绿色空间" >绿色空间</A>
-					}
-					</Item>
-					
-					<Item>
-					{this.props.lang === 'en' ? 
-						<A to="/residences/" onClick={this.props.onClick}  activeClassName="selected" title="Residences" >Residences</A>
-						:
-						<A to="/ch/residences/" onClick={this.props.onClick}  activeClassName="selected" title="精品住宅" >精品住宅</A>
-					}
-					</Item>
-					
-					<Item>
-					{this.props.lang === 'en' ? 
-						<A to="/contact/" onClick={this.props.onClick}  activeClassName="selected" title="Contact" >Contact</A>
-						:
-						<A to="/ch/contact/" onClick={this.props.onClick}  activeClassName="selected" title="联系方式" >联系方式</A>
-					}
-						</Item>
-					
-					<Item>
-					{this.props.lang === 'en' ? 
-						<A to="/ch" onClick={this.props.onClick}  activeClassName="selected" title="中文(简体)" >
-						<img src="/svg/china_flag.svg" alt="中文(简体)" className="national-flag" />
-						</A>
-					:
-					<A to="/" onClick={this.props.onClick}  activeClassName="selected" title="English" >
-					<img src="/svg/aus_flag.svg" alt="English" className="national-flag" />
-					</A>
-					}
-					</Item>
-					
-				</Inner>
-			</Container>
-		)
-	}
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/location/" onClick={this.props.onClick} activeClassName="selected" title="Location">
+                        Location
+                     </A>
+                  ) : (
+                     <A to="/ch/location/" onClick={this.props.onClick} activeClassName="selected" title="地点">
+                        地点
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/lifestyle/" onClick={this.props.onClick} activeClassName="selected" title="Lifestyle">
+                        Lifestyle
+                     </A>
+                  ) : (
+                     <A to="/ch/lifestyle/" onClick={this.props.onClick} activeClassName="selected" title="生活方式">
+                        生活方式
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/smart-city/" onClick={this.props.onClick} activeClassName="selected" title="Smart City">
+                        Smart City
+                     </A>
+                  ) : (
+                     <A to="/ch/smart-city/" onClick={this.props.onClick} activeClassName="selected" title="智慧城市">
+                        智慧城市
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/green-space/" onClick={this.props.onClick} activeClassName="selected" title="Green Space">
+                        Green Space
+                     </A>
+                  ) : (
+                     <A to="/ch/green-space/" onClick={this.props.onClick} activeClassName="selected" title="绿色空间">
+                        绿色空间
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/residences/" onClick={this.props.onClick} activeClassName="selected" title="Residences">
+                        Residences
+                     </A>
+                  ) : (
+                     <A to="/ch/residences/" onClick={this.props.onClick} activeClassName="selected" title="精品住宅">
+                        精品住宅
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/contact/" onClick={this.props.onClick} activeClassName="selected" title="Contact">
+                        Contact
+                     </A>
+                  ) : (
+                     <A to="/ch/contact/" onClick={this.props.onClick} activeClassName="selected" title="联系方式">
+                        联系方式
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A
+                        to="/ch"
+                        onClick={this.props.onClick}
+                        activeClassName="selected"
+								title="中文(简体)"
+								className="national-flag"
+                       >
+                        <img src="/svg/china_flag.svg" alt="中文(简体)" />
+                     </A>
+                  ) : (
+                     <A
+                        to="/"
+                        onClick={this.props.onClick}
+                        activeClassName="selected"
+								title="English"
+								className="national-flag"
+                       >
+                        <img src="/svg/aus_flag.svg" alt="English" />
+                     </A>
+                  )}
+               </Item>
+            </Inner>
+         </Container>
+      )
+   }
 }
 
 const Container = styled.nav`
-	float:right;
-	overflow:hidden;
-	padding: 0 ${vars.genPadd}rem;
-	&.links-hide{
-		display:none;
-	}
+   float: right;
+   overflow: hidden;
+   padding: 0 ${vars.genPadd}rem;
+   &.links-hide {
+      display: none;
+   }
 
-		${below.desktop`
+   ${below.desktop`
 	font-size: 1rem;
 	padding: 0;
 		float: left;
-	`}
-
-	${below.mobile`
+	`} ${below.mobile`
 		position: fixed;
 		top: 4.5rem;
 		z-index: 2;
@@ -109,20 +145,30 @@ const Container = styled.nav`
 		transition: top ${vars.time};
 		top: ${props => (props.nav_open ? `4.5rem` : `-60vh`)};
 		background: ${vars.colors.offBlank};
-	`}
+	`};
 `
 
 const Inner = styled.ul`
-	list-style: none;
-
+   list-style: none;
+	display: flex;
+	justify-content: space-between;
+   /* border: 1px solid lime; */
+	/* width: 59vw; */
+	/* margin: 0; */
+   /* height: 40px; */
+	${below.mobile`
+		display: block;
+		width: auto;
+	`};
 `
 
 const Item = styled.li`
-	display:inline-block;
-	${below.mobile`
-		display: block;
-	`}
+   /* display: inline-block; */
+	/* border: 1px solid red; */
 
+   ${below.mobile`
+		display: block;
+	`};
 `
 
 const A = styled(Link)`
@@ -154,8 +200,21 @@ const A = styled(Link)`
 	*/
 	}
 
-	.national-flag {
-		width: 40px;
+	&.national-flag {
+		height: 100%;
+		width: 3vw;
+		/* width: 55px; */
+		margin: 0px;
+		padding: 0px;
+		/* margin: .5rem; */
+		/* position: relative; */
+		/* vertical-align: baseline; */
+		/* border: 1px solid red; */
+
+		img {
+			/* position: absolute; */
+			/* top: -5px; */
+		}
 	}
 
 	${below.mid`
@@ -163,16 +222,28 @@ const A = styled(Link)`
 		font-size:1.2rem;
 	`}
 	${below.desktop`
-		padding: 0.9rem 1rem;
+		padding: 0.9rem .6rem;
 		font-size: 1rem;
-
 	`}
-	${below.mobile `
+
+		
+
+	${below.mobile`
 		font-size: 2rem;
 		padding: 2rem 2rem;
 		border-bottom: 1px solid ${vars.colors.brandPrimary};
 		&:hover{
 			background: ${vars.colors.offColor}
+		}
+
+		&.national-flag {
+			display: none;
+
+			img {
+				width: 40px;
+				position: absolute;
+				top: -5px;
+			}
 		}
 	`}
 `
