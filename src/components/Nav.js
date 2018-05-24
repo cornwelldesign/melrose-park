@@ -214,12 +214,11 @@ const A = styled(Link)`
 			width: 25px;
 		}
 	`}
+		
 	${below.desktop`
 		padding: 0.9rem .6rem;
 		font-size: 1rem;
 	`}
-
-		
 
 	${below.mobile`
 		font-size: 2rem;
@@ -230,11 +229,16 @@ const A = styled(Link)`
 		}
 
 		&.national-flag {
-			width: 100%;
+			position: fixed;
+			top: 1rem;
+			border: 0px;
+			left: 17rem;
+
+			/* width: 100%; */
 
 			img {
-				width: 40px;
-				margin: 1rem 2rem;
+				width: 20px;
+				margin: 0;
 				
 			}
 		}

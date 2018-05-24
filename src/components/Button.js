@@ -72,7 +72,7 @@ const ButtonContainer = styled(Link)`
 	line-height: 4.5rem;
 	display:block;
 	font-size: 2.2rem;
-	padding: 0 1.5rem;
+	padding: 0 .5rem;
 	`}
 	${props => props.type == 'border-white' && `
 		border: 1px solid ${vars.colors.blank};
