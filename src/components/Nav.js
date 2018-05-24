@@ -143,7 +143,7 @@ const Container = styled.nav`
 		width:100%;
 		height:auto;
 		transition: top ${vars.time};
-		top: ${props => (props.nav_open ? `4.5rem` : `-60vh`)};
+		top: ${props => (props.nav_open ? `4.5rem` : `-45rem`)};
 		background: ${vars.colors.offBlank};
 	`};
 `

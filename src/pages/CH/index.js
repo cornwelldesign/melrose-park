@@ -58,7 +58,7 @@ class HomePage extends React.Component {
 							/><FocusImg
 								link="/ch/residences/"
 								image="/images/melrose-park-sydney-property-006-BUILDING.jpg"
-								title={`Melrose精品住宅`}
+								title="Melrose&#10;精品住宅"
 								alt="Melrose Park Property, Sydney - Outside View of Building (Artists Impression)"
 								button="点击浏览生活方式"
 							/><FocusTxt
