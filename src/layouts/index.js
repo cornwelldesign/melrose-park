@@ -112,18 +112,20 @@ class TemplateWrapper extends React.Component {
       if (typeof window !== `undefined`) {
          setTimeout(function() {
             window.scrollTo(0, 0)
-         }, 1)
+         }, 100)
          /*
 			setTimeout(function () {
 
           this.setState({loadingOver: true});
 				}.bind(this), 4600)
 
-						*/ setTimeout(
+                        */
+
+         setTimeout(
             function() {
                this.setState({ loadingOver: true })
             }.bind(this),
-            0
+            100
          )
       }
    }
@@ -134,19 +136,21 @@ class TemplateWrapper extends React.Component {
          window.scrollTo(0, 0)
       }
    }
-   
+
    toggleNav(event) {
       let nav_open = !this.state.nav_open
       this.setState({ nav_open })
 
       // if header link '中文(简体)' was cicked, change state to 'ch'
-      if (event.target.title === '中文(简体)') {
-        this.setState({ lang: 'ch' })
-        } else if (event.target.title === 'English') {
-            this.setState({ lang: 'en' })
-        }
-    }
-    
+      console.log(event.target.alt)
+
+      if (event.target.alt === "中文(简体)") {
+         this.setState({ lang: "ch" })
+      } else if (event.target.alt === "English") {
+         this.setState({ lang: "en" })
+      }
+   }
+
    updateMeta(title, desc) {
       this.setState({ page_title: title, page_description: desc })
    }
@@ -188,9 +192,7 @@ class TemplateWrapper extends React.Component {
                   },
                   {
                      itemprop: "image",
-                     content: `${
-                        this.state.domain
-                     }/images/melrose-park-sydney-property-000-SOCIAL.jpg`
+                     content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
                   },
                   {
                      name: "twitter:card",
@@ -206,9 +208,7 @@ class TemplateWrapper extends React.Component {
                   },
                   {
                      name: "twitter:image:src",
-                     content: `${
-                        this.state.domain
-                     }/images/melrose-park-sydney-property-000-SOCIAL.jpg`
+                     content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
                   },
                   {
                      property: "og:video",
@@ -232,15 +232,11 @@ class TemplateWrapper extends React.Component {
                   },
                   {
                      property: "og:image",
-                     content: `${
-                        this.state.domain
-                     }/images/melrose-park-sydney-property-000-SOCIAL.jpg`
+                     content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
                   },
                   {
                      property: "og:image:secure_url",
-                     content: `${
-                        this.state.domain
-                     }/images/melrose-park-sydney-property-000-SOCIAL.jpg`
+                     content: `${this.state.domain}/images/melrose-park-sydney-property-000-SOCIAL.jpg`
                   },
                   {
                      property: "og:image:type",
@@ -354,11 +350,18 @@ class TemplateWrapper extends React.Component {
             />
 
             <Header className={this.state.nav_fixed + " " + this.state.nav_hidden}>
-               <Logo to={this.state.lang === 'en' ? "/" : "/ch"}   >
+               <Logo to={this.state.lang === "en" ? "/" : "/ch"}>
                   <img src="/svg/melrose-park-sydney-property-001-LOGO.svg" />
                </Logo>
+
                <Hamburger onClick={this.toggleNav.bind(this)} isOpened={this.state.nav_open} />
-               <Button button="Register Now" href="/register" float={true} />
+
+               {/* Register Now button language switch */}
+               {this.state.lang === "en" ? (
+                  <Button button="Register Now" href="/register" float={true} />
+               ) : (
+                  <Button button="立刻登记" href="/ch/register" float={true} />
+               )}
 
                <Nav
                   toggleNav={this.toggleNav.bind(this)}
@@ -368,6 +371,7 @@ class TemplateWrapper extends React.Component {
                   lang={this.state.lang}
                />
             </Header>
+
             <Main>
                {this.props.children({
                   ...this.props,
@@ -376,7 +380,7 @@ class TemplateWrapper extends React.Component {
                })}
             </Main>
 
-            <Footer />
+            <Footer lang={this.state.lang} />
 
             {this.state.loading == true && <Splash shown={this.state.loadingOver} />}
          </div>

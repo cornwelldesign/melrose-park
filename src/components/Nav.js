@@ -68,9 +68,13 @@ class Nav extends React.Component {
 					
 					<Item>
 					{this.props.lang === 'en' ? 
-						<A to="/ch" onClick={this.props.onClick}  activeClassName="selected" title="中文(简体)" >中文(简体)</A>
+						<A to="/ch" onClick={this.props.onClick}  activeClassName="selected" title="中文(简体)" >
+						<img src="/svg/china_flag.svg" alt="中文(简体)" className="national-flag" />
+						</A>
 					:
-						<A to="/" onClick={this.props.onClick}  activeClassName="selected" title="English" >English</A>
+					<A to="/" onClick={this.props.onClick}  activeClassName="selected" title="English" >
+					<img src="/svg/aus_flag.svg" alt="English" className="national-flag" />
+					</A>
 					}
 					</Item>
 					
@@ -148,6 +152,10 @@ const A = styled(Link)`
 		font-weight: bold;
 		color: ${vars.colors.brandHighlight};
 	*/
+	}
+
+	.national-flag {
+		width: 40px;
 	}
 
 	${below.mid`
