@@ -75,7 +75,7 @@ const ButtonContainer = styled(Link)`
 	padding: 0 .5rem;
 	`}
 	${below.xs`
-		font-size: 4vw;
+		font-size: 3vw;
 	`}
 	${props => props.type == 'border-white' && `
 		border: 1px solid ${vars.colors.blank};
