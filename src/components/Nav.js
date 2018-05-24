@@ -102,7 +102,7 @@ class Nav extends React.Component {
 								title="中文(简体)"
 								className="national-flag"
                        >
-                        <img src="/svg/china_flag.svg" alt="中文(简体)" />
+                        <img src="/svg/china_flag.svg" alt="Chinese" />
                      </A>
                   ) : (
                      <A

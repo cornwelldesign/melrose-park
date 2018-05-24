@@ -142,7 +142,7 @@ class TemplateWrapper extends React.Component {
       let nav_open = !this.state.nav_open
       
       // if header link '中文(简体)' was cicked, change state to 'ch'
-      if (event.target.alt === "中文(简体)") {
+      if (event.target.alt === "Chinese") {
         this.setState({ lang: "ch" })
       } else if (event.target.alt === "English") {
         this.setState({ lang: "en" })
