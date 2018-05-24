@@ -1,38 +1,39 @@
 import React from "react"
 import styled from "styled-components"
 import * as vars from "../style/vars"
-import {below, clearFix} from "../style/functions"
+import { below, clearFix } from "../style/functions"
 import Link from "gatsby-link"
 import Button from "../components/Button"
 
 class Footer extends React.Component {
-  render() {
-		return (
-			<Container>
-				<Logo href="http://payce.com.au/" title="Payce" target="_blank" >
-					<Icon src="/svg/melrose-park-sydney-property-002-PAYCE.svg" alt="Payce Logo" />
-				</Logo>
-				<Logo href="https://www.sekisuihouse.com.au/" title="Sekisui House" target="_blank" >
-					<Icon src="/svg/melrose-park-sydney-property-003-SEKISUI.svg" alt="Sekisui House Logo" />
-				</Logo>
-				<Logo href="http://www.bostonmarketing.com.au/" title="Boston" target="_blank" >
-					<Icon src="/svg/melrose-park-sydney-property-002-BOSTON-v3.svg" alt="Boston Marketing" />
-				</Logo>
-				<Etc href="https://www.bostonmarketing.com.au/privacy-policy/" target="_blank" title="Privacy Policy" >
-					Privacy Policy
-				</Etc> 
+   render() {
+      return (
+         <Container>
+            <Logo href="http://payce.com.au/" title="Payce" target="_blank">
+               <Icon src="/svg/melrose-park-sydney-property-002-PAYCE.svg" alt="Payce Logo" />
+            </Logo>
+            <Logo href="http://www.bostonmarketing.com.au/" title="Boston" target="_blank">
+               <Icon src="/svg/melrose-park-sydney-property-002-BOSTON-v3.svg" alt="Boston Marketing" />
+            </Logo>
+            <Etc href="https://www.bostonmarketing.com.au/privacy-policy/" target="_blank" title="Privacy Policy">
+               {this.props.lang === 'en' ? "Privacy Policy" : "隐私政策"} 
+            </Etc>
 
-				<Button button="Register Now" href="/register" float={true} />
-				<Social href="https://www.facebook.com/MelroseParkLife/" title="Facebook">
-					<Round src="/svg/melrose-park-sydney-property-005-FACEBOOK.svg" alt="Facebook Logo" />
-				</Social>
-				<Social href="https://www.instagram.com/melroseparklife/" title="Instagram">
-					<Round src="/svg/melrose-park-sydney-property-006-INSTAGRAM.svg" alt="Instagram Logo" />
-				</Social>
-
-			</Container>
-		)
-  }
+            {/* Register Now button language switch */}
+            {this.props.lang === "en" ? (
+               <Button button="Register Now" href="/register" float={true} />
+            ) : (
+               <Button button="立刻登记" href="/ch/register" float={true} />
+            )}
+            <Social href="https://www.facebook.com/MelroseParkLife/" title="Facebook">
+               <Round src="/svg/melrose-park-sydney-property-005-FACEBOOK.svg" alt="Facebook Logo" />
+            </Social>
+            <Social href="https://www.instagram.com/melroseparklife/" title="Instagram">
+               <Round src="/svg/melrose-park-sydney-property-006-INSTAGRAM.svg" alt="Instagram Logo" />
+            </Social>
+         </Container>
+      )
+   }
 }
 
 export default Footer
@@ -100,6 +101,6 @@ const Social = styled.a`
 `
 
 const Round = styled.img`
-	width:3rem;
-	margin-right: 1rem;
+   width: 3rem;
+   margin-right: 1rem;
 `

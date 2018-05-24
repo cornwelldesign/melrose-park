@@ -1134,11 +1134,11 @@ class Transport extends React.Component {
 	</g>
 </svg>
         <Toggles>
-          <Toggle className="toggle toggle-retail" onClick={() => { this.toggle('retail') }}>Retail</Toggle>
-          <Toggle className="toggle toggle-parks"  onClick={() => { this.toggle('parks') }}>Parks</Toggle>
-          <Toggle className="toggle toggle-education"  onClick={() => { this.toggle('education') }}>Education</Toggle>
-          <Toggle className="toggle toggle-transit"  onClick={() => { this.toggle('transit') }}>Transportation</Toggle>
-          <Toggle className="toggle toggle-roads"  onClick={() => { this.toggle('roads') }}>Main Roads</Toggle>
+          <Toggle className="toggle toggle-retail" onClick={() => { this.toggle('retail') }}>{ this.props.lang === 'ch' ? "购物" : 'Retail' }</Toggle>
+          <Toggle className="toggle toggle-parks"  onClick={() => { this.toggle('parks') }}>{ this.props.lang === 'ch' ? "公园" :'Parks' }</Toggle>
+          <Toggle className="toggle toggle-education"  onClick={() => { this.toggle('education') }}>{ this.props.lang === 'ch' ? "学校" : 'Education' }</Toggle>
+          <Toggle className="toggle toggle-transit"  onClick={() => { this.toggle('transit') }}>{ this.props.lang === 'ch' ? "公交" : 'Transportation' }</Toggle>
+          <Toggle className="toggle toggle-roads"  onClick={() => { this.toggle('roads') }}>{ this.props.lang === 'ch' ? "主要道路" : 'Main Roads' }</Toggle>
 
         </Toggles>
 
