@@ -14,18 +14,18 @@ class ParaTitle extends React.Component {
          let scroll = window.scrollY
 
          if (div) {
-            let top = div.offsetTop
-            let height = window.innerHeight
-            let btm = top + height
+            let distanceFromTop = div.offsetTop
+            let screenHeight = window.innerHeight
+            let distanceFromBottom = distanceFromTop + screenHeight
 
             // if mobile, scroll starting position change
-            let track = isSmlScrn ? scroll - height / 3 : scroll - top
+            let track = isSmlScrn ? scroll - distanceFromTop / 1.5 : scroll - distanceFromTop
 
             // if mobile, track faster
-            track = isSmlScrn ? track * 3 : track * 0.4
+            track = isSmlScrn ? track * 1.3 : track * 0.4
 
             // if mobile, scroll from right to left
-            let goal = isSmlScrn ? top - btm : btm - top
+            let goal = isSmlScrn ? distanceFromTop - distanceFromBottom : distanceFromBottom - distanceFromTop
 
             let style = track / goal * 100
             div.style.transform = `translateX(${style}%)`
