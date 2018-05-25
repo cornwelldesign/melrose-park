@@ -16,64 +16,6 @@ import "../style/main.js"
 import { below } from "../style/functions"
 import TagManager from "react-gtm-module"
 
-const Main = styled.main`
-   padding-top: 4.5rem;
-   position: relative;
-`
-const ToggleWrap = styled.div`
-   transition: filter 2s;
-   transition-timing-function: ease;
-
-   filter: blur(0);
-   ${props =>
-      props.blur == true &&
-      `
-        filter: blur(5px);
-	`};
-`
-
-const Logo = styled(Link)`
-	width: 23rem;
-	position: relative;
-	display: block;
-	float:left;
-	${below.mid`
-	width: 20rem;
-
-	`}
-	${below.desktop`
-    display: none;
-	`}	
-  ${below.tablet`
-    display: block;
-    width: 15rem;
-	`}
-	${below.mobile`
-    margin: 1rem 0 0 1rem;
-	`}
-`
-
-const Header = styled.header`
-   position: fixed;
-   z-index: 10;
-   left: 0;
-   right: 0;
-   transform: translate3d(0, 0, 0);
-   background: ${vars.colors.brandPrimary};
-   padding: ${vars.genPadd / 2}rem ${vars.genPadd}rem;
-   ${below.mobile`
-	padding:0;
-
-	`} &:before, &:after {
-      content: " "; /* 1 */
-      display: table; /* 2 */
-   }
-
-   &:after {
-      clear: both;
-   }
-`
-
 class TemplateWrapper extends React.Component {
    constructor(props) {
       super(props)
@@ -113,7 +55,7 @@ class TemplateWrapper extends React.Component {
          setTimeout(function() {
             window.scrollTo(0, 0)
          }, 100)
-        
+
          setTimeout(
             function() {
                this.setState({ loadingOver: true })
@@ -124,12 +66,10 @@ class TemplateWrapper extends React.Component {
 
       // if path includes "/ch", set to Chinese
       if (window.location.href.search(/ch\b/) !== -1) {
-        this.setState({ lang: 'ch' })
-        
-      } 
-    }
-      
-      
+         this.setState({ lang: "ch" })
+      }
+   }
+
    toggleForm() {
       const registerOpen = !this.state.registerOpen
       this.setState({ registerOpen })
@@ -140,16 +80,15 @@ class TemplateWrapper extends React.Component {
 
    toggleNav(event) {
       let nav_open = !this.state.nav_open
-      
+
       // if header link '中文(简体)' was cicked, change state to 'ch'
       if (event.target.alt === "Chinese") {
-        this.setState({ lang: "ch" })
+         this.setState({ lang: "ch" })
       } else if (event.target.alt === "English") {
-        this.setState({ lang: "en" })
+         this.setState({ lang: "en" })
       } else {
-        // if clicked other links on mobile, toggle navigation open / close
-        this.setState({ nav_open })
-
+         // if clicked other links on mobile, toggle navigation open / close
+         this.setState({ nav_open })
       }
    }
 
@@ -356,15 +295,6 @@ class TemplateWrapper extends React.Component {
                   <img src="/svg/melrose-park-sydney-property-001-LOGO.svg" />
                </Logo>
 
-               <Hamburger onClick={this.toggleNav.bind(this)} isOpened={this.state.nav_open} />
-
-               {/* Register Now button language switch */}
-               {this.state.lang === "en" ? (
-                  <Button button="Register Now" href="/register" float={true} />
-               ) : (
-                  <Button button="立刻登记" href="/ch/register" float={true} />
-               )}
-
                <Nav
                   toggleNav={this.toggleNav.bind(this)}
                   nav_open={this.state.nav_open}
@@ -372,6 +302,13 @@ class TemplateWrapper extends React.Component {
                   onClick={this.toggleNav.bind(this)}
                   lang={this.state.lang}
                />
+               {/* Register Now button language switch */}
+               {this.state.lang === "en" ? (
+                  <Button button="Register Now" href="/register" float={true} />
+               ) : (
+                  <Button button="立刻登记" href="/ch/register" float={true} />
+               )}
+               <Hamburger onClick={this.toggleNav.bind(this)} isOpened={this.state.nav_open} />
             </Header>
 
             <Main>
@@ -395,3 +332,78 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper
+
+const Header = styled.header`
+   position: fixed;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 10;
+   left: 0;
+   right: 0;
+   border: 1px solid red;
+   /* transform: translate3d(0, 0, 0); */
+   background: ${vars.colors.brandPrimary};
+   padding: 1.3rem;
+   
+   ${below.tablet`
+      padding: .5rem;
+	`} 
+   
+   /* &:before, &:after {
+      content: " "; 
+      display: table;
+   } */
+
+   /* &:after {
+      clear: both;
+   } */
+`
+
+const Logo = styled(Link)`
+	width: 16vw;
+   border: 1px solid red;
+	/* display: block; */
+	/* float:left; */
+
+   img {
+      position: absolute;
+      /* height: auto; */
+      width: inherit;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+   
+	${below.mid`
+      width: 20rem;
+	`}
+
+	${below.desktop`
+    display: none;
+	`}	
+
+  ${below.tablet`
+    display: block;
+    width: 15rem;
+	`}
+   
+	${below.mobile`
+    margin: 1rem 0 0 1rem;
+	`}
+`
+
+const Main = styled.main`
+   padding-top: 4.5rem;
+   position: relative;
+`
+const ToggleWrap = styled.div`
+   transition: filter 2s;
+   transition-timing-function: ease;
+
+   filter: blur(0);
+   ${props =>
+      props.blur == true &&
+      `
+        filter: blur(5px);
+	`};
+`

@@ -29,10 +29,11 @@ class Button extends React.Component {
 export default Button
 
 const Wrap = styled.div`
-		float: ${props => (props.float ? `right` : `none`)};
+		/* float: ${props => (props.float ? `right` : `none`)}; */
 
 `
 const ButtonContainer = styled(Link)`
+	/* border: 1px solid dodgerblue; */
 
 	text-align: center;
 	text-transform: uppercase;
@@ -46,12 +47,12 @@ const ButtonContainer = styled(Link)`
 	color: ${vars.colors.offBody};
 	padding: ${vars.genPadd / 2}rem  ${vars.genPadd}rem;
 	transition: background 1s;
-	display: inline-block;
+	/* display: inline-block; */
 	overflow: hidden;
 	min-width: 10rem;
 	z-index:0;
 	font-weight: 500;
-	z-index: ${props => (props.float ? `-1` : `1`)};
+	/* z-index: ${props => (props.float ? `-1` : `1`)}; */
 
 	${below.desktop`
 	font-size:1.2rem;

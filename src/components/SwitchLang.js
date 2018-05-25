@@ -4,7 +4,7 @@ import * as vars from "../style/vars"
 import { below } from "../style/functions"
 import Link from "gatsby-link"
 
-class Nav extends React.Component {
+class SwitchLang extends React.Component {
    render() {
       return (
          <Container nav_open={this.props.nav_open} className={this.props.links_hide}>
@@ -252,4 +252,4 @@ const A = styled(Link)`
 	`}
 `
 
-export default Nav
+export default SwitchLang
