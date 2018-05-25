@@ -66,6 +66,7 @@ const Inner = styled.div`
    height: 12.5rem;
    padding-left: 30vw;
    h1 {
+		line-height: 1;
    }
 `
 
