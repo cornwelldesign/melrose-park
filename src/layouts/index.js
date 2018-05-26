@@ -141,13 +141,15 @@ class TemplateWrapper extends React.Component {
    toggleNav(event) {
       let nav_open = !this.state.nav_open
       
-      // if header link '中文(简体)' was cicked, change state to 'ch'
+      console.log(event.target.alt);
+      
+      // if national flag was cicked, switch language
       if (event.target.alt === "Chinese") {
         this.setState({ lang: "ch" })
       } else if (event.target.alt === "English") {
         this.setState({ lang: "en" })
       } else {
-        // if clicked other links on mobile, toggle navigation open / close
+        // hamburger menu toggle navigation open / close
         this.setState({ nav_open })
 
       }

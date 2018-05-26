@@ -100,7 +100,7 @@ class Nav extends React.Component {
                         onClick={this.props.onClick}
                         activeClassName="selected"
 								title="中文(简体)"
-								className="national-flag"
+                        className="national-flag"
                        >
                         <img src="/svg/china_flag.svg" alt="Chinese" />
                      </A>
@@ -110,7 +110,7 @@ class Nav extends React.Component {
                         onClick={this.props.onClick}
                         activeClassName="selected"
 								title="English"
-								className="national-flag"
+                        className="national-flag"
                        >
                         <img src="/svg/aus_flag.svg" alt="English" />
                      </A>
@@ -182,7 +182,7 @@ const A = styled(Link)`
 	padding: ${vars.genPadd / 2}rem;
 	display:block;
 	transition: opacity ${vars.time};
-
+   
 	font-weight: 500;
 
 	&:hover{
@@ -236,7 +236,7 @@ const A = styled(Link)`
 			border: 0px;
 			left: 17rem;
 			padding-top: 0;
-			/* width: 100%; */
+         height: 1px;
 
 			img {
 				width: 20px;
