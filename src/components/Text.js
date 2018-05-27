@@ -53,10 +53,9 @@ const H1container = styled.h1`
 	font-weight: normal;
 	line-height: 0.8;
 	color: ${props => (props.type ? `${vars.colors.brandPrimary}` : `auto`)};
-		padding-bottom: ${vars.genPadd}rem;
+	padding-bottom: ${vars.genPadd}rem;
 	${below.mid`
-	font-size: 10rem;
-
+		line-height: 1;
 	`}
 `
 
@@ -151,4 +150,8 @@ const Pcontainer = styled.p`
 	.green{
 		color: ${vars.colors.brandPrimary};
 	}
+	${below.mid`
+		line-height: 1.5;
+
+	`}
 `

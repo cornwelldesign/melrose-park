@@ -36,9 +36,9 @@ class HomePage extends React.Component {
 								button="Explore the Lifestyle"
 							/><FocusImg
 								link="/location/"
-								title={`My World 
-								Connected Like 
-								Never Before`}
+								title="My World 
+								Connected &#10; Like 
+								Never Before"
 								image="/images/melrose-park-sydney-property-003-RESIDENTS.jpg"
 								alt="Melrose Park Property, Sydney - Young Couple Residents"
 							/><FocusTxt
@@ -145,9 +145,9 @@ class HomePage extends React.Component {
 						<rightSide>
 							<FocusImg
 								link="/location/"
-								title={`My World 
-								Connected Like 
-								Never Before`}
+								title="My World 
+								Connected &#10; Like 
+								Never Before"
 								image="/images/melrose-park-sydney-property-003-RESIDENTS.jpg"
 								alt="Melrose Park Property, Sydney - Young Couple Residents"
 							/>
