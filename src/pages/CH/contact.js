@@ -8,7 +8,7 @@ import { below } from "../../style/functions"
 
 class contactPage extends React.Component {
    componentDidMount() {
-      this.props.updateMeta("Contact | Melrose Park ", "Stay in touch with all the latest new from Melrose Park")
+      this.props.updateMeta("联系方式 | Melrose Park ", "得到更多最新 的Melrose Park信息")
    }
    render() {
       if (typeof window !== `undefined`) {

@@ -10,7 +10,7 @@ class LocationPage extends React.Component {
   componentDidMount() {
     this
       .props
-      .updateMeta("Location | Melrose Park ", "一系列新的通勤计划提议将使Melrose Park成为悉尼最四通八达的地区之一。");
+      .updateMeta("地点 | Melrose Park ", "一系列新的通勤计划提议将使Melrose Park成为悉尼最四通八达的地区之一。");
   }
 
   render() {

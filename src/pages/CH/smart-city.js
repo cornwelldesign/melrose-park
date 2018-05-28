@@ -8,7 +8,7 @@ class SmartCity extends React.Component {
   componentDidMount() {
     this
       .props
-      .updateMeta("Smart City | Melrose Park ", "立足未来，Melrose Park采用智能城市技术对可持续城市设计进行了精辟的研究。");
+      .updateMeta("智慧城市 | Melrose Park ", "立足未来，Melrose Park采用智能城市技术对可持续城市设计进行了精辟的研究。");
   }
 
   render() {

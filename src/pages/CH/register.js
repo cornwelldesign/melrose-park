@@ -10,7 +10,7 @@ import {below} from "../../style/functions"
 class registerPage extends React.Component {
   componentDidMount() {
     this.props.updateMeta(
-      "Register | Melrose Park ",
+      "联系方式 | Melrose Park ",
       "Melrose Park的确是在定义一种不同的生活方式。在充满活力的Melrose Park中，您可以逃离城市的喧嚣，进入宁静港湾，在这里，每个细节都被考虑到了。"
     );
   }

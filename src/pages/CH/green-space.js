@@ -10,8 +10,7 @@ class LifestylePage extends React.Component {
   componentDidMount() {
     this
       .props
-      .updateMeta("Green Space | Melrose Park ", "The sprawling 13,000m2 Central Park will be the heart of the new Melrose Park co" +
-          "mmunity.");
+      .updateMeta("绿色空间 | Melrose Park ", "13,000平米的中央公园将成为Melrose Park新社区的中心。");
   }
 
   render() {

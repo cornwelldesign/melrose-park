@@ -10,8 +10,7 @@ class LifestylePage extends React.Component {
   componentDidMount() {
     this
       .props
-      .updateMeta("Lifestyle | Melrose Park ", "The pulse of your new neighbourhood, Melrose Park will have everything you need " +
-          "for the life you want to live.");
+      .updateMeta("生活方式 | Melrose Park ", "一个破茧而出的新邻里社区，Melrose Park 将满足您所有的日常生活所需。");
   }
 
   render() {

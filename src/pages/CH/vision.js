@@ -12,8 +12,8 @@ import { LargeP, P, H1, H4 } from "../../components/Text.js"
 class VisionPage extends React.Component {
    componentDidMount() {
       this.props.updateMeta(
-         "Vision | Melrose Park ",
-         "Melrose Park is the new Australian dream, a welcoming neighbourhood with a sense of place. Beautiful residences, public spaces, vibrant shopping and dining"
+         "理念 | Melrose Park ",
+         "Melrose Park，一个新澳洲梦开启的地方，一个遍布美丽住宅，宽广绿地，商场美食的大型社区，这里充满了友好的氛围和无数的可能性，充分诠释了新悉尼大都会的城市精神。"
       )
    }
 
