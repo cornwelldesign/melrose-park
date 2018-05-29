@@ -140,21 +140,21 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                url = `${edge.node.parent_element.slug}/${edge.node.slug}`               
             } else {
                url = `${edge.node.slug}`
-            }
-            var template = `./src/templates/${edge.node.template.replace('.php', '')}.js`
-            createPage({
-               path: `/${url}/`,
-               component: slash(
+              }
+              var template = `./src/templates/${edge.node.template.replace('.php', '')}.js`
+              createPage({
+                path: `/${url}/`,
+                component: slash(
                   path.resolve(
-                     template
+                    template
                   )
-               ),
-               context: {
+                ),
+                context: {
                   id: edge.node.id,
                   slug: edge.node.slug,
                   parent_element: edge.node.id
-               }
-            })
+                }
+              })
          })
          resolve()
       })

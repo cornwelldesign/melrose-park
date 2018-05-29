@@ -3,131 +3,107 @@ import Hero from '../components/Hero.js'
 import FocusImg from '../components/FocusImg.js'
 import FocusTxt from '../components/FocusTxt.js'
 import MultiGroup from '../components/MultiGroup.js'
+import renderHTML from 'react-render-html'
 
 class HomePage extends React.Component {
    componentDidMount() {
       this.props.updateMeta(
-         'Melrose Park | The New Heart of Sydney ',
-         'The pulse of your new neighbourhood, Melrose Park Residences will have everything you could need for the life you want to live. Located only 8km from Parramatta and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places.'
+         this.props.data.wordpressPage.acf.meta_title,
+         this.props.data.wordpressPage.acf.meta_description
       )
    }
 
    render() {
+      const wp = this.props.data.wordpressPage.acf
+
       if (typeof window !== `undefined`) {
          if (window.innerWidth < 640) {
             return (
                <div>
                   <Hero
-                     image="/images/melrose-park-sydney-property-001-GARDENS.jpg"
+                     image={wp.hero_image.source_url}
                      alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)"
-                     title={`The New Heart
-						of Sydney`}
+                     title="{wp.hero_text}"
                      half="left"
                   />
                   <FocusImg
                      link="/lifestyle/"
-                     image="/images/melrose-park-sydney-property-002-RESIDENT.jpg"
-                     title={`Somewhere 
-		to Call 
-		My Own`}
+                     image={wp.slide_2_image.source_url}
+                     title={wp.slide_2_main_text}
                      alt="Melrose Park Property, Sydney - First Time Buyer Resident"
-                     button="Explore the Lifestyle"
+                     button={wp.slide_2_link_text}
                   />
                   <FocusTxt
                      link="/lifestyle/"
-                     text={`The pulse of your new neighbourhood, 
-								Melrose Park Residences 
-								will have everything you 
-								could need for the 
-								life you want to live.`}
-                     button="Explore the Lifestyle"
+                     text={renderHTML(wp.slide_2_paragraph) }
+                     button={wp.slide_2_link_text}
                   />
                   <FocusImg
                      link="/location/"
-                     title="My World 
-								Connected &#10; Like 
-								Never Before"
-                     image="/images/melrose-park-sydney-property-003-RESIDENTS.jpg"
+                     title={wp.slide_3_main_text}
+                     image={wp.slide_3_image.source_url}
                      alt="Melrose Park Property, Sydney - Young Couple Residents"
                   />
                   <FocusTxt
                      link="/location/"
-                     text={`Located only 7km from 
-								Parramatta CBD and 17km from 
-								Sydney CBD, Melrose Park 
-								one of Sydney’s most 
-								connected places. `}
-                     button="Explore the Location"
+                     text={renderHTML(wp.slide_3_paragraph) }
+                     button={wp.slide_3_link_text}
                   />
                   <FocusImg
                      link="/green-space/"
-                     image="/images/melrose-park-sydney-property-004-RESIDENTS.jpg"
+                     image={wp.slide_4_image.source_url}
                      alt="Melrose Park Property, Sydney - Young Family Residents"
-                     title={`People I Love, 
-								In a Place 
-								We Love.`}
+                     title={wp.slide_4_main_text}
                   />
                   <FocusTxt
                      link="/green-space/"
-                     text={`There are vast open 
-								spaces for kids to be kids, 
-								and parks to explore or 
-								relax in. It is like having your 
-								own backyard. `}
-                     button="Explore the Green Space"
+                     text={renderHTML(wp.slide_4_paragraph) }
+                     button={wp.slide_4_link_text}
                   />
                   <FocusImg
                      link="/smart-city/"
-                     title={`My Life
-								Made Simply
-								Wonderful`}
-                     image="/images/melrose-park-sydney-property-005-RESIDENT.jpg"
+                     title={wp.slide_5_main_text}
+                     image={wp.slide_5_image.source_url}
                      alt="Melrose Park Property, Sydney - Downsizer Residents"
                      button="Explore the Smart City"
                   />
                   <FocusTxt
                      link="/smart-city/"
-                     text={`With the future in mind, 
-								Smart City technology is designed
-								to enrich your lifestyle.`}
-                     button="Explore the  Smart City"
+                     text={renderHTML(wp.slide_5_paragraph) }
+                     button={wp.slide_5_link_text}
                   />
                   <FocusImg
                      link="/residences/"
-                     image="/images/melrose-park-sydney-property-006-BUILDING.jpg"
-                     title={`Melrose 
-								Residences`}
+                     image={wp.slide_6_image.source_url}
+                     title={wp.slide_6_main_text}
                      alt="Melrose Park Property, Sydney - Outside View of Building (Artists Impression)"
-                     button="Explore the Lifestyle"
+                     button={wp.slide_2_link_text}
                   />
                   <FocusTxt
                      link="/residences/"
-                     text={`More space to live, love and grow. 
-								Studio, 1, 2 and 3-bedroom residences 
-								launching soon.`}
-                     button="Explore the Lifestyle"
+                     text={renderHTML(wp.slide_6_paragraph) }
+                     button={wp.slide_2_link_text}
                   />
                </div>
             )
          } else {
             return (
+            
                <MultiGroup animTime={1.5} paddingTop="4rem">
                   <multiScroll>
                      <leftSide>
                                 <Hero
-                           image="/images/melrose-park-sydney-property-001-GARDENS.jpg"
+                           image={wp.hero_image.source_url}
                            alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)"
-                           title={`The New Heart
-						of Sydney`}
+                           title={wp.hero_text}
                            half="left"
                         />
                      </leftSide>
                      <rightSide>
                                 <Hero
-                           image="/images/melrose-park-sydney-property-001-GARDENS.jpg"
+                           image={wp.hero_image.source_url}
                            alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)"
-                           title={`The New Heart
-						of Sydney`}
+                           title={wp.hero_text}
                            half="right"
                         />
                      </rightSide>
@@ -136,23 +112,17 @@ class HomePage extends React.Component {
                      <leftSide>
                         <FocusImg
                            link="/lifestyle/"
-                           image="/images/melrose-park-sydney-property-002-RESIDENT.jpg"
-                           title={`Somewhere 
-		to Call 
-		My Own`}
+                           image={wp.slide_2_image.source_url}
+                           title={wp.slide_2_main_text}
                            alt="Melrose Park Property, Sydney - First Time Buyer Resident"
-                           button="Explore the Lifestyle"
+                           button={wp.slide_2_link_text}
                         />
                      </leftSide>
                      <rightSide>
                          <FocusTxt
                            link="/lifestyle/"
-                           text={`The pulse of your new neighbourhood, 
-								Melrose Park Residences 
-								will have everything you 
-								could need for the 
-								life you want to live.`}
-                           button="Explore the Lifestyle"
+                           text={renderHTML(wp.slide_2_paragraph) }
+                           button={wp.slide_2_link_text}
                         />
                      </rightSide>
                   </multiScroll>
@@ -160,21 +130,15 @@ class HomePage extends React.Component {
                      <leftSide>
                         <FocusTxt
                            link="/location/"
-                           text={`Located only 7km from 
-								Parramatta CBD and 17km from 
-								Sydney CBD, Melrose Park 
-								one of Sydney’s most 
-								connected places. `}
-                           button="Explore the Location"
+                     text={renderHTML(wp.slide_3_paragraph) }
+                           button={wp.slide_3_link_text}
                         />
                      </leftSide>
                      <rightSide>
                         <FocusImg
                            link="/location/"
-                           title="My World 
-								Connected &#10; Like 
-								Never Before"
-                           image="/images/melrose-park-sydney-property-003-RESIDENTS.jpg"
+                           title={wp.slide_3_main_text}
+                           image={wp.slide_3_image.source_url}
                            alt="Melrose Park Property, Sydney - Young Couple Residents"
                         />
                      </rightSide>
@@ -184,22 +148,16 @@ class HomePage extends React.Component {
                      <leftSide>
                          <FocusImg
                            link="/green-space/"
-                           image="/images/melrose-park-sydney-property-004-RESIDENTS.jpg"
+                           image={wp.slide_4_image.source_url}
                            alt="Melrose Park Property, Sydney - Young Family Residents"
-                           title={`People I Love, 
-								In a Place 
-								We Love.`}
+                           title={wp.slide_4_main_text}
                         />
                      </leftSide>
                      <rightSide>
                                   <FocusTxt
                            link="/green-space/"
-                           text={`There are vast open 
-								spaces for kids to be kids, 
-								and parks to explore or 
-								relax in. It is like having your 
-								own backyard. `}
-                           button="Explore the Green Space"
+                           text={renderHTML(wp.slide_4_paragraph) }
+                           button={wp.slide_4_link_text}
                         />
                      </rightSide>
                   </multiScroll>
@@ -207,19 +165,15 @@ class HomePage extends React.Component {
                      <leftSide>
                          <FocusTxt
                            link="/smart-city/"
-                           text={`With the future in mind, 
-								Smart City technology is designed
-								to enrich your lifestyle.`}
-                           button="Explore the  Smart City"
+                           text={renderHTML(wp.slide_5_paragraph) }
+                           button={wp.slide_5_link_text}
                         />
                      </leftSide>
                      <rightSide>
                                   <FocusImg
                            link="/smart-city/"
-                           title={`My Life
-								Made Simply
-								Wonderful`}
-                           image="/images/melrose-park-sydney-property-005-RESIDENT.jpg"
+                           title={wp.slide_5_main_text}
+                           image={wp.slide_5_image.source_url}
                            alt="Melrose Park Property, Sydney - Downsizer Residents"
                            button="Explore the Smart City"
                         />
@@ -229,25 +183,23 @@ class HomePage extends React.Component {
                      <leftSide>
                                   <FocusImg
                            link="/residences/"
-                           image="/images/melrose-park-sydney-property-006-BUILDING.jpg"
-                           title={`Melrose 
-								Residences`}
+                           image={wp.slide_6_image.source_url}
+                           title={wp.slide_6_main_text}
                            alt="Melrose Park Property, Sydney - Outside View of Building (Artists Impression)"
-                           button="Explore the Lifestyle"
+                           button={wp.slide_2_link_text}
                         />
                      </leftSide>
                      <rightSide>
                                   <FocusTxt
                            link="/residences/"
-                           text={`More space to live, love and grow. 
-								Studio, 1, 2 and 3-bedroom residences 
-								launching soon.`}
-                           button="Explore the Lifestyle"
+                           text={renderHTML(wp.slide_6_paragraph) }
+                           button={wp.slide_2_link_text}
                         />
                      </rightSide>
                   </multiScroll>
                </MultiGroup>
             )
+
          }
       } else {
          return <div>build</div>
@@ -257,9 +209,8 @@ class HomePage extends React.Component {
 
 export default HomePage
 
-
 export const pageQuery = graphql`
-   query Homepage($slug: String) {
+   query chPage($slug: String) {
       wordpressPage(slug: { eq: $slug }) {
          id
          slug
@@ -270,9 +221,6 @@ export const pageQuery = graphql`
          }
          acf {
             hero_image {
-               source_url
-            }
-            image_1 {
                source_url
             }
             image_2 {

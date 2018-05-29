@@ -23,7 +23,7 @@ class HomePage extends React.Component {
                   <Hero
                      image={wp.hero_image.source_url}
                      alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)"
-                     title={wp.hero_text}
+                     title="{wp.hero_text}"
                      half="left"
                   />
                   <FocusImg
@@ -88,6 +88,7 @@ class HomePage extends React.Component {
             )
          } else {
             return (
+            
                <MultiGroup animTime={1.5} paddingTop="4rem">
                   <multiScroll>
                      <leftSide>
@@ -210,7 +211,7 @@ export default HomePage
 
 export const pageQuery = graphql`
    query Index {
-      wordpressPage(slug: { eq: "index" }) {
+      wordpressPage(slug: { eq: "homepage-en" }) {
          id
          slug
          template
