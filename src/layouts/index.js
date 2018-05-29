@@ -361,7 +361,7 @@ class TemplateWrapper extends React.Component {
                {this.state.lang === "en" ? (
                   <Button button="Register Now" href="/register" float={true} />
                ) : (
-                  <Button button="立刻登记" href="/ch/register" float={true} />
+                  <Button button="立刻登记" href="/ch/ch-register" float={true} />
                )}
 
                <Nav
