@@ -98,10 +98,13 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                          paragraph
                          team_header
                          team_1_name
+                         team_1_url
                          team_1_description
                          team_2_name
+                         team_2_url
                          team_2_description
                          team_3_name
+                         team_3_url
                          team_3_description
                          slide_2_main_text
                          slide_2_paragraph

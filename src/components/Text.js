@@ -137,7 +137,7 @@ const H4container = styled.h4`
 	`)}
 `
 
-const Pcontainer = styled.p`
+const Pcontainer = styled.div`
 	font-family: ${vars.fonts.body};
   font-size: 2rem;
 	font-weight: normal;
