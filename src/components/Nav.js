@@ -99,10 +99,11 @@ class Nav extends React.Component {
                         to="/ch"
                         onClick={this.props.onClick}
                         activeClassName="selected"
-								title="中文(简体)"
-                        className="national-flag"
+								title="中文"
+                        className="lang-switch"
+                        lang="ch"
                        >
-                        <img src="/svg/china_flag.svg" alt="Chinese" />
+                       中文
                      </A>
                   ) : (
                      <A
@@ -110,9 +111,10 @@ class Nav extends React.Component {
                         onClick={this.props.onClick}
                         activeClassName="selected"
 								title="English"
-                        className="national-flag"
+                        className="lang-switch"
+                        lang="en"
                        >
-                        <img src="/svg/aus_flag.svg" alt="English" />
+                       EN
                      </A>
                   )}
                </Item>
@@ -200,20 +202,21 @@ const A = styled(Link)`
 	*/
 	}
 
-	&.national-flag {
+	&.lang-switch {
 		height: 100%;
-		width: 35px;
+		width: 100%;
 		margin: 0;
-		padding: 0px;
-		padding-top: 6px;
+		padding-top: 10px;
+      color: white;
+      /* position: absolute; */
+		/* padding-top: 6px; */
 	}
 
 	${below.mid`
 		/* padding: ${vars.genPadd / 2}rem .5rem; */
 		font-size:1.2rem;
-		&.national-flag {
-			padding-top: 4px;
-			width: 25px;
+		&.lang-switch {
+			padding-top: 8px;
 		}
 	`}
 		
@@ -230,7 +233,7 @@ const A = styled(Link)`
 			background: ${vars.colors.offColor}
 		}
 
-		&.national-flag {
+		&.lang-switch {
 			position: fixed;
 			top: 1rem;
 			border: 0px;
