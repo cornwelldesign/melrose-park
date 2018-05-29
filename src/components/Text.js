@@ -92,7 +92,7 @@ const H3container = styled.h3`
 	`)}
 `
 
-const LargePcontainer = styled.p`
+const LargePcontainer = styled.div`
 	font-family: ${vars.fonts.body};
   font-size: 4rem;
 	font-weight: normal;

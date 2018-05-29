@@ -17,7 +17,7 @@ class FocusBox extends React.Component {
 		
 				<Txt className="txt " >
 					<Inner >			
-						<LargeP>{this.props.text}</LargeP>
+						<LargeP className="sub-text">{this.props.text}</LargeP>
 							<Button title={this.props.button} href={this.props.link} button={this.props.button} type="border-white" />
 					</Inner>
 				</Txt>	
@@ -79,9 +79,18 @@ const Inner = styled.div`
 	width: 100% ;
 	margin: auto;
 	white-space: pre-line;
+
+	.sub-text {
+		width: 70%;
+		margin: 0 auto;
+	}
+	
 	${below.mobile`
 	top: auto;
 	transform: translateY(0%); 
 
+	.sub-text {
+		width: 100%;
+	}
 	`}
 `
