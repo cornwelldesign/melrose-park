@@ -210,8 +210,8 @@ class HomePage extends React.Component {
 export default HomePage
 
 export const pageQuery = graphql`
-   query Index {
-      wordpressPage(slug: { eq: "homepage-en" }) {
+   query chPage($slug: String) {
+      wordpressPage(slug: { eq: $slug }) {
          id
          slug
          template

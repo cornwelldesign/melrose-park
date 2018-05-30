@@ -141,17 +141,14 @@ class TemplateWrapper extends React.Component {
    toggleNav(event) {
       let nav_open = !this.state.nav_open
       
-      console.log(event.target.alt);
-      
-      // if national flag was cicked, switch language
-      if (event.target.alt === "Chinese") {
+      // switch language
+      if (event.target.lang === "ch") {
         this.setState({ lang: "ch" })
-      } else if (event.target.alt === "English") {
+      } else if (event.target.lang === "en") {
         this.setState({ lang: "en" })
       } else {
         // hamburger menu toggle navigation open / close
         this.setState({ nav_open })
-
       }
    }
 
@@ -364,7 +361,7 @@ class TemplateWrapper extends React.Component {
                {this.state.lang === "en" ? (
                   <Button button="Register Now" href="/register" float={true} />
                ) : (
-                  <Button button="立刻登记" href="/ch/register" float={true} />
+                  <Button button="立刻登记" href="/ch/ch-register" float={true} />
                )}
 
                <Nav

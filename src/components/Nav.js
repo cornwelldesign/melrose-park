@@ -15,7 +15,7 @@ class Nav extends React.Component {
                         Vision
                      </A>
                   ) : (
-                     <A to="/ch/vision/" onClick={this.props.onClick} activeClassName="selected" title="理念">
+                     <A to="/ch/ch-vision/" onClick={this.props.onClick} activeClassName="selected" title="理念">
                         理念
                      </A>
                   )}
@@ -27,7 +27,7 @@ class Nav extends React.Component {
                         Location
                      </A>
                   ) : (
-                     <A to="/ch/location/" onClick={this.props.onClick} activeClassName="selected" title="地点">
+                     <A to="/ch/ch-location/" onClick={this.props.onClick} activeClassName="selected" title="地点">
                         地点
                      </A>
                   )}
@@ -39,7 +39,7 @@ class Nav extends React.Component {
                         Lifestyle
                      </A>
                   ) : (
-                     <A to="/ch/lifestyle/" onClick={this.props.onClick} activeClassName="selected" title="生活方式">
+                     <A to="/ch/ch-lifestyle/" onClick={this.props.onClick} activeClassName="selected" title="生活方式">
                         生活方式
                      </A>
                   )}
@@ -51,7 +51,7 @@ class Nav extends React.Component {
                         Smart City
                      </A>
                   ) : (
-                     <A to="/ch/smart-city/" onClick={this.props.onClick} activeClassName="selected" title="智慧城市">
+                     <A to="/ch/ch-smart-city/" onClick={this.props.onClick} activeClassName="selected" title="智慧城市">
                         智慧城市
                      </A>
                   )}
@@ -63,7 +63,7 @@ class Nav extends React.Component {
                         Green Space
                      </A>
                   ) : (
-                     <A to="/ch/green-space/" onClick={this.props.onClick} activeClassName="selected" title="绿色空间">
+                     <A to="/ch/ch-green-space/" onClick={this.props.onClick} activeClassName="selected" title="绿色空间">
                         绿色空间
                      </A>
                   )}
@@ -75,7 +75,7 @@ class Nav extends React.Component {
                         Residences
                      </A>
                   ) : (
-                     <A to="/ch/residences/" onClick={this.props.onClick} activeClassName="selected" title="精品住宅">
+                     <A to="/ch/ch-residences/" onClick={this.props.onClick} activeClassName="selected" title="精品住宅">
                         精品住宅
                      </A>
                   )}
@@ -87,7 +87,7 @@ class Nav extends React.Component {
                         Contact
                      </A>
                   ) : (
-                     <A to="/ch/contact/" onClick={this.props.onClick} activeClassName="selected" title="联系方式">
+                     <A to="/ch/ch-contact/" onClick={this.props.onClick} activeClassName="selected" title="联系方式">
                         联系方式
                      </A>
                   )}
@@ -99,10 +99,11 @@ class Nav extends React.Component {
                         to="/ch"
                         onClick={this.props.onClick}
                         activeClassName="selected"
-								title="中文(简体)"
-                        className="national-flag"
+								title="中文"
+                        className="lang-switch"
+                        lang="ch"
                        >
-                        <img src="/svg/china_flag.svg" alt="Chinese" />
+                       中文
                      </A>
                   ) : (
                      <A
@@ -110,9 +111,10 @@ class Nav extends React.Component {
                         onClick={this.props.onClick}
                         activeClassName="selected"
 								title="English"
-                        className="national-flag"
+                        className="lang-switch"
+                        lang="en"
                        >
-                        <img src="/svg/aus_flag.svg" alt="English" />
+                       EN
                      </A>
                   )}
                </Item>
@@ -200,20 +202,21 @@ const A = styled(Link)`
 	*/
 	}
 
-	&.national-flag {
+	&.lang-switch {
 		height: 100%;
-		width: 35px;
+		width: 100%;
 		margin: 0;
-		padding: 0px;
-		padding-top: 6px;
+		padding-top: 10px;
+      color: white;
+      /* position: absolute; */
+		/* padding-top: 6px; */
 	}
 
 	${below.mid`
 		/* padding: ${vars.genPadd / 2}rem .5rem; */
 		font-size:1.2rem;
-		&.national-flag {
-			padding-top: 4px;
-			width: 25px;
+		&.lang-switch {
+			padding-top: 8px;
 		}
 	`}
 		
@@ -230,7 +233,7 @@ const A = styled(Link)`
 			background: ${vars.colors.offColor}
 		}
 
-		&.national-flag {
+		&.lang-switch {
 			position: fixed;
 			top: 1rem;
 			border: 0px;

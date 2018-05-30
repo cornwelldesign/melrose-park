@@ -13,7 +13,7 @@ class FocusImg extends React.Component {
 	render() {
 		return(<Img className="img " to={this.props.link} title={this.props.button}  >
 			<img src={this.props.image} alt={this.props.alt}  draggable={false}    />
-			<H2>{this.props.title}</H2>
+			<H2 className="main-copy">{this.props.title}</H2>
 		</Img>
 
 		)
@@ -50,5 +50,9 @@ const Img = styled(Link)`
 		color: rgba(255, 255, 255, 0.9);
 		white-space:pre-line;
 
+		&.main-copy {
+			width: 85%;
+		}
 	}
+
 `;

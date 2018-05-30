@@ -7,6 +7,21 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`, {
       resolve: `gatsby-plugin-sitemap`
+    },
+    {
+      resolve: 'gatsby-source-wordpress',
+			options: {
+				baseUrl: '13.211.165.10',
+				protocol: 'http',
+				hostingWPCOM: false,
+				useACF: false,
+				auth: {
+					htaccess_user: "root",
+					htaccess_pass: "root",
+					htaccess_sendImmediately: false,
+				},
+				verboseOutput: false
     }
+  }
   ]
 };
