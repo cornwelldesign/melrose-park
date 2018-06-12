@@ -23,7 +23,7 @@ class HomePage extends React.Component {
                   <Hero
                      image={wp.hero_image.source_url}
                      alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)"
-                     title="{wp.hero_text}"
+                     title={wp.hero_text}
                      half="left"
                   />
                   <FocusImg
