@@ -89,9 +89,17 @@ class TemplateWrapper extends React.Component {
          company: "Melrose Park",
          page_title: "Melrose Park | The New Heart of Sydney",
          page_description:
-            "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
-            "g you could need for the life you want to live. Located only 8km from Parramatta" +
-            " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
+         "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
+         "g you could need for the life you want to live. Located only 8km from Parramatta" +
+         " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
+         seo_meta: "Melrose Park | The New Heart of Sydney",
+         seo_body: "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
+         "g you could need for the life you want to live. Located only 8km from Parramatta" +
+         " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
+         seo_footer: "Melrose Park | The New Heart of Sydney",
+         seo_code_block: "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
+         "g you could need for the life you want to live. Located only 8km from Parramatta" +
+         " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
          company: "Melrose Park",
          street_address: "661 Victoria Road ",
          addressLocality: "Melrose Park",
@@ -152,8 +160,8 @@ class TemplateWrapper extends React.Component {
       }
    }
 
-   updateMeta(title, desc) {
-      this.setState({ page_title: title, page_description: desc })
+   updateMeta(title, desc, seo_meta, seo_body) {
+      this.setState({ page_title: title, page_description: desc, seo_meta, seo_body })
    }
    render() {
       if (typeof window !== `undefined`) {
@@ -181,7 +189,7 @@ class TemplateWrapper extends React.Component {
                   },
                   {
                      name: "description",
-                     content: this.state.page_description
+                     content: this.state.seo_meta
                   },
                   {
                      itemprop: "name",
@@ -381,7 +389,9 @@ class TemplateWrapper extends React.Component {
                })}
             </Main>
 
-            <Footer lang={this.state.lang} />
+            <div className="seo-body">{this.state.seo_body}</div>
+
+            <Footer lang={this.state.lang} seoFooter={this.state.seo_footer} seoCodeBlock={this.state.seo_code_block} />
 
             {this.state.loading == true && <Splash shown={this.state.loadingOver} />}
          </div>

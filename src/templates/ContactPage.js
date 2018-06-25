@@ -6,13 +6,17 @@ import * as vars from '../style/vars'
 import Register from '../components/RegisterForm.js'
 import { below } from '../style/functions'
 import renderHTML from 'react-render-html'
+import Footer from "../components/Footer"
+
 
 
 class contactPage extends React.Component {
    componentDidMount() {
       this.props.updateMeta(
          this.props.data.wordpressPage.acf.meta_title,
-         this.props.data.wordpressPage.acf.meta_description
+         this.props.data.wordpressPage.acf.meta_description,
+         this.props.data.wordpressPage.acf.seo_meta,
+         this.props.data.wordpressPage.acf.seo_body
       )
    }
    render() {
@@ -71,6 +75,7 @@ class contactPage extends React.Component {
                      />
                   </div>
                </ContactBtm>
+               <Footer seoFooter={wp.seo_footer} seoCodeBlock={wp.seo_code_block}/>
             </div>
          )
       } else {
