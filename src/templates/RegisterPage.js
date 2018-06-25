@@ -106,6 +106,10 @@ export const pageQuery = graphql`
          acf {
             meta_title
             meta_description
+            seo_meta
+            seo_body
+            seo_footer
+            seo_code_block
             header
             paragraph
             wordpress_

@@ -189,6 +189,10 @@ export const pageQuery = graphql`
             }
             meta_title
             meta_description
+            seo_meta
+            seo_body
+            seo_footer
+            seo_code_block
             headline_1
             paragraph_1
             sub_title_1
