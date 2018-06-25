@@ -193,7 +193,6 @@ const A = styled(Link)`
 
 	${below.mobile`
 		color: ${vars.colors.body};
-
 	`}
 	&.selected { 
 		/*
@@ -207,7 +206,8 @@ const A = styled(Link)`
 		width: 100%;
 		margin: 0;
 		padding-top: 10px;
-      color: white;
+
+    color: white;
       /* position: absolute; */
 		/* padding-top: 6px; */
 	}
@@ -227,25 +227,22 @@ const A = styled(Link)`
 
 	${below.mobile`
 		font-size: 2rem;
-		padding: 2rem 2rem;
+    /* margin: 1rem 0; */
+		/* padding: 2rem 2rem; */
 		border-bottom: 1px solid ${vars.colors.brandPrimary};
 		&:hover{
 			background: ${vars.colors.offColor}
 		}
 
 		&.lang-switch {
+      text-align: center;
+      width: 13vw;
 			position: fixed;
 			top: 1rem;
-			border: 0px;
-			left: 17rem;
-			padding-top: 0;
-         height: 1px;
+			left: 40vw;
+			padding: 0;
+      height: 1px;
 
-			img {
-				width: 20px;
-				margin: 0;
-				
-			}
 		}
 	`}
 `
