@@ -186,7 +186,7 @@ class TemplateWrapper extends React.Component {
                   },
                   {
                      name: "description",
-                     content: this.state.seo_meta
+                     content: this.state.page_description
                   },
                   {
                      itemprop: "name",
