@@ -157,9 +157,10 @@ class TemplateWrapper extends React.Component {
       }
    }
 
-   updateMeta(title, desc, seo_meta, seo_body, seo_code_block, seo_footer) {
-      this.setState({ page_title: title, page_description: desc, seo_meta, seo_body, seo_code_block, seo_footer })
-   }
+    updateMeta(title, desc, seo_meta, seo_body, seo_footer, seo_code_block) {
+      this.setState({ page_title: title, page_description: desc, seo_meta, seo_body, seo_footer, seo_code_block })
+    }
+
    render() {
       if (typeof window !== `undefined`) {
          const tagManagerArgs = {

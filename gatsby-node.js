@@ -140,7 +140,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
          }
          _.each(result.data.allWordpressPage.edges, edge => {
 						var url
-						console.log(edge.node);
+						// console.log(edge.node);
             if (edge.node.parent_element) {
                url = `${edge.node.parent_element.slug}/${edge.node.slug}`               
             } else {
