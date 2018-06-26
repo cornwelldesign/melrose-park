@@ -4,6 +4,7 @@ import * as vars from "../style/vars"
 import { below, clearFix } from "../style/functions"
 import Link from "gatsby-link"
 import Button from "../components/Button"
+import renderHTML from 'react-render-html'
 
 class Footer extends React.Component {
    render() {
@@ -31,8 +32,9 @@ class Footer extends React.Component {
                title="Privacy Policy">
                {this.props.lang === "ch" ? "隐私政策" : "Privacy Policy"}
             </Etc>
-            <div class="seo-footer">{this.props.seoFooter}</div>
-            <div class="seo-footer">{this.props.seoCodeBlock}</div>
+						{renderHTML(renderHTML(this.props.seoFooter))}
+						{renderHTML(renderHTML(this.props.seoCodeBlock))}
+
 
             {/* Register Now button language switch */}
             {this.props.lang === "ch" ? (

@@ -9,10 +9,14 @@ import renderHTML from 'react-render-html'
 
 class LocationPage extends React.Component {
    componentDidMount() {
-      this.props.updateMeta(
-         this.props.data.wordpressPage.acf.meta_title,
-         this.props.data.wordpressPage.acf.meta_description
-      )
+		this.props.updateMeta(
+			this.props.data.wordpressPage.acf.meta_title,
+			this.props.data.wordpressPage.acf.meta_description,
+			this.props.data.wordpressPage.acf.seo_meta,
+			this.props.data.wordpressPage.acf.seo_body,
+			this.props.data.wordpressPage.acf.seo_footer,
+			this.props.data.wordpressPage.acf.seo_code_block
+	 )
    }
 
    render() {

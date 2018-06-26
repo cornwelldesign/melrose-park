@@ -152,7 +152,7 @@ export default class MultiGroup extends React.Component {
                     selected={nPage===i+1}/>)}
                   </ul>
                 </div>
-								<Footer/>
+								<Footer seoFooter="   "  seoCodeBlock="   "  />
 
         </div>
     );
