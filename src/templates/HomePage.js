@@ -6,11 +6,15 @@ import MultiGroup from '../components/MultiGroup.js'
 import renderHTML from 'react-render-html'
 
 class HomePage extends React.Component {
-   componentDidMount() {
-      this.props.updateMeta(
-         this.props.data.wordpressPage.acf.meta_title,
-         this.props.data.wordpressPage.acf.meta_description
-      )
+	componentDidMount() {
+		this.props.updateMeta(
+			this.props.data.wordpressPage.acf.meta_title,
+			this.props.data.wordpressPage.acf.meta_description,
+			this.props.data.wordpressPage.acf.seo_meta,
+			this.props.data.wordpressPage.acf.seo_body,
+			this.props.data.wordpressPage.acf.seo_footer,
+			this.props.data.wordpressPage.acf.seo_code_block
+	 )
    }
 
    render() {
@@ -23,7 +27,7 @@ class HomePage extends React.Component {
                   <Hero
                      image={wp.hero_image.source_url}
                      alt="Melrose Park Property, Sydney - Outside Gardens (Artists Impression)"
-                     title="{wp.hero_text}"
+                     title={wp.hero_text}
                      half="left"
                   />
                   <FocusImg
@@ -264,6 +268,10 @@ export const pageQuery = graphql`
             }
             meta_title
             meta_description
+            seo_meta
+            seo_body
+            seo_footer
+            seo_code_block
             headline_1
             paragraph_1
             sub_title_1

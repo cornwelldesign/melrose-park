@@ -74,7 +74,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                          paragraph_2
                          sub_title_2
                          side_text
-                         header_1
+												 header_1
+												 seo_body
+												 seo_footer
+												 seo_code_block
+												 seo_meta
                          sub_header_1
                          text_1
                          sub_header_2
@@ -135,7 +139,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             reject(result.errors)
          }
          _.each(result.data.allWordpressPage.edges, edge => {
-            var url
+						var url
+						console.log(edge.node);
             if (edge.node.parent_element) {
                url = `${edge.node.parent_element.slug}/${edge.node.slug}`               
             } else {

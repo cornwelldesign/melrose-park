@@ -8,16 +8,20 @@ import { LargeP, P, H4, H3 } from '../components/Text.js'
 import renderHTML from 'react-render-html'
 
 class LifestylePage extends React.Component {
-   componentDidMount() {
-      this.props.updateMeta(
-         this.props.data.wordpressPage.acf.meta_title,
-         this.props.data.wordpressPage.acf.meta_description
-      )
-   }
+	componentDidMount() {
+		this.props.updateMeta(
+			 this.props.data.wordpressPage.acf.meta_title,
+			 this.props.data.wordpressPage.acf.meta_description,
+			 this.props.data.wordpressPage.acf.seo_meta,
+			 this.props.data.wordpressPage.acf.seo_body,
+			 this.props.data.wordpressPage.acf.seo_footer,
+			 this.props.data.wordpressPage.acf.seo_code_block
+		)
+ }
 
    render() {
       const wp = this.props.data.wordpressPage.acf
-
+			console.log(this.props.data.wordpressPage.acf);
       return (
          <section>
             <div className="row tab-hide">
@@ -189,6 +193,10 @@ export const pageQuery = graphql`
             }
             meta_title
             meta_description
+            seo_meta
+            seo_body
+            seo_footer
+            seo_code_block
             headline_1
             paragraph_1
             sub_title_1

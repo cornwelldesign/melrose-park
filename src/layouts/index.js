@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import styled, { injectGlobal } from "styled-components"
+import renderHTML from 'react-render-html'
 
 import Footer from "../components/Footer"
 import RegisterForm from "../components/RegisterForm.js"
@@ -89,9 +90,13 @@ class TemplateWrapper extends React.Component {
          company: "Melrose Park",
          page_title: "Melrose Park | The New Heart of Sydney",
          page_description:
-            "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
-            "g you could need for the life you want to live. Located only 8km from Parramatta" +
-            " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
+         "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
+         "g you could need for the life you want to live. Located only 8km from Parramatta" +
+         " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
+         seo_meta: "1",
+         seo_body: "2",
+         seo_code_block: "3",
+         seo_footer: "3",
          company: "Melrose Park",
          street_address: "661 Victoria Road ",
          addressLocality: "Melrose Park",
@@ -152,8 +157,8 @@ class TemplateWrapper extends React.Component {
       }
    }
 
-   updateMeta(title, desc) {
-      this.setState({ page_title: title, page_description: desc })
+   updateMeta(title, desc, seo_meta, seo_body, seo_code_block, seo_footer) {
+      this.setState({ page_title: title, page_description: desc, seo_meta, seo_body, seo_code_block, seo_footer })
    }
    render() {
       if (typeof window !== `undefined`) {
@@ -181,7 +186,7 @@ class TemplateWrapper extends React.Component {
                   },
                   {
                      name: "description",
-                     content: this.state.page_description
+                     content: this.state.seo_meta
                   },
                   {
                      itemprop: "name",
@@ -349,7 +354,7 @@ class TemplateWrapper extends React.Component {
                   }
                ]}
             />
-
+						{renderHTML(renderHTML(this.state.seo_meta))}
             <Header className={this.state.nav_fixed + " " + this.state.nav_hidden}>
                <Logo to={this.state.lang === "en" ? "/" : "/ch"}>
                   <img src="/svg/melrose-park-sydney-property-001-LOGO.svg" />
@@ -372,7 +377,9 @@ class TemplateWrapper extends React.Component {
                   lang={this.state.lang}
                />
             </Header>
-
+						<div>
+						{renderHTML(renderHTML(this.state.seo_body))}
+</div>
             <Main>
                {this.props.children({
                   ...this.props,
@@ -381,7 +388,8 @@ class TemplateWrapper extends React.Component {
                })}
             </Main>
 
-            <Footer lang={this.state.lang} />
+
+            <Footer lang={this.state.lang} seoFooter={this.state.seo_footer} seoCodeBlock={this.state.seo_code_block} />
 
             {this.state.loading == true && <Splash shown={this.state.loadingOver} />}
          </div>
@@ -394,3 +402,4 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper
+
