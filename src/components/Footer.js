@@ -4,11 +4,10 @@ import * as vars from "../style/vars"
 import { below, clearFix } from "../style/functions"
 import Link from "gatsby-link"
 import Button from "../components/Button"
-import renderHTML from 'react-render-html'
+import renderHTML from "react-render-html"
 
 class Footer extends React.Component {
    render() {
-      
       return (
          <Container>
             <Logo href="http://payce.com.au/" title="Payce" target="_blank">
@@ -32,9 +31,8 @@ class Footer extends React.Component {
                title="Privacy Policy">
                {this.props.lang === "ch" ? "隐私政策" : "Privacy Policy"}
             </Etc>
-						{renderHTML(renderHTML(this.props.seoFooter))}
-						{renderHTML(renderHTML(this.props.seoCodeBlock))}
-
+            <div>{renderHTML(renderHTML(this.props.seoFooter))}</div>
+            <div>{renderHTML(renderHTML(this.props.seoCodeBlock))}</div>
 
             {/* Register Now button language switch */}
             {this.props.lang === "ch" ? (
@@ -72,7 +70,7 @@ const Container = styled.footer`
 		.btn {
 			display:none;
 		}
-	`}
+	`};
 `
 
 const Logo = styled.a`
@@ -84,7 +82,7 @@ const Logo = styled.a`
 		position: relative;
 		margin: 0;
 		line-height: 0;
-	`}
+	`};
 `
 
 const Icon = styled.img`
@@ -96,7 +94,7 @@ const Icon = styled.img`
 		top: 50%;
 		/* bottom: 0; */
 		transform: translateY(-50%);
-	`}
+	`};
 `
 
 const Etc = styled.a`
@@ -112,14 +110,14 @@ const Etc = styled.a`
 		width: 19rem;
 		text-align: center;
 		line-height: 2.6;
-	`}
+	`};
 `
 
 const Social = styled.a`
    float: right;
    ${below.mobile`
 		margin: 0 .5rem;
-	`}
+	`};
 `
 
 const Round = styled.img`
