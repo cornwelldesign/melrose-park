@@ -5,6 +5,7 @@ import { below, clearFix } from "../style/functions"
 import Link from "gatsby-link"
 import Button from "../components/Button"
 import renderHTML from "react-render-html"
+import Parser from 'html-react-parser';
 
 class Footer extends React.Component {
    render() {
@@ -31,8 +32,23 @@ class Footer extends React.Component {
                title="Privacy Policy">
                {this.props.lang === "ch" ? "隐私政策" : "Privacy Policy"}
             </Etc>
-            <div>{renderHTML(renderHTML(this.props.seoFooter))}</div>
-            <div>{renderHTML(renderHTML(this.props.seoCodeBlock))}</div>
+
+            {/* testing html parser */}
+            {/* <div>{renderHTML(renderHTML(this.props.seoFooter))}</div> */}
+            <div>{ this.props.seoCodeBlock }</div>
+             {/* {Parser('<p id="im-id" onclick="alert(`hi`)" >brother</p>',  {
+
+               replace: function(domnode) {
+                  console.log('checking', domnode.attribs);
+                  if ( domnode.attribs.onclick ) {
+                     return <p id="im-id" onClick={() => alert('hi')} >brother</p>
+                  } else {
+                     return domnode
+                  }
+               }
+
+
+             } )} */}
 
             {/* Register Now button language switch */}
             {this.props.lang === "ch" ? (
