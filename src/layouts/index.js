@@ -101,7 +101,7 @@ class TemplateWrapper extends React.Component {
 				 <meta name="description" content="Melrose Park apartments for sale are available now, off the plan. The Melrose Park residential development is the latest new community from PAYCE, Australia’s premier apartment development company. In line with all PAYCE developments, Melrose Park delivers residential havens surrounded by commercial facilities and green spaces. From owner-occupiers to investment purchases, the off the plan apartments for sale in the new Melrose Park development will impress." />
 				 <meta name="keywords" content="Apartments for sale, off the plan, Sydney apartments, new apartments, display suite Sydney, Melrose park, urban renewal, first home buyers, western Sydney apartments, new development, apartment project, payce, boston marketing" />
 				 <meta http-equiv="Last-Modified" content="2018-06-14T01:06:39+10:00" />`),
-         seo_body: `<div id='semdoc'>
+         seo_body: renderHTML(`<div id='semdoc'>
 				 <article itemscope='' itemtype='http://schema.org/NewsArticle' itemprop='mainEntityOfPage' >
 					 <section id='lead' itemprop='about'>
 						 <h1 id='headline'  itemprop='headline'>
@@ -138,9 +138,9 @@ class TemplateWrapper extends React.Component {
 					 </section><!--end: arguments -->
 				 <hr width='90%' color='#000000' size='1' noshade='noshade' />
 				 </article><!--end: article -->
-			 </div><!--end:semdoc-->`,
+			 </div><!--end:semdoc-->`),
          seo_code_block: true,
-         seo_footer: `<div id="sem-footer-link" style="display: inline; "><a style="font-size: 8pt;" onclick="Obvt(650,400);" href="javascript:void(0); ">sem</a></div>`,
+         seo_footer: renderHTML(`<div id="sem-footer-link" style="display: inline; "><a style="font-size: 8pt;" onclick="Obvt(650,400);" href="javascript:void(0); ">sem</a></div>`),
          company: "Melrose Park",
          street_address: "661 Victoria Road ",
          addressLocality: "Melrose Park",
