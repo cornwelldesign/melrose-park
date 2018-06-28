@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import styled, { injectGlobal } from "styled-components"
-import renderHTML from 'react-render-html'
 
 import Footer from "../components/Footer"
 import RegisterForm from "../components/RegisterForm.js"
@@ -16,6 +15,11 @@ import * as vars from "../style/vars"
 import "../style/main.js"
 import { below } from "../style/functions"
 import TagManager from "react-gtm-module"
+import renderHTML from "react-render-html"
+import Parser from 'html-react-parser';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ScriptTag from 'react-script-tag';
+
 
 const Main = styled.main`
    padding-top: 4.5rem;
@@ -114,6 +118,7 @@ class TemplateWrapper extends React.Component {
       }
    }
    componentDidMount() {
+		 
       if (typeof window !== `undefined`) {
          setTimeout(function() {
             window.scrollTo(0, 0)
@@ -158,7 +163,11 @@ class TemplateWrapper extends React.Component {
    }
 
     updateMeta(title, desc, seo_meta, seo_body, seo_footer, seo_code_block) {
-      this.setState({ page_title: title, page_description: desc, seo_meta, seo_body, seo_footer, seo_code_block })
+			seo_meta = ReactHtmlParser(seo_meta);
+			seo_body = ReactHtmlParser(seo_body);
+			seo_footer = ReactHtmlParser(seo_footer);
+			this.setState({ page_title: title, page_description: desc, seo_meta, seo_body, seo_footer, seo_code_block })
+			console.log(seo_code_block)
     }
 
    render() {
@@ -355,7 +364,7 @@ class TemplateWrapper extends React.Component {
                   }
                ]}
             />
-						{renderHTML(renderHTML(this.state.seo_meta))}
+						<div>{ this.state.seo_meta}</div> 
             <Header className={this.state.nav_fixed + " " + this.state.nav_hidden}>
                <Logo to={this.state.lang === "en" ? "/" : "/ch"}>
                   <img src="/svg/melrose-park-sydney-property-001-LOGO.svg" />
@@ -378,9 +387,8 @@ class TemplateWrapper extends React.Component {
                   lang={this.state.lang}
                />
             </Header>
-						<div>
-						{renderHTML(renderHTML(this.state.seo_body))}
-</div>
+						<div>{ this.state.seo_body}</div> 
+
             <Main>
                {this.props.children({
                   ...this.props,
@@ -393,6 +401,10 @@ class TemplateWrapper extends React.Component {
             <Footer lang={this.state.lang} seoFooter={this.state.seo_footer} seoCodeBlock={this.state.seo_code_block} />
 
             {this.state.loading == true && <Splash shown={this.state.loadingOver} />}
+						{this.state.seo_code_block == true && <ScriptTag isHydrating={false}  type="text/javascript" src="http://wp.melrosepark.com.au/wp-content/themes/melrosepark-v2/js/navigation.js" />}
+
+						
+
          </div>
       )
    }

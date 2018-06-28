@@ -4,6 +4,7 @@ import FocusImg from '../components/FocusImg.js'
 import FocusTxt from '../components/FocusTxt.js'
 import MultiGroup from '../components/MultiGroup.js'
 import renderHTML from 'react-render-html'
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 class HomePage extends React.Component {
 	componentDidMount() {
@@ -93,7 +94,7 @@ class HomePage extends React.Component {
          } else {
             return (
             
-               <MultiGroup animTime={1.5} paddingTop="4rem">
+               <MultiGroup animTime={1.5} paddingTop="4rem" seoFooter={ReactHtmlParser(this.props.data.wordpressPage.acf.seo_footer)} >
                   <multiScroll>
                      <leftSide>
                                 <Hero

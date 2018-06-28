@@ -6,9 +6,17 @@ import Link from "gatsby-link"
 import Button from "../components/Button"
 import renderHTML from "react-render-html"
 import Parser from 'html-react-parser';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ScriptTag from 'react-script-tag';
 
 class Footer extends React.Component {
+
+
+
+
+
    render() {
+		 
       return (
          <Container>
             <Logo href="http://payce.com.au/" title="Payce" target="_blank">
@@ -33,22 +41,9 @@ class Footer extends React.Component {
                {this.props.lang === "ch" ? "隐私政策" : "Privacy Policy"}
             </Etc>
 
-            {/* testing html parser */}
-            {/* <div>{renderHTML(renderHTML(this.props.seoFooter))}</div> */}
-            <div>{ this.props.seoCodeBlock }</div>
-             {/* {Parser('<p id="im-id" onclick="alert(`hi`)" >brother</p>',  {
-
-               replace: function(domnode) {
-                  console.log('checking', domnode.attribs);
-                  if ( domnode.attribs.onclick ) {
-                     return <p id="im-id" onClick={() => alert('hi')} >brother</p>
-                  } else {
-                     return domnode
-                  }
-               }
+						<div>{ this.props.seoFooter}</div> 
 
 
-             } )} */}
 
             {/* Register Now button language switch */}
             {this.props.lang === "ch" ? (
@@ -75,6 +70,8 @@ class Footer extends React.Component {
 
 export default Footer
 
+const Source = styled.source`
+`
 const Container = styled.footer`
    background: ${vars.colors.brandPrimary};
    ${clearFix()};
