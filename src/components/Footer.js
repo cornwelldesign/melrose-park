@@ -5,9 +5,18 @@ import { below, clearFix } from "../style/functions"
 import Link from "gatsby-link"
 import Button from "../components/Button"
 import renderHTML from "react-render-html"
+import Parser from 'html-react-parser';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ScriptTag from 'react-script-tag';
 
 class Footer extends React.Component {
+
+
+
+
+
    render() {
+		 
       return (
          <Container>
             <Logo href="http://payce.com.au/" title="Payce" target="_blank">
@@ -31,8 +40,10 @@ class Footer extends React.Component {
                title="Privacy Policy">
                {this.props.lang === "ch" ? "隐私政策" : "Privacy Policy"}
             </Etc>
-            <div>{renderHTML(renderHTML(this.props.seoFooter))}</div>
-            <div>{renderHTML(renderHTML(this.props.seoCodeBlock))}</div>
+
+						<div>{ this.props.seoFooter}</div> 
+
+
 
             {/* Register Now button language switch */}
             {this.props.lang === "ch" ? (
@@ -59,6 +70,8 @@ class Footer extends React.Component {
 
 export default Footer
 
+const Source = styled.source`
+`
 const Container = styled.footer`
    background: ${vars.colors.brandPrimary};
    ${clearFix()};
