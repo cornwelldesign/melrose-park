@@ -10,11 +10,7 @@ class thanksPage extends React.Component {
    componentDidMount() {
 		this.props.updateMeta(
       "Thank You | Melrose Park ",
-      "Registration made.",
-			this.props.data.wordpressPage.acf.seo_meta,
-			this.props.data.wordpressPage.acf.seo_body,
-			this.props.data.wordpressPage.acf.seo_footer,
-			this.props.data.wordpressPage.acf.seo_code_block
+      "Registration made."
 	 )
    }
   render() {
