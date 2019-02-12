@@ -9,6 +9,7 @@ class Nav extends React.Component {
       return (
          <Container nav_open={this.props.nav_open} className={this.props.links_hide}>
             <Inner>
+             
                <Item>
                   {this.props.lang === "en" ? (
                      <A to="/vision/" onClick={this.props.onClick} activeClassName="selected" title="Vision">
@@ -89,6 +90,30 @@ class Nav extends React.Component {
                   ) : (
                      <A to="/ch/ch-contact/" onClick={this.props.onClick} activeClassName="selected" title="联系方式">
                         联系方式
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="Bus Timetable">
+                        Bus Timetable
+                     </A>
+                  ) : (
+                     <A to="/ch/ch-bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="理念">
+                        Bus Timetable
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/blog/" onClick={this.props.onClick} activeClassName="selected" title="Blog">
+                        Media & News
+                     </A>
+                  ) : (
+                     <A to="/ch/ch-blog/" onClick={this.props.onClick} activeClassName="selected" title="理念">
+                        Media & News
                      </A>
                   )}
                </Item>
