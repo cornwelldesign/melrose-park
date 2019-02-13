@@ -10,6 +10,9 @@ import { LargeP, P, H4, H3 } from '../components/Text.js'
 import bus from '../../static/images/MelroseParkBusTimetable.jpg'
 
 class BusTimetable extends React.Component {
+	componentDidMount() {
+		this.props.updateMeta('Bus Timetable ', '');
+	}
    render() {
       // const wp = this.props.data.wordpressPage.acf
       return (

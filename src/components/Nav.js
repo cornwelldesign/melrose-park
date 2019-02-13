@@ -199,7 +199,7 @@ const Item = styled.li`
 `
 
 const A = styled(Link)`
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	letter-spacing:1px;
 	text-transform: uppercase;
 	color: ${vars.colors.blank};
