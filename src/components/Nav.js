@@ -100,7 +100,7 @@ class Nav extends React.Component {
                         Bus Timetable
                      </A>
                   ) : (
-                     <A to="/ch/ch-bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="理念">
+                     <A to="/ch/ch-bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="Bus Timetable">
                         Bus Timetable
                      </A>
                   )}
@@ -108,11 +108,11 @@ class Nav extends React.Component {
 
                <Item>
                   {this.props.lang === "en" ? (
-                     <A to="/blog/" onClick={this.props.onClick} activeClassName="selected" title="Blog">
+                     <A to="/media-news/" onClick={this.props.onClick} activeClassName="selected" title="Media & News">
                         Media & News
                      </A>
                   ) : (
-                     <A to="/ch/ch-blog/" onClick={this.props.onClick} activeClassName="selected" title="理念">
+                     <A to="/ch/ch-media-news/" onClick={this.props.onClick} activeClassName="selected" title="Media & News">
                         Media & News
                      </A>
                   )}
