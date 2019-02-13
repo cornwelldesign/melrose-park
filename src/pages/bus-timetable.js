@@ -16,7 +16,7 @@ class BusTimetable extends React.Component {
       // const wp = this.props.data.wordpressPage.acf
       return (
       <BusWrapper>
-         <H4>Melrose Park Community Shuttle Timetable</H4>
+         <H3>Melrose Park Community Shuttle Timetable</H3>
          <a href={bus} target="_blank">
             <img src={bus} alt="Bus timetable" />
          </a>
@@ -25,11 +25,12 @@ class BusTimetable extends React.Component {
 }
 
 const BusWrapper = styled.div`
-   margin-top: 3rem;
+   margin-top: 5rem;
    font-family: "Plantin",serif;
 
-   h4 {
+   h3 {
       color: #9B9B9B;
+      text-align: center;
    }
 `
 
