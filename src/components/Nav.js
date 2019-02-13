@@ -100,8 +100,8 @@ class Nav extends React.Component {
                         Bus Timetable
                      </A>
                   ) : (
-                     <A to="/ch/ch-bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="Bus Timetable">
-                        Bus Timetable
+                     <A to="/bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="公交车时刻表">
+                        公交车时刻表
                      </A>
                   )}
                </Item>
@@ -112,8 +112,8 @@ class Nav extends React.Component {
                         Media & News
                      </A>
                   ) : (
-                     <A to="/ch/ch-media-news/" onClick={this.props.onClick} activeClassName="selected" title="Media & News">
-                        Media & News
+                     <A to="/media-news/" onClick={this.props.onClick} activeClassName="selected" title="Media & News">
+                        新闻
                      </A>
                   )}
                </Item>
