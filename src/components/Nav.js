@@ -96,24 +96,24 @@ class Nav extends React.Component {
 
                <Item>
                   {this.props.lang === "en" ? (
-                     <A to="/bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="Bus Timetable">
-                        Bus Timetable
-                     </A>
-                  ) : (
-                     <A to="/ch/ch-bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="巴士时间表">
-                        巴士时间表
-                     </A>
-                  )}
-               </Item>
-
-               <Item>
-                  {this.props.lang === "en" ? (
                      <A to="/media-news/" onClick={this.props.onClick} activeClassName="selected" title="Media & News">
                         Media & News
                      </A>
                   ) : (
                      <A to="/ch/ch-media-news/" onClick={this.props.onClick} activeClassName="selected" title="媒体及新闻">
                         媒体及新闻
+                     </A>
+                  )}
+               </Item>
+
+               <Item>
+                  {this.props.lang === "en" ? (
+                     <A to="/bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="Bus Timetable">
+                        Bus Timetable
+                     </A>
+                  ) : (
+                     <A to="/ch/ch-bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="巴士时间表">
+                        巴士时间表
                      </A>
                   )}
                </Item>
