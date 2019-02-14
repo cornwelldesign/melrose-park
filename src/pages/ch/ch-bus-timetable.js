@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from "styled-components"
 import { LargeP, P, H4, H3 } from '../../components/Text.js'
-import bus from '../../../static/images/MelroseParkBusTimetable.jpg'
+import bus from '../../../static/images/MP-BUS-TIMETABLE.jpg'
 
 class BusTimetable extends React.Component {
    render() {

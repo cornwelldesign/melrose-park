@@ -11,7 +11,7 @@ import ReactHtmlParser, {
    htmlparser2
 } from 'react-html-parser'
 import { LargeP, P, H4, H3 } from '../components/Text.js'
-import bus from '../../static/images/MelroseParkBusTimetable.jpg'
+import bus from '../../static/images/MP-BUS-TIMETABLE.jpg'
 
 class BusTimetable extends React.Component {
    render() {
@@ -31,7 +31,7 @@ class BusTimetable extends React.Component {
                   While the first apartments at the Melrose Park development site are not
                   due for completion until next year, PAYCE is launching the service early
                   to provide a new transport link for the community. Running as a round
-                  trip from Wharf Road to Meadowbank Station, this free hop-on, hop-off
+                  trip from Wharf Road to Meadowbank Station, this <em>free</em> hop-on, hop-off
                   shuttle will stop at seven key points along its route and provide an
                   integral transport link for Melrose Park residents. The shuttle is now
                   in full operation and available for use by all members of the public.

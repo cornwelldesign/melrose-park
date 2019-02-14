@@ -1,8 +1,9 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { LargeP, P, H4, H3 } from '../../components/Text.js'
+import { LargeP, P, H2, H4, H3 } from '../../components/Text.js'
 import { below } from '../../style/functions'
 import sampleImage from '../../../static/images/melrose-park-sydney-property-008-SUBURB.jpg'
+
 
 class BusTimetable extends React.Component {
    componentDidMount() {
@@ -13,7 +14,7 @@ class BusTimetable extends React.Component {
       // const wp = this.props.data.wordpressPage.acf
       return (
          <NewsWrapper>
-            <H4>Media & News</H4>
+            <H2>媒体及新闻</H2>
             <CardsWrapper>
                <Card>
                   <H4>
@@ -226,8 +227,10 @@ const NewsWrapper = styled.div`
    margin: 6rem auto 0rem;
    font-family: 'Plantin', serif;
 
-   h4 {
-      color: #00b398;
+   h2 {
+      color: #00B398;
+      font-size: 6rem;
+      margin-bottom: 2rem;
    }
 
    ${below.mid`
@@ -252,9 +255,9 @@ const Card = styled.div`
    a {
       text-decoration: none;
       color: inherit;
-      transition: opacity 0.3s;
+      transition: color 0.3s;
       :hover {
-         opacity: 0.7;
+         color: #00B398;
       }
    }
 
@@ -262,6 +265,7 @@ const Card = styled.div`
       font-family: 'Plantin', serif;
       color: #00b398;
       padding-bottom: 2rem;
+      text-transform: uppercase;
    }
 
    p.read-more {
@@ -273,7 +277,7 @@ const Card = styled.div`
       }
 
       :hover:after {
-         color: #9b9b9b;
+         color: #00B398;
          padding-left: 1rem;
       }
    }
@@ -284,5 +288,3 @@ const Card = styled.div`
    `};
 `
 export default BusTimetable
-
-

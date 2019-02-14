@@ -103,6 +103,7 @@ const NewsWrapper = styled.div`
 
    h2 {
       color: #00B398;
+      font-size: 6rem;
    }
    img.hero-image {
       margin: 4rem 0;
