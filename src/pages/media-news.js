@@ -225,6 +225,7 @@ const Card = styled.div`
       }
 
       :hover:after {
+         color: #9b9b9b;
          padding-left: 1rem;
       }
    }
