@@ -6,12 +6,6 @@ import { below } from '../../style/functions'
 class BusTimetable extends React.Component {
    componentDidMount() {
       this.props.updateMeta(
-         "sample text",
-         "sample text",
-         "sample text",
-         "sample text",
-         "sample text",
-         "sample text",
 	 )
    }
    

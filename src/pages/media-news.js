@@ -7,12 +7,6 @@ import sampleImage from '../../static/images/melrose-park-sydney-property-008-SU
 class BusTimetable extends React.Component {
    componentDidMount() {
       this.props.updateMeta(
-         "sample text",
-         "sample text",
-         "sample text",
-         "sample text",
-         "sample text",
-         "sample text",
 	 )
    }
    

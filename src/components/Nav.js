@@ -3,6 +3,7 @@ import styled from "styled-components"
 import * as vars from "../style/vars"
 import { below } from "../style/functions"
 import Link from "gatsby-link"
+import bus from '../../static/svg/bus.svg'
 
 class Nav extends React.Component {
    render() {
@@ -106,17 +107,19 @@ class Nav extends React.Component {
                   )}
                </Item>
 
-               <Item>
+               <FloatingTab>
                   {this.props.lang === "en" ? (
                      <A to="/bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="Bus Timetable">
+                        <img src={bus} alt="bus icon" />
                         Bus Timetable
                      </A>
                   ) : (
                      <A to="/ch/ch-bus-timetable/" onClick={this.props.onClick} activeClassName="selected" title="巴士时间表">
+                        <img src={bus} alt="bus icon" />
                         巴士时间表
                      </A>
                   )}
-               </Item>
+               </FloatingTab>
 
                <Item>
                   {this.props.lang === "en" ? (
@@ -161,7 +164,8 @@ const Container = styled.nav`
 	font-size: 1rem;
 	padding: 0;
 		float: left;
-	`} ${below.mobile`
+	`} 
+   ${below.mobile`
 		position: fixed;
 		top: 4.5rem;
 		z-index: 2;
@@ -179,23 +183,44 @@ const Inner = styled.ul`
    list-style: none;
 	display: flex;
 	justify-content: space-between;
-   /* border: 1px solid lime; */
-	/* width: 59vw; */
-	/* margin: 0; */
-   /* height: 40px; */
-	${below.mobile`
-		display: block;
-		width: auto;
-	`};
+   ${below.mobile`
+      display: block;
+      width: auto;
+   `};
+
 `
 
 const Item = styled.li`
-   /* display: inline-block; */
-	/* border: 1px solid red; */
-
    ${below.mobile`
 		display: block;
 	`};
+`
+
+const FloatingTab = styled.li`
+   position: absolute;
+   width: 240px;
+   right: -194px;
+   top: 8vh;
+   background: white;
+   border: 1px solid #ddd;
+   border-radius: 30px;
+   transition: right .4s ease-in-out;
+
+   :hover {
+      right: -50px;
+   }
+
+   a {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      color: inherit;
+   }
+
+   img {
+      width: 24px;
+      margin: 0 14px 0 3px;
+   }
 `
 
 const A = styled(Link)`
