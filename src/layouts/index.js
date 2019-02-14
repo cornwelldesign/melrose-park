@@ -140,7 +140,7 @@ class TemplateWrapper extends React.Component {
 				 </article><!--end: article -->
 			 </div><!--end:semdoc-->`),
          seo_code_block: true,
-         // seo_footer: renderHTML(`<div id="sem-footer-link" style="display: inline; "><a style="font-size: 8pt;" onclick="Obvt(650,400);" href="javascript:void(0); ">sem</a></div>`),
+         seo_footer: renderHTML(`<div id="sem-footer-link" style="display: inline; "><a style="font-size: 8pt;" onclick="Obvt(650,400);" href="javascript:void(0); ">sem</a></div>`),
          company: "Melrose Park",
          street_address: "661 Victoria Road ",
          addressLocality: "Melrose Park",
