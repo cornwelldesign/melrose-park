@@ -4,6 +4,17 @@ import { LargeP, P, H4, H3 } from '../../components/Text.js'
 import { below } from '../../style/functions'
 
 class BusTimetable extends React.Component {
+   componentDidMount() {
+      this.props.updateMeta(
+         "sample text",
+         "sample text",
+         "sample text",
+         "sample text",
+         "sample text",
+         "sample text",
+	 )
+   }
+   
    render() {
       // const wp = this.props.data.wordpressPage.acf
       return (
@@ -11,9 +22,11 @@ class BusTimetable extends React.Component {
             <H3>媒体及新闻</H3>
             <CardsWrapper>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub
@@ -22,6 +35,7 @@ class BusTimetable extends React.Component {
                   </summary>
                   <p className="read-more">
                      <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     
                   </p>
                   <img
                      src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
@@ -29,9 +43,11 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub
@@ -40,6 +56,7 @@ class BusTimetable extends React.Component {
                   </summary>
                   <p className="read-more">
                      <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     
                   </p>
                   <img
                      src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
@@ -47,9 +64,11 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub
@@ -58,6 +77,7 @@ class BusTimetable extends React.Component {
                   </summary>
                   <p className="read-more">
                      <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     
                   </p>
                   <img
                      src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
@@ -65,9 +85,11 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub
@@ -76,6 +98,7 @@ class BusTimetable extends React.Component {
                   </summary>
                   <p className="read-more">
                      <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     
                   </p>
                   <img
                      src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
@@ -83,9 +106,11 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub
@@ -94,6 +119,7 @@ class BusTimetable extends React.Component {
                   </summary>
                   <p className="read-more">
                      <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     
                   </p>
                   <img
                      src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
@@ -101,9 +127,11 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub
@@ -112,6 +140,7 @@ class BusTimetable extends React.Component {
                   </summary>
                   <p className="read-more">
                      <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     
                   </p>
                   <img
                      src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
@@ -119,9 +148,11 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub
@@ -130,6 +161,7 @@ class BusTimetable extends React.Component {
                   </summary>
                   <p className="read-more">
                      <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     
                   </p>
                   <img
                      src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
@@ -137,9 +169,11 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
+                  
                   <a href="/ch/ch-media-news/library-and-community-hub-opens-at-washington-park/">
                      <H4>Library and community hub opens at Washington Park</H4>
                   </a>
+                  
                   <summary>
                      12 December 2018 – Local residents joined special guests to celebrate
                      the official opening of the new Riverwood Library and Community Hub

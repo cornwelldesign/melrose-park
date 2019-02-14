@@ -3,15 +3,27 @@ import Link from "gatsby-link"
 import styled, { keyframes } from 'styled-components'
 import { LargeP, P, H1, H2, H4, H3 } from '../../../components/Text.js'
 import { below } from '../../../style/functions'
+import sampleImage from '../../../../static/images/melrose-park-sydney-property-008-SUBURB.jpg'
 
 class BusTimetable extends React.Component {
+   componentDidMount() {
+      this.props.updateMeta(
+         "sample text",
+         "sample text",
+         "sample text",
+         "sample text",
+         "sample text",
+         "sample text",
+	 )
+   }
+   
    render() {
       // const wp = this.props.data.wordpressPage.acf
       return (
          <NewsWrapper>
             <H2>LIBRARY AND COMMUNITY HUB OPENS AT WASHINGTON PARK</H2>
             <img
-               src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+               src={sampleImage}
                alt="hero"
             />
             <article>
