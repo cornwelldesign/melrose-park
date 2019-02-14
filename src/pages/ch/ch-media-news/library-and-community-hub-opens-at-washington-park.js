@@ -19,6 +19,7 @@ class BusTimetable extends React.Component {
             <img
                src={sampleImage}
                alt="hero"
+               className="hero-image"
             />
             <article>
                <p>
@@ -100,6 +101,12 @@ const NewsWrapper = styled.div`
    margin: 7rem auto 0rem;
    font-family: 'Plantin', serif;
 
+   h2 {
+      color: #00B398;
+   }
+   img.hero-image {
+      margin: 4rem 0;
+   }
    h3 {
       color: #9b9b9b;
    }
@@ -114,7 +121,7 @@ const NewsWrapper = styled.div`
 
       p, ul {
          line-height: 1.2;
-         padding: 1rem 0;
+         padding-bottom: 1rem;
       }
 
       li {
@@ -137,3 +144,5 @@ const NewsWrapper = styled.div`
 
 
 export default BusTimetable
+
+

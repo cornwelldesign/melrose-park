@@ -6,28 +6,34 @@ import sampleImage from '../../static/images/melrose-park-sydney-property-008-SU
 
 class BusTimetable extends React.Component {
    componentDidMount() {
-      this.props.updateMeta(
-	 )
+      this.props.updateMeta()
    }
-   
+
    render() {
       // const wp = this.props.data.wordpressPage.acf
       return (
          <NewsWrapper>
-            <H3>Media & News</H3>
+            <H4>Media & News</H4>
             <CardsWrapper>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -35,17 +41,24 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -53,17 +66,24 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -71,17 +91,24 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -89,17 +116,24 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -107,17 +141,24 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -125,17 +166,24 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -143,35 +191,24 @@ class BusTimetable extends React.Component {
                   />
                </Card>
                <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
-                  </p>
-                  <img
-                     src={sampleImage}
-                     alt="Library and community hub opens at Washington Park"
-                  />
-               </Card>
-               <Card>
-                  <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
-                  <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/media-news/library-and-community-hub-opens-at-washington-park/">[...]</a>
-                  </summary>
-                  <p className="read-more">
-                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
                      src={sampleImage}
@@ -186,29 +223,28 @@ class BusTimetable extends React.Component {
 
 const NewsWrapper = styled.div`
    width: 68%;
-   margin: 7rem auto 0rem;
+   margin: 6rem auto 0rem;
    font-family: 'Plantin', serif;
 
-   h3 {
-      color: #9b9b9b;
+   h4 {
+      color: #00b398;
    }
 
    ${below.mid`
       width: 94%;
-   `};
+      `};
 `
 
 const CardsWrapper = styled.div`
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
-   margin-top: 4rem;
 `
 
 const Card = styled.div`
-   flex: 0 0 22%;
+   flex: 0 0 23%;
    border: 1px solid #d4d4d4;
-   margin-bottom: 5rem;
+   margin: 1% 1% 1% 0;
    font-family: 'Founders Grotesk', sans-serif;
    font-size: 1.5rem;
    padding: 1rem;
@@ -216,10 +252,16 @@ const Card = styled.div`
    a {
       text-decoration: none;
       color: inherit;
-      transition: color .3s;
+      transition: opacity 0.3s;
       :hover {
-         color: #9b9b9b;
+         opacity: 0.7;
       }
+   }
+
+   p.date {
+      font-family: 'Plantin', serif;
+      color: #00b398;
+      padding-bottom: 2rem;
    }
 
    p.read-more {
