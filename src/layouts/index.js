@@ -97,50 +97,6 @@ class TemplateWrapper extends React.Component {
          "The pulse of your new neighbourhood, Melrose Park Residences will have everythin" +
          "g you could need for the life you want to live. Located only 8km from Parramatta" +
          " and 17km from Sydney CBD, Melrose Park one of Sydney’s most connected places. ",
-         seo_meta: renderHTML(`<title>Melrose Park | The New Heart of Sydney | Apartments for Sale Sydney | Off Plan Apartments Sydney</title>
-				 <meta name="description" content="Melrose Park apartments for sale are available now, off the plan. The Melrose Park residential development is the latest new community from PAYCE, Australia’s premier apartment development company. In line with all PAYCE developments, Melrose Park delivers residential havens surrounded by commercial facilities and green spaces. From owner-occupiers to investment purchases, the off the plan apartments for sale in the new Melrose Park development will impress." />
-				 <meta name="keywords" content="Apartments for sale, off the plan, Sydney apartments, new apartments, display suite Sydney, Melrose park, urban renewal, first home buyers, western Sydney apartments, new development, apartment project, payce, boston marketing" />
-				 <meta http-equiv="Last-Modified" content="2018-06-14T01:06:39+10:00" />`),
-         seo_body: renderHTML(`<div id='semdoc'>
-				 <article itemscope='' itemtype='http://schema.org/NewsArticle' itemprop='mainEntityOfPage' >
-					 <section id='lead' itemprop='about'>
-						 <h1 id='headline'  itemprop='headline'>
-		 Off the Plan Apartments for sale in Sydney are now available for the Melrose Park Development</h1>
-						 <ul><li id='editorial'>
-							 <time id='dateline' itemprop='dateModified' datetime='2018-06-14' >14 June, 2018.</time>
-							 <div id='byline'  itemprop='author'>Melrose Park – Prestige Sydney Apartment Developers, PAYCE Consolidated Pty Limited</div></li>
-							 <li id='publishing-meta' style='display: none; '>
-							 <div itemprop='publisher'>Melrose Park Apartments by PAYCE Consolidated</div>
-							 <div itemprop='datePublished'>2018-06-12</div>
-			 </li>
-							 </ul>
-						 <h2 id='subheading'  itemprop='alternativeHeadline'>Melrose Park is set to become one of Sydney’s most vibrant living precincts through the PAYCE masterplan which encompasses all aspects of lifestyle and connectivity. The first stage of apartments for sale have been released to the market and client inquiry is ever-growing.</h2>
-						 <p id='leadline'  itemprop='description'><strong>The quality of the Melrose Park apartments for sale can be described as exceptional in the Sydney marketplace. As with all PAYCE apartments development projects, Melrose Park will re-define apartment living through clever design, connectivity and a perfect balance of green spaces.</strong></p>
-						 <p id='leadline_minor'>PAYCE Consolidated - invite owner-occupier and investment purchasers to make contact and learn more about the exceptional opportunities attached to this exciting apartment development project in Sydney’s west.</p>
-		 <p>Coupled with the world-leading apartment design aspects of the project, Melrose Park will feature a fully integrated shopping precinct where all manner of retail goods is available. Melrose Park is set to become highly sought city environment with enviable levels of lifestyle, connectivity and open spaces. We invite owner-occupiers and investors alike to view the Melrose Park apartments for sale.</p>
-					 </section><!--end: lead -->
-					 <hr width='90%' color='#000000' size='1' noshade='noshade' />
-					 <section id='arguments' itemprop='articleBody'>
-						 <h3>Sydney Apartment Developments – Melrose Park Off the Plan Apartments</h3>
-						 <p>Welcome to Melrose Park, PAYCE Consolidated’s newest community offering luxurious off the plan apartments. Situated in a prime and highly sought-after area of Western Sydney, the Melrose Park master plan aims to provide stunning residential accommodations to perfectly match the needs of young professionals, growing families, and recent retirees with residences, retail space, and parkland areas. </p>
-		 <p>Leaders in the design and creation of new apartment developments, PAYCE has long been associated with luxury, practicality, and modern living, and these factors can all be seen throughout the new Melrose Park apartments for sale. Whether you’re looking for investment apartments off the plan, or first home buyer new apartments in Sydney to get a foot on the property ladder, Melrose Park has it all.
-		 </p>
-						 <h3>Melrose Park Apartments</h3>
-						 <p>If you’re looking for first home buyer new apartments in Western Sydney, consider Melrose Park. All off the plan apartments for sale within this new PAYCE suburb make it easy to enjoy modern city life, while still helping you to feel connected to nature. Offering a strong, welcoming community feel, luxurious studio, 1, 2, or 3 bedroom apartments, and exciting retail spaces, Melrose Park really does have it all.</p>
-						 <h3>New Apartments for Sale in Sydney – Melrose Park Apartments for Sale can be Viewed Now </h3>
-						 <p>Are you looking for a new investment opportunity to grow your portfolio? Or are you looking to buy your first property? Ideal for both investors and first home buyers, off the plan apartments in Western Sydney can be viewed at the local Boston Marketing offices. In-house display suites showcasing the typical layout and design features of the Melrose Park off the plan apartments in Sydney can’t be missed. </p>
-		 <p>Situated within the Boston Marketing office complex — part of the PAYCE group —these full display suites can be hugely beneficial in helping you to envision modern living at Melrose Park, or help you to envision your investment on a deeper level. Viewing the Melrose Park in-house display suites is the perfect opportunity to experience the feel of the community, and the luxury of the residences.
-		 </p>
-						 <h3>Modern Living at Melrose Park </h3>
-						 <p>All Melrose Park off the plan apartments are designed to perfectly facilitate modern living and form a beacon of contemporary, urban lifestyle. As with all of PAYCE’s new apartment developments in Sydney, the living standards of Melrose Park residents are the highest priority, and this ethic can be seen throughout not only the accommodations, but across every single aspect of the Melrose Park suburb. </p>
-		 <p>While every PAYCE community is different, they all have one thing in common: each of the new apartment developments in Western Sydney works to combine the beauty and serenity of the surrounding natural environment with modern technology and conveniences. And that’s exactly what you’ll find at Melrose Park; a quiet living environment with easy access to transport, shops, and the city.
-		 </p>
-					 </section><!--end: arguments -->
-				 <hr width='90%' color='#000000' size='1' noshade='noshade' />
-				 </article><!--end: article -->
-			 </div><!--end:semdoc-->`),
-         seo_code_block: true,
-         seo_footer: renderHTML(`<div id="sem-footer-link" style="display: inline; "><a style="font-size: 8pt;" onclick="Obvt(650,400);" href="javascript:void(0); ">sem</a></div>`),
          company: "Melrose Park",
          street_address: "661 Victoria Road ",
          addressLocality: "Melrose Park",
@@ -202,12 +158,8 @@ class TemplateWrapper extends React.Component {
       }
    }
 
-    updateMeta(title, desc, seo_meta, seo_body, seo_footer, seo_code_block) {
-			seo_meta = ReactHtmlParser(seo_meta);
-			seo_body = ReactHtmlParser(seo_body);
-			seo_footer = ReactHtmlParser(seo_footer);
-			this.setState({ page_title: title, page_description: desc, seo_meta, seo_body, seo_footer, seo_code_block })
-			console.log(seo_code_block)
+    updateMeta(title, desc) {
+			this.setState({ page_title: title, page_description: desc })
     }
 
    render() {
@@ -404,7 +356,6 @@ class TemplateWrapper extends React.Component {
                   }
                ]}
             />
-						<div>{ this.state.seo_meta}</div> 
             <Header className={this.state.nav_fixed + " " + this.state.nav_hidden}>
                <Logo to={this.state.lang === "en" ? "/" : "/ch"}>
                   <img src="/svg/melrose-park-sydney-property-001-LOGO.svg" />
@@ -438,7 +389,7 @@ class TemplateWrapper extends React.Component {
             </Main>
 
 
-            <Footer lang={this.state.lang} seoFooter={this.state.seo_footer} seoCodeBlock={this.state.seo_code_block} />
+            <Footer lang={this.state.lang} />
 
             {this.state.loading == true && <Splash shown={this.state.loadingOver} />}
 						{this.state.seo_code_block == true && <ScriptTag isHydrating={false}  type="text/javascript" src="http://wp.melrosepark.com.au/wp-content/themes/melrosepark-v2/js/navigation.js" />}
