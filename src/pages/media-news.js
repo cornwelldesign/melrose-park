@@ -1,174 +1,217 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { LargeP, P, H4, H3 } from '../components/Text.js'
+import { LargeP, P, H2, H4, H3 } from '../components/Text.js'
 import { below } from '../style/functions'
+import sampleImage from '../../static/images/melrose-park-sydney-property-008-SUBURB.jpg'
 
 class BusTimetable extends React.Component {
+   componentDidMount() {
+      this.props.updateMeta()
+   }
+
    render() {
       // const wp = this.props.data.wordpressPage.acf
       return (
          <NewsWrapper>
-            <H3>Media & News</H3>
+            <H2>Media & News</H2>
             <CardsWrapper>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
                <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
+                  <H4>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Library and community hub opens at Washington Park
+                     </a>
+                  </H4>
+                  <p className="date">12 December 2018</p>
                   <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
+                     Local residents joined special guests to celebrate the official
+                     opening of the new Riverwood Library and Community Hub at Washington
+                     Park. The new library and community hub are located in one of{' '}
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        ...
+                     </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/">Read more</a>
+                     <a href="/media-news/library-and-community-hub-opens-at-washington-park/">
+                        Read more
+                     </a>
                   </p>
                   <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
-                     alt="Library and community hub opens at Washington Park"
-                  />
-               </Card>
-               <Card>
-                  <a href="/">
-                     <H4>Library and community hub opens at Washington Park</H4>
-                  </a>
-                  <summary>
-                     12 December 2018 – Local residents joined special guests to celebrate
-                     the official opening of the new Riverwood Library and Community Hub
-                     at Washington Park. The new library and community hub are located in
-                     one of <a href="/">[...]</a>
-                  </summary>
-                  <p className="read-more">
-                     <a href="/">Read more</a>
-                  </p>
-                  <img
-                     src="http://13.211.165.10/wp-content/uploads/2018/05/melrose-park-sydney-property-013-FERRY.jpg"
+                     src={sampleImage}
                      alt="Library and community hub opens at Washington Park"
                   />
                </Card>
@@ -180,29 +223,30 @@ class BusTimetable extends React.Component {
 
 const NewsWrapper = styled.div`
    width: 68%;
-   margin: 7rem auto 0rem;
+   margin: 6rem auto 0rem;
    font-family: 'Plantin', serif;
 
-   h3 {
-      color: #9b9b9b;
+   h2 {
+      color: #00B398;
+      font-size: 6rem;
+      margin-bottom: 2rem;
    }
 
    ${below.mid`
       width: 94%;
-   `};
+      `};
 `
 
 const CardsWrapper = styled.div`
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
-   margin-top: 4rem;
 `
 
 const Card = styled.div`
-   flex: 0 0 22%;
+   flex: 0 0 23%;
    border: 1px solid #d4d4d4;
-   margin-bottom: 5rem;
+   margin: 1% 1% 1% 0;
    font-family: 'Founders Grotesk', sans-serif;
    font-size: 1.5rem;
    padding: 1rem;
@@ -210,10 +254,17 @@ const Card = styled.div`
    a {
       text-decoration: none;
       color: inherit;
-      transition: color .3s;
+      transition: color 0.3s;
       :hover {
-         color: #9b9b9b;
+         color: #00B398;
       }
+   }
+
+   p.date {
+      font-family: 'Plantin', serif;
+      color: #00b398;
+      padding-bottom: 2rem;
+      text-transform: uppercase;
    }
 
    p.read-more {
@@ -225,6 +276,7 @@ const Card = styled.div`
       }
 
       :hover:after {
+         color: #00B398;
          padding-left: 1rem;
       }
    }
