@@ -87,8 +87,8 @@ class BusTimetable extends React.Component {
                </p>
             </article>
 
-            <Link to='/media-news' className="back">
-            ← Return to Media & News
+            <Link to='/community-news' className="back">
+            ← Return to Community News
             </Link>
             
          </NewsWrapper>
