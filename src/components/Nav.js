@@ -151,25 +151,7 @@ class Nav extends React.Component {
                      )}
                   </Item>
 
-                  <Item>
-                     {this.props.lang === 'en' ? (
-                        <A
-                           to="/community-news/"
-                           onClick={this.props.onClick}
-                           activeClassName="selected"
-                           title="Community News">
-                           Community News
-                        </A>
-                     ) : (
-                        <A
-                           to="/ch/ch-community-news/"
-                           onClick={this.props.onClick}
-                           activeClassName="selected"
-                           title="媒体及新闻">
-                           媒体及新闻
-                        </A>
-                     )}
-                  </Item>
+
 
                   <Item>
                      {this.props.lang === 'en' ? (
