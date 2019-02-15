@@ -24,6 +24,9 @@ import ScriptTag from 'react-script-tag';
 const Main = styled.main`
    padding-top: 4.5rem;
    position: relative;
+	 min-height: calc(100vh - 58px);
+
+	 
 `
 const ToggleWrap = styled.div`
    transition: filter 2s;
