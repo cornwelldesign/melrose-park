@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { LargeP, P, H4, H3 } from '../components/Text.js'
 import { below } from '../style/functions'
-import bus from '../../static/images/MP-BUS-TIMETABLE.jpg'
+import bus from '../../static/images/MP-BUS-TIMETABLE-V4.jpg'
 
 class BusTimetable extends React.Component {
 	componentDidMount() {
@@ -47,7 +47,7 @@ const BusWrapper = styled.div`
 
 const Blurb = styled.div`
    width: 65%;
-   margin: 0 auto;
+   margin: 6rem auto 3rem;
    text-align: center;
 
    h3 {
