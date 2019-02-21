@@ -6,7 +6,7 @@ const slash = require(`slash`)
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
    const { createPage } = boundActionCreators
-   return new Promise((resolve, reject) => {
+   new Promise((resolve, reject) => {
       // First, query all the pages on your WordPress
       graphql(
          `
@@ -164,5 +164,57 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
          resolve()
       })
       // === END TAGS ===
-   })
+	 })
+	 new Promise((resolve, reject) => {
+		// First, query all the pages on your WordPress
+		graphql(
+			 `
+			 {
+				allWordpressPost {
+					edges {
+						node {
+							id
+							date
+							content
+							title 
+							acf {
+								url
+								date
+								image {
+									id
+									source_url
+								}
+							}
+						}
+					}
+				}
+			}
+`          
+		).then(result => {
+			 if (result.errors) {
+					console.log(result.errors)
+					reject(result.errors)
+			 }
+			 _.each(result.data.allWordpressPost.edges, edge => {
+					var url
+					// console.log(edge.node);
+						var template = `./src/templates/PostPage.js`
+						createPage({
+							path: `/community-news/${edge.node.acf.url}/`,
+							component: slash(
+								path.resolve(
+									template
+								)
+							),
+							context: {
+								id: edge.node.id,
+								slug: edge.node.acf.url,
+								parent_element: edge.node.id
+							}
+						})
+			 })
+			 resolve()
+		})
+		// === END TAGS ===
+ })
 }

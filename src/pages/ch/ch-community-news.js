@@ -2,6 +2,8 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { LargeP, P, H2, H4, H3 } from '../../components/Text.js'
 import { below } from '../../style/functions'
+import sampleImage from '../../../static/images/melrose-park-sydney-property-008-SUBURB.jpg'
+import moment from 'moment'
 
 class BusTimetable extends React.Component {
    componentDidMount() {
@@ -9,109 +11,74 @@ class BusTimetable extends React.Component {
    }
 
    render() {
-      // const wp = this.props.data.wordpressPage.acf
-      return (
+
+			// const wp = this.props.data.wordpressPage.acf
+			console.log(this.props.data.allWordpressPost.edges);
+			function sortNodes(a, b) {
+				return a.node.acf.date - b.node.acf.date;
+			 }
+			var posts = this.props.data.allWordpressPost.edges;
+			posts.sort(function(a,b){
+				// Turn your strings into dates, and then subtract them
+				// to get a value that is either negative, positive, or zero.
+				return b.node.acf.date - a.node.acf.date;
+			});
+			return (
          <NewsWrapper>
             <H2>媒体及新闻</H2>
             <CardsWrapper>
-               <Card>
+						{ posts.map((x, i) =>
+							<Card>
                   <H4>
-                     <a href="/community-news/30-minute-connected-community-concept/">
-										 30-minute connected community concept
+                     <a href={`/community-news/${x.node.acf.url}/`}>
+										 {x.node.title}
                      </a>
                   </H4>
-                  <p className="date">16 October 2018</p>
+									<p className="date" >{moment(x.node.acf.date).format('Do MMM YYYY')}</p>
                   <summary>
 									Urban renewal project Melrose Park will be one of the first developments in Sydney to meet the new 30-minute connected community concept, PAYCE Director Dominic Sullivan said today.{' '}
-                     <a href="/community-news/30-minute-connected-community-concept/">
+                     <a href={`/community-news/${x.node.acf.url}/`}>
                         ...
                      </a>
                   </summary>
                   <p className="read-more">
-                     <a href="/community-news/30-minute-connected-community-concept/">
+                     <a href={`/community-news/${x.node.acf.url}/`}>
                         Read more
                      </a>
                   </p>
                   <img
-										src="/media/04.jpg"
-                     alt="Library and community hub opens at Washington Park"
+										src={x.node.acf.image.source_url}
                   />
                </Card>
-							 <Card>
-                  <H4>
-                     <a href="/community-news/melrose-park-open-day/">
-										 Melrose Park Open Day
-                     </a>
-                  </H4>
-                  <p className="date">7 November 2018</p>
-                  <summary>
-									This year’s Melrose Park Public School Family Fun Day was an outstanding success, with over 3000 people of all ages attending through the afternoon to enjoy the wide range of activities and contribute to the school’s annual fundraiser.{' '}
-                     <a href="/community-news/melrose-park-open-day/">
-                        ...
-                     </a>
-                  </summary>
-                  <p className="read-more">
-                     <a href="/community-news/melrose-park-open-day/">
-                        Read more
-                     </a>
-                  </p>
-                  <img
-										src="/media/01.jpg"
-                     alt="Library and community hub opens at Washington Park"
-                  />
-               </Card>
-							 <Card>
-                  <H4>
-                     <a href="/community-news/melrose-park-school-funding/">
-										 Melrose Park School Funding
-                     </a>
-                  </H4>
-                  <p className="date">1 December 2018</p>
-                  <summary>
-									PAYCE is assisting Melrose Park Public School deliver a number of much-needed projects under an Infrastructure Support Program partnership, following meetings with the School’s Relieving Principal, Jen Riley.{' '}
-                     <a href="/community-news/melrose-park-school-funding/">
-                        ...
-                     </a>
-                  </summary>
-                  <p className="read-more">
-                     <a href="/community-news/melrose-park-school-funding/">
-                        Read more
-                     </a>
-                  </p>
-                  <img
-										src="/media/02.jpg"
-                     alt="Library and community hub opens at Washington Park"
-                  />
-               </Card>
-							 <Card>
-                  <H4>
-                     <a href="/community-news/melrose-park-smart-city-funding/">
-										 Melrose Park Smart City Funding
-                     </a>
-                  </H4>
-                  <p className="date">28 November 2018</p>
-                  <summary>
-									A smart city project will be undertaken at the PAYCE urban renewal project in Melrose Park, after a consortium led by the City of Parramatta secured a $571,000 federal government grant.{' '}
-                     <a href="/community-news/melrose-park-smart-city-funding/">
-                        ...
-                     </a>
-                  </summary>
-                  <p className="read-more">
-                     <a href="/community-news/melrose-park-smart-city-funding/">
-                        Read more
-                     </a>
-                  </p>
-                  <img
-										src="/media/03.jpg"
-                     alt="Library and community hub opens at Washington Park"
-                  />
-               </Card> 
+						)}
+               
             </CardsWrapper>
          </NewsWrapper>
       )
    }
 }
-
+export const pageQuery = graphql`
+   query chPosts {
+			allWordpressPost {
+				edges {
+					node {
+						id
+						date
+						content
+						title 
+						acf {
+							url
+							date
+							image {
+								id
+								source_url
+							}
+						}
+					}
+				}
+			}
+	 }
+	 `
 const NewsWrapper = styled.div`
    width: 68%;
    margin: 6rem auto 0rem;
