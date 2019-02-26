@@ -13,7 +13,6 @@ class BusTimetable extends React.Component {
    render() {
 
 			// const wp = this.props.data.wordpressPage.acf
-			console.log(this.props.data.allWordpressPost.edges);
 			function sortNodes(a, b) {
 				return a.node.acf.date - b.node.acf.date;
 			 }

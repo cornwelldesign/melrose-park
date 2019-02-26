@@ -74,7 +74,6 @@ handleSubmit(e) {
 		})
 		.then(json => {
 			//console.log(json)
-			console.log("Tag manager push here")
 
 		})
 		.catch(err => console.log(err))

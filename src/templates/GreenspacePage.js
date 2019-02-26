@@ -21,7 +21,6 @@ class LifestylePage extends React.Component {
 
    render() {
       const wp = this.props.data.wordpressPage.acf
-			console.log(this.props.data.wordpressPage.acf);
       return (
          <section>
             <div className="row tab-hide">

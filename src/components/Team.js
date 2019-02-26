@@ -9,7 +9,6 @@ import renderHTML from 'react-render-html'
 class Team extends React.Component {
    render() {
       const wp = this.props.wp
-      console.log(this.props.wp)
       return (
          <Container>
             <div className="row ">

@@ -20,7 +20,6 @@ class VisionPage extends React.Component {
 
    render() {
       const wp = this.props.data.wordpressPage.acf
-      console.log(wp)
       return (
          <div>
             <Hero

@@ -14,7 +14,6 @@ class BusTimetable extends React.Component {
    
    render() {
 		const wp = this.props.data.wordpressPost
-		console.log(wp);
 		return (
          <NewsWrapper>
             <H2>{wp.title}</H2>
