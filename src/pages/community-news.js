@@ -28,19 +28,19 @@ class BusTimetable extends React.Component {
 						{ posts.map((x, i) =>
 							<Card>
                   <H4>
-                     <a href={`/community-news/${x.node.acf.url}/`}>
+                     <a href={`/community-news/${x.node.slug}/`}>
 										 {x.node.title}
                      </a>
                   </H4>
 									<p className="date" >{moment(x.node.acf.date).format('Do MMM YYYY')}</p>
                   <summary>
 									Urban renewal project Melrose Park will be one of the first developments in Sydney to meet the new 30-minute connected community concept, PAYCE Director Dominic Sullivan said today.{' '}
-                     <a href={`/community-news/${x.node.acf.url}/`}>
+                     <a href={`/community-news/${x.node.slug}/`}>
                         ...
                      </a>
                   </summary>
                   <p className="read-more">
-                     <a href={`/community-news/${x.node.acf.url}/`}>
+                     <a href={`/community-news/${x.node.slug}/`}>
                         Read more
                      </a>
                   </p>
@@ -64,8 +64,8 @@ export const pageQuery = graphql`
 						date
 						content
 						title 
+						slug
 						acf {
-							url
 							date
 							image {
 								id

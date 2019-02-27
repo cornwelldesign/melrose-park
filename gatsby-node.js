@@ -177,8 +177,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 							date
 							content
 							title 
+							slug
 							acf {
-								url
 								date
 								image {
 									id
@@ -200,7 +200,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 					// console.log(edge.node);
 						var template = `./src/templates/PostPage.js`
 						createPage({
-							path: `/community-news/${edge.node.acf.url}/`,
+							path: `/community-news/${edge.node.slug}/`,
 							component: slash(
 								path.resolve(
 									template
