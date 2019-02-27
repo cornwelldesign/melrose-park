@@ -8,7 +8,7 @@ import moment from 'moment'
 
 class BusTimetable extends React.Component {
    componentDidMount() {
-		this.props.updateMeta('30-minute connected community concept | Melrose Park', '')
+		this.props.updateMeta(`${this.props.data.wordpressPost.title} | Melrose Park`, '')
 
    }
    
