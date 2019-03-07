@@ -143,7 +143,7 @@ class TemplateWrapper extends React.Component {
 				 </article><!--end: article -->	
 			 </div><!--end:semdoc-->`),	
          seo_code_block: true,	
-         seo_footer: renderHTML(`<div id="sem-footer-link" style="display: inline; "><a style="font-size: 8pt;" onclick="Obvt(650,400);" href="javascript:void(0); ">sem</a></div>`),
+         seo_footer: renderHTML(`<div id="sem-footer-link" style="display: inline; "><a style="font-size: 8pt;"  >sem</a></div>`),
          company: "Melrose Park",
          street_address: "661 Victoria Road ",
          addressLocality: "Melrose Park",
@@ -442,7 +442,7 @@ class TemplateWrapper extends React.Component {
 
 
             <Footer lang={this.state.lang} seoFooter={this.state.seo_footer} seoCodeBlock={this.state.seo_code_block} />	
-						
+
             {this.state.loading == true && <Splash shown={this.state.loadingOver} />}
 						{this.state.seo_code_block == true && <ScriptTag isHydrating={false}  type="text/javascript" src="http://wp.melrosepark.com.au/wp-content/themes/melrosepark-v2/js/navigation.js" />}
 

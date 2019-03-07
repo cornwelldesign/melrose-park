@@ -40,7 +40,6 @@ class Footer extends React.Component {
                title="Privacy Policy">
                {this.props.lang === "ch" ? "隐私政策" : "Privacy Policy"}
             </Etc>
-						<div>{ this.props.seoFooter}</div> 	
 
 
 
