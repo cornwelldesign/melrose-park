@@ -34,7 +34,9 @@ class BusTimetable extends React.Component {
                   </H4>
 									<p className="date" >{moment(x.node.acf.date).format('Do MMM YYYY')}</p>
                   <summary>
-									Urban renewal project Melrose Park will be one of the first developments in Sydney to meet the new 30-minute connected community concept, PAYCE Director Dominic Sullivan said today.{' '}
+                  {/* Urban renewal project Melrose Park will be one of the first developments in Sydney to meet the new 30-minute connected community concept, PAYCE Director Dominic Sullivan said today.{' '} */}
+                  {x.node.content.replace(/<(?:.|\n)*?>/gm, '').substring(0, 120)}
+                  
                      <a href={`/community-news/${x.node.slug}/`}>
                         ...
                      </a>
