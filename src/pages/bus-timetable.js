@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { LargeP, P, H4, H3 } from '../components/Text.js'
 import { below } from '../style/functions'
-import bus from '../../static/images/MP-BUS-TIMETABLE-V4.jpg'
+import bus from '../../static/images/MP-BUS-TIMETABLE-V5.jpg'
 
 class BusTimetable extends React.Component {
 	componentDidMount() {
