@@ -208,7 +208,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 							),
 							context: {
 								id: edge.node.id,
-								slug: edge.node.acf.url,
+								slug: edge.node.slug,
 								parent_element: edge.node.id
 							}
 						})
